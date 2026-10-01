@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw
 def create_sprout_animation():
     os.makedirs('images', exist_ok=True)
     width, height = 480, 480
-    num_frames = 36
+    num_frames = 48
     frames = []
 
     # Parameters
@@ -235,7 +235,7 @@ def create_sprout_animation():
         out_path,
         save_all=True,
         append_images=frames[1:],
-        duration=55, # ~18 fps
+        duration=42, # ~24 fps smooth
         loop=0,
         disposal=2
     )
