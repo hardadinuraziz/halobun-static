@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Konsultasi &#8212; Hallobun</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head><body>
+<div class="adm-lay">
+<div class="sb">
+  <div class="sb-hd">
+    <img src="../../images/logo.png" alt="Hallobun" style="height:28px;filter:brightness(0) invert(1)">
+    <div><div class="bt">Hallobun</div><div class="bs">Panel Admin</div></div>
+  </div>
+  <div class="sb-nav"><a href="dashboard.html">&#128200; Dashboard</a>
+<div class="sb-lbl">Manajemen</div><a href="konsultasi.html" class="active">&#128187; Konsultasi</a>
+<a href="kunjungan.html">&#127968; Kunjungan</a>
+<a href="narsum.html">&#127891; Narsum</a>
+<a href="sarana.html">&#127807; Sarana</a>
+<div class="sb-lbl">Manajemen</div><a href="users.html">&#128100; Pengguna</a>
+<a href="praktisi.html">&#127807; Praktisi</a>
+<a href="payments.html">&#128179; Pembayaran</a>
+</div>
+  <div style="padding:16px;border-top:1px solid rgba(255,255,255,.08)">
+    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:13px">&#128682; Keluar</a>
+  </div>
+</div>
+<div class="adm-main">
+<div class="adm-top">
+  <h2>&#128187; Manajemen Konsultasi</h2>
+  <div style="display:flex;align-items:center;gap:12px">
+    <span style="font-size:13px;color:var(--s500)">&#128100; Admin Hallobun</span>
+    <a href="../login.html" class="btn btn-o btn-sm">Keluar</a>
+  </div>
+</div>
+<div class="adm-body">
+  <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+    <input type="text" class="fc" placeholder="&#128269; Cari pengguna atau praktisi..." style="max-width:300px">
+    <select class="fc" style="max-width:160px"><option>Semua Status</option><option>Pending</option><option>Confirmed</option><option>Selesai</option><option>Dibatalkan</option></select>
+    <input type="date" class="fc" style="max-width:160px">
+    <button class="btn btn-g btn-sm">Filter</button>
+    <button class="btn btn-o btn-sm" style="margin-left:auto">&#128196; Ekspor CSV</button>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>#ID</th><th>Pengguna</th><th>Praktisi</th><th>Topik</th><th>Tanggal</th><th>Metode Bayar</th><th>Nominal</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>
+      <tr><td class="txs tm">#BK-0052</td><td><div class="fw7">Ahmad Fauzi</div><div class="txs tm">ahmad@mail.com</div></td><td>Dr. Budi Santoso</td><td>Kutu putih pada cabai</td><td>1 Okt 2026<br>14.00 WIB</td><td>QRIS</td><td>Rp 150.000</td><td><span class="sts sts-c">Confirmed</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-g btn-sm">Detail</a></td></tr>
+      <tr><td class="txs tm">#BK-0051</td><td><div class="fw7">Siti Aminah</div><div class="txs tm">siti@mail.com</div></td><td>Ir. Siti Rahayu</td><td>Daun padi menguning</td><td>30 Sep 2026<br>10.00 WIB</td><td>BCA VA</td><td>Rp 120.000</td><td><span class="sts sts-d">Selesai</span></td><td><a href="#" class="btn btn-o btn-sm">Lihat</a></td></tr>
+      <tr><td class="txs tm">#BK-0050</td><td><div class="fw7">Budi Santoso</div><div class="txs tm">budi@mail.com</div></td><td>Prof. Ahmad Fauzi</td><td>Nutrisi tanaman tomat</td><td>2 Okt 2026<br>09.00 WIB</td><td>BNI VA</td><td>Rp 200.000</td><td><span class="sts sts-p">Pending</span></td><td style="display:flex;gap:4px;flex-wrap:wrap"><a href="#" class="btn btn-g btn-sm">Konfirmasi</a><a href="#" class="btn btn-red btn-sm">Batal</a></td></tr>
+    </tbody>
+  </table></div>
+</div></div></div>
+<script src="../../js/app.js"></script>
+</body></html>

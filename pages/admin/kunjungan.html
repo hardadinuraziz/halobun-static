@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Kunjungan &#8212; Hallobun</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head><body>
+<div class="adm-lay">
+<div class="sb">
+  <div class="sb-hd">
+    <img src="../../images/logo.png" alt="Hallobun" style="height:28px;filter:brightness(0) invert(1)">
+    <div><div class="bt">Hallobun</div><div class="bs">Panel Admin</div></div>
+  </div>
+  <div class="sb-nav"><a href="dashboard.html">&#128200; Dashboard</a>
+<div class="sb-lbl">Manajemen</div><a href="konsultasi.html">&#128187; Konsultasi</a>
+<a href="kunjungan.html" class="active">&#127968; Kunjungan</a>
+<a href="narsum.html">&#127891; Narsum</a>
+<a href="sarana.html">&#127807; Sarana</a>
+<div class="sb-lbl">Manajemen</div><a href="users.html">&#128100; Pengguna</a>
+<a href="praktisi.html">&#127807; Praktisi</a>
+<a href="payments.html">&#128179; Pembayaran</a>
+</div>
+  <div style="padding:16px;border-top:1px solid rgba(255,255,255,.08)">
+    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:13px">&#128682; Keluar</a>
+  </div>
+</div>
+<div class="adm-main">
+<div class="adm-top">
+  <h2>&#127968; Manajemen Kunjungan Lahan</h2>
+  <div style="display:flex;align-items:center;gap:12px">
+    <span style="font-size:13px;color:var(--s500)">&#128100; Admin Hallobun</span>
+    <a href="../login.html" class="btn btn-o btn-sm">Keluar</a>
+  </div>
+</div>
+<div class="adm-body">
+  <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+    <input type="text" class="fc" placeholder="&#128269; Cari pengguna atau lokasi..." style="max-width:300px">
+    <select class="fc" style="max-width:160px"><option>Semua Status</option><option>Pending</option><option>Scheduled</option><option>Selesai</option></select>
+    <button class="btn btn-g btn-sm">Filter</button>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>#ID</th><th>Pemohon</th><th>Lokasi</th><th>Jenis Kunjungan</th><th>Tanggal</th><th>Biaya</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>
+      <tr><td class="txs tm">#KJ-0015</td><td><div class="fw7">Siti Aminah</div><div class="txs tm">0814-9876-5432</div></td><td>Desa Cibodas, Bogor</td><td>Inspeksi Hama</td><td>5 Okt 2026</td><td>Rp 350.000</td><td><span class="sts sts-p">Pending</span></td><td><a href="#" class="btn btn-g btn-sm">Jadwalkan</a></td></tr>
+      <tr><td class="txs tm">#KJ-0014</td><td><div class="fw7">Rudi Hartono</div><div class="txs tm">0815-1234-5678</div></td><td>Desa Pakis, Malang</td><td>Audit Tanah</td><td>3 Okt 2026</td><td>Rp 600.000</td><td><span class="sts sts-c">Scheduled</span></td><td><a href="#" class="btn btn-o btn-sm">Detail</a></td></tr>
+      <tr><td class="txs tm">#KJ-0013</td><td><div class="fw7">Ahmad Fauzi</div><div class="txs tm">0812-3456-7890</div></td><td>Desa Ciawi, Tasik</td><td>Komprehensif</td><td>25 Sep 2026</td><td>Rp 600.000</td><td><span class="sts sts-d">Selesai</span></td><td><a href="#" class="btn btn-o btn-sm">Laporan</a></td></tr>
+    </tbody>
+  </table></div>
+</div></div></div>
+<script src="../../js/app.js"></script>
+</body></html>

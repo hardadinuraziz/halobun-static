@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Narsum &#8212; Hallobun</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head><body>
+<div class="adm-lay">
+<div class="sb">
+  <div class="sb-hd">
+    <img src="../../images/logo.png" alt="Hallobun" style="height:28px;filter:brightness(0) invert(1)">
+    <div><div class="bt">Hallobun</div><div class="bs">Panel Admin</div></div>
+  </div>
+  <div class="sb-nav"><a href="dashboard.html">&#128200; Dashboard</a>
+<div class="sb-lbl">Manajemen</div><a href="konsultasi.html">&#128187; Konsultasi</a>
+<a href="kunjungan.html">&#127968; Kunjungan</a>
+<a href="narsum.html" class="active">&#127891; Narsum</a>
+<a href="sarana.html">&#127807; Sarana</a>
+<div class="sb-lbl">Manajemen</div><a href="users.html">&#128100; Pengguna</a>
+<a href="praktisi.html">&#127807; Praktisi</a>
+<a href="payments.html">&#128179; Pembayaran</a>
+</div>
+  <div style="padding:16px;border-top:1px solid rgba(255,255,255,.08)">
+    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:13px">&#128682; Keluar</a>
+  </div>
+</div>
+<div class="adm-main">
+<div class="adm-top">
+  <h2>&#127891; Manajemen Narasumber</h2>
+  <div style="display:flex;align-items:center;gap:12px">
+    <span style="font-size:13px;color:var(--s500)">&#128100; Admin Hallobun</span>
+    <a href="../login.html" class="btn btn-o btn-sm">Keluar</a>
+  </div>
+</div>
+<div class="adm-body">
+  <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+    <input type="text" class="fc" placeholder="&#128269; Cari penyelenggara atau topik..." style="max-width:320px">
+    <select class="fc" style="max-width:160px"><option>Semua Status</option><option>Pending</option><option>Disetujui</option><option>Selesai</option></select>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>#ID</th><th>Penyelenggara</th><th>Jenis Kegiatan</th><th>Topik</th><th>Tanggal</th><th>Peserta</th><th>Tarif</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>
+      <tr><td class="txs tm">#NS-0008</td><td><div class="fw7">Poktan Maju Bersama</div><div class="txs tm">Budi - 0812-xxx</div></td><td>Bimtek Full-day</td><td>PHT pada Padi</td><td>10 Okt 2026</td><td>80 org</td><td>Rp 4.000.000</td><td><span class="sts sts-p">Pending</span></td><td><a href="#" class="btn btn-g btn-sm">Setujui</a></td></tr>
+      <tr><td class="txs tm">#NS-0007</td><td><div class="fw7">Universitas Pertanian</div><div class="txs tm">Dr. Sari - 0813-xxx</div></td><td>Kuliah Tamu</td><td>Agribisnis Modern</td><td>5 Okt 2026</td><td>120 org</td><td>Rp 1.500.000</td><td><span class="sts sts-c">Disetujui</span></td><td><a href="#" class="btn btn-o btn-sm">Detail</a></td></tr>
+      <tr><td class="txs tm">#NS-0006</td><td><div class="fw7">Dinas Pertanian Bogor</div><div class="txs tm">Ir. Hendra - 0819-xxx</div></td><td>Seminar</td><td>Pertanian Organik</td><td>20 Sep 2026</td><td>200 org</td><td>Rp 5.000.000</td><td><span class="sts sts-d">Selesai</span></td><td><a href="#" class="btn btn-o btn-sm">Laporan</a></td></tr>
+    </tbody>
+  </table></div>
+</div></div></div>
+<script src="../../js/app.js"></script>
+</body></html>

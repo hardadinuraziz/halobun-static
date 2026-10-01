@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Sarana &#8212; Hallobun</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head><body>
+<div class="adm-lay">
+<div class="sb">
+  <div class="sb-hd">
+    <img src="../../images/logo.png" alt="Hallobun" style="height:28px;filter:brightness(0) invert(1)">
+    <div><div class="bt">Hallobun</div><div class="bs">Panel Admin</div></div>
+  </div>
+  <div class="sb-nav"><a href="dashboard.html">&#128200; Dashboard</a>
+<div class="sb-lbl">Manajemen</div><a href="konsultasi.html">&#128187; Konsultasi</a>
+<a href="kunjungan.html">&#127968; Kunjungan</a>
+<a href="narsum.html">&#127891; Narsum</a>
+<a href="sarana.html" class="active">&#127807; Sarana</a>
+<div class="sb-lbl">Manajemen</div><a href="users.html">&#128100; Pengguna</a>
+<a href="praktisi.html">&#127807; Praktisi</a>
+<a href="payments.html">&#128179; Pembayaran</a>
+</div>
+  <div style="padding:16px;border-top:1px solid rgba(255,255,255,.08)">
+    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:13px">&#128682; Keluar</a>
+  </div>
+</div>
+<div class="adm-main">
+<div class="adm-top">
+  <h2>&#127807; Manajemen Sarana Tani</h2>
+  <div style="display:flex;align-items:center;gap:12px">
+    <span style="font-size:13px;color:var(--s500)">&#128100; Admin Hallobun</span>
+    <a href="../login.html" class="btn btn-o btn-sm">Keluar</a>
+  </div>
+</div>
+<div class="adm-body">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+    <input type="text" class="fc" placeholder="&#128269; Cari produk..." style="max-width:280px">
+    <button onclick="openModal('addProduk')" class="btn btn-g btn-sm">+ Tambah Produk</button>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Produk</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>
+      <tr><td><div class="fw7">Bibit Cabai Merah TW Super</div><div class="txs tm">Varietas unggulan, tahan virus</div></td><td>Bibit</td><td>Rp 45.000</td><td>150 pcs</td><td><span class="sts sts-c">Tersedia</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Hapus</a></td></tr>
+      <tr><td><div class="fw7">Pupuk NPK Organik 25Kg</div><div class="txs tm">Formulasi khusus sayuran</div></td><td>Pupuk</td><td>Rp 185.000</td><td>80 bag</td><td><span class="sts sts-c">Tersedia</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Hapus</a></td></tr>
+      <tr><td><div class="fw7">Pestisida Nabati Neem Oil</div><div class="txs tm">Pengendali hama organik</div></td><td>Pestisida</td><td>Rp 75.000</td><td>0 btl</td><td><span class="sts sts-x">Habis</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Hapus</a></td></tr>
+      <tr><td><div class="fw7">Soil Test Kit Digital</div><div class="txs tm">Uji pH, NPK, dan kelembaban</div></td><td>Alat</td><td>Rp 350.000</td><td>12 unit</td><td><span class="sts sts-c">Tersedia</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Hapus</a></td></tr>
+    </tbody>
+  </table></div>
+  <div class="mo" id="addProduk">
+    <div class="mo-box">
+      <button class="mo-close" onclick="closeModal('addProduk')">&#215;</button>
+      <div class="fw8" style="font-size:18px;margin-bottom:16px">Tambah Produk Baru</div>
+      <div class="fg"><label class="fl">Nama Produk</label><input type="text" class="fc"></div>
+      <div class="fg"><label class="fl">Kategori</label><select class="fc"><option>Bibit</option><option>Pupuk</option><option>Pestisida</option><option>Nutrisi</option><option>Alat</option></select></div>
+      <div class="fg"><label class="fl">Harga (Rp)</label><input type="number" class="fc"></div>
+      <div class="fg"><label class="fl">Stok</label><input type="number" class="fc"></div>
+      <div class="fg"><label class="fl">Deskripsi</label><textarea class="fc" rows="3"></textarea></div>
+      <button onclick="toast('Produk berhasil ditambahkan!','ok');closeModal('addProduk')" class="btn btn-g w100">Simpan Produk</button>
+    </div>
+  </div>
+</div></div></div>
+<script src="../../js/app.js"></script>
+</body></html>

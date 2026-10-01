@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Konsultasi Agronom Online &#8212; Hallobun</title>
+<link rel="stylesheet" href="../css/style.css">
+</head><body>
+<nav class="nb">
+  <a class="nb-brand" href="../index.html"><img src="../images/logo.png" alt="Hallobun"><span>Hallobun</span></a>
+  <ul class="nb-nav" id="navLinks"><li><a href="../index.html">Beranda</a></li>
+<li><a href="konsultasi.html" class="active">Konsultasi</a></li>
+<li><a href="kunjungan.html">Kunjungan</a></li>
+<li><a href="narsum.html">Narsum</a></li>
+<li><a href="sarana.html">Sarana</a></li>
+</ul>
+  <div class="nb-act" id="navActions">
+    <a href="login.html" class="b-out">Masuk</a>
+    <a href="register.html" class="b-grn">Daftar</a>
+  </div>
+  <button class="hbg" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="ph"><div class="con"><h1>&#128187; Konsultasi Agronom Online</h1><p>Pilih praktisi ahli dan booking sesi video call. Konsultasi hama, penyakit, nutrisi, dan teknik berkebun langsung dengan pakar.</p></div></div>
+<section class="sec"><div class="con">
+  <div style="display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap;align-items:center">
+    <input type="text" class="fc" placeholder="&#128269; Cari praktisi atau spesialisasi..." style="max-width:360px">
+    <select class="fc" style="max-width:200px">
+      <option>Semua Spesialisasi</option>
+      <option>Hama &amp; Penyakit</option>
+      <option>Padi &amp; Palawija</option>
+      <option>Hortikultura</option>
+      <option>Perkebunan</option>
+      <option>Pertanian Organik</option>
+    </select>
+    <select class="fc" style="max-width:180px">
+      <option>Semua Harga</option>
+      <option>Di bawah Rp 150.000</option>
+      <option>Rp 150.000 - 200.000</option>
+      <option>Di atas Rp 200.000</option>
+    </select>
+  </div>
+  <div class="grid g3"><div class="pk-card">
+  <img src="../images/halobun_real_practitioner.jpg" alt="Dr. Budi Santoso, M.Si">
+  <div class="pk-b">
+    <div class="pk-name">Dr. Budi Santoso, M.Si</div>
+    <div class="pk-spec">&#127807; Penyakit &amp; Hama Tanaman &bull; 8 tahun pengalaman</div>
+    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Senin-Jumat, 08.00-17.00</div>
+    <div class="pk-ft">
+      <div class="price">Rp 150.000<span>/sesi</span></div>
+      <div class="rating"><span class="star">&#11088;</span> 4.9</div>
+    </div>
+    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
+  </div>
+</div><div class="pk-card">
+  <img src="../images/halobun_praktisi_hero.jpg" alt="Ir. Siti Rahayu, M.P">
+  <div class="pk-b">
+    <div class="pk-name">Ir. Siti Rahayu, M.P</div>
+    <div class="pk-spec">&#127807; Padi &amp; Palawija &bull; 6 tahun pengalaman</div>
+    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Senin-Sabtu, 09.00-16.00</div>
+    <div class="pk-ft">
+      <div class="price">Rp 120.000<span>/sesi</span></div>
+      <div class="rating"><span class="star">&#11088;</span> 4.8</div>
+    </div>
+    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
+  </div>
+</div><div class="pk-card">
+  <img src="../images/halobun_real_practitioner_2.jpg" alt="Prof. Ahmad Fauzi, Ph.D">
+  <div class="pk-b">
+    <div class="pk-name">Prof. Ahmad Fauzi, Ph.D</div>
+    <div class="pk-spec">&#127807; Agronomi &amp; Kesuburan Tanah &bull; 15 tahun pengalaman</div>
+    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Selasa-Kamis, 10.00-15.00</div>
+    <div class="pk-ft">
+      <div class="price">Rp 200.000<span>/sesi</span></div>
+      <div class="rating"><span class="star">&#11088;</span> 5.0</div>
+    </div>
+    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
+  </div>
+</div><div class="pk-card">
+  <img src="../images/halobun_hero_halodoc.jpg" alt="Dr. Dewi Lestari, M.Si">
+  <div class="pk-b">
+    <div class="pk-name">Dr. Dewi Lestari, M.Si</div>
+    <div class="pk-spec">&#127807; Hortikultura &amp; Florikultura &bull; 10 tahun pengalaman</div>
+    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Senin-Jumat, 08.00-17.00</div>
+    <div class="pk-ft">
+      <div class="price">Rp 130.000<span>/sesi</span></div>
+      <div class="rating"><span class="star">&#11088;</span> 4.7</div>
+    </div>
+    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
+  </div>
+</div><div class="pk-card">
+  <img src="../images/halobun_real_sarana.jpg" alt="Ir. Rudi Hartono, M.P">
+  <div class="pk-b">
+    <div class="pk-name">Ir. Rudi Hartono, M.P</div>
+    <div class="pk-spec">&#127807; Perkebunan &amp; Tanaman Industri &bull; 12 tahun pengalaman</div>
+    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Senin-Jumat, 09.00-16.00</div>
+    <div class="pk-ft">
+      <div class="price">Rp 175.000<span>/sesi</span></div>
+      <div class="rating"><span class="star">&#11088;</span> 4.9</div>
+    </div>
+    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
+  </div>
+</div><div class="pk-card">
+  <img src="../images/dashboard_praktisi_banner.jpg" alt="Dr. Nina Kusuma, M.Si">
+  <div class="pk-b">
+    <div class="pk-name">Dr. Nina Kusuma, M.Si</div>
+    <div class="pk-spec">&#127807; Pertanian Organik &amp; Agroekologi &bull; 7 tahun pengalaman</div>
+    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Rabu-Sabtu, 09.00-15.00</div>
+    <div class="pk-ft">
+      <div class="price">Rp 160.000<span>/sesi</span></div>
+      <div class="rating"><span class="star">&#11088;</span> 4.8</div>
+    </div>
+    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
+  </div>
+</div></div>
+</div></section>
+
+<div class="mo" id="bookModal">
+  <div class="mo-box">
+    <button class="mo-close" onclick="closeModal('bookModal')">&#215;</button>
+    <div style="font-weight:800;font-size:20px;margin-bottom:4px">Booking Konsultasi</div>
+    <p class="tsm" style="color:var(--s500);margin-bottom:20px">Isi data berikut untuk memesan sesi konsultasi video call.</p>
+    <div class="fg"><label class="fl">Nama Lengkap</label><input type="text" class="fc" placeholder="Nama Anda"></div>
+    <div class="fg"><label class="fl">WhatsApp Aktif</label><input type="tel" class="fc" placeholder="08xx-xxxx-xxxx"></div>
+    <div class="fg"><label class="fl">Tanggal Sesi</label><input type="date" class="fc"></div>
+    <div class="fg"><label class="fl">Waktu Sesi</label><select class="fc"><option>08.00 WIB</option><option>09.00 WIB</option><option>10.00 WIB</option><option>14.00 WIB</option><option>15.00 WIB</option></select></div>
+    <div class="fg"><label class="fl">Deskripsi Masalah</label><textarea class="fc" rows="3" placeholder="Ceritakan kendala tanaman Anda..."></textarea></div>
+    <div class="alert al-in">&#128139; Link video call Jitsi Meet akan dikirim otomatis ke WhatsApp Anda setelah pembayaran selesai.</div>
+    <button onclick="toast('Booking berhasil! Kami akan menghubungi Anda via WhatsApp.','ok');closeModal('bookModal')" class="btn btn-g w100">Konfirmasi Booking &amp; Bayar</button>
+  </div>
+</div>
+
+<footer class="ft"><div class="ft-in">
+  <div class="ft-g">
+    <div class="ft-brand"><img class="ft-logo" src="../images/logo.png" alt="Hallobun">
+      <p>Platform tele-agronomi &amp; layanan kebun terpercaya. Konsultasi bersama praktisi agronom bersertifikasi Indonesia.</p></div>
+    <div class="ft-col"><h4>Layanan</h4><ul>
+      <li><a href="konsultasi.html">Konsultasi Online</a></li>
+      <li><a href="kunjungan.html">Kunjungan Lahan</a></li>
+      <li><a href="narsum.html">Undang Narsum</a></li>
+      <li><a href="sarana.html">Sarana Tani</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Akun</h4><ul>
+      <li><a href="login.html">Masuk</a></li>
+      <li><a href="register.html">Daftar</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="admin/dashboard.html">Panel Admin</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Kontak</h4><ul>
+      <li><a href="https://wa.me/6281234567890">WhatsApp CS</a></li>
+      <li><a href="mailto:info@hallobun.com">info@hallobun.com</a></li>
+      <li><a href="#">Instagram</a></li><li><a href="#">YouTube</a></li>
+    </ul></div>
+  </div>
+  <div class="ft-bot"><span>&copy; 2026 Hallobun Indonesia</span><span>Seluruh hak dilindungi</span></div>
+</div></footer>
+<div class="wa"><a href="https://wa.me/6281234567890" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp CS</a></div>
+<script src="../js/app.jsjs/app.js"></script>
+</body></html>
