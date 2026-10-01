@@ -1,0 +1,346 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8D5B36"/>
+      <stop offset="60%" stop-color="#5C3A21"/>
+      <stop offset="100%" stop-color="#3D2414"/>
+    </linearGradient>
+
+    <linearGradient id="stemGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#15803D"/>
+      <stop offset="60%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
+    </linearGradient>
+
+    <linearGradient id="leafGradLeft" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#15803D"/>
+      <stop offset="50%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <linearGradient id="leafGradRight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#166534"/>
+      <stop offset="50%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#86EFAC"/>
+    </linearGradient>
+
+    <linearGradient id="wheatGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+
+    <linearGradient id="canGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="40%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BAE6FD" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="1"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="sparkleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* CSS Animations for smooth 60fps natural motion */
+    @keyframes plantSway {
+      0%, 100% { transform: rotate(0deg); }
+      30% { transform: rotate(2.8deg); }
+      70% { transform: rotate(-2.5deg); }
+    }
+
+    @keyframes leafLeftSway {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      40% { transform: rotate(-4deg) scale(1.02); }
+      80% { transform: rotate(3deg) scale(0.98); }
+    }
+
+    @keyframes leafRightSway {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      35% { transform: rotate(3.5deg) scale(1.02); }
+      75% { transform: rotate(-3deg) scale(0.98); }
+    }
+
+    @keyframes budPulse {
+      0%, 100% { transform: scale(1) translateY(0); }
+      50% { transform: scale(1.08) translateY(-3px); }
+    }
+
+    @keyframes canHover {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(-3px, -8px) rotate(-2deg); }
+    }
+
+    @keyframes dropFall1 {
+      0% { transform: translate(0, 0) scale(0.3); opacity: 0; }
+      15% { opacity: 0.95; }
+      80% { transform: translate(85px, 190px) scale(1); opacity: 1; }
+      92% { transform: translate(95px, 210px) scale(1.3, 0.4); opacity: 0.8; }
+      100% { transform: translate(95px, 212px) scale(2, 0.1); opacity: 0; }
+    }
+
+    @keyframes dropFall2 {
+      0% { transform: translate(0, 0) scale(0.3); opacity: 0; }
+      15% { opacity: 0.95; }
+      80% { transform: translate(70px, 175px) scale(1); opacity: 1; }
+      92% { transform: translate(78px, 195px) scale(1.2, 0.4); opacity: 0.8; }
+      100% { transform: translate(78px, 197px) scale(1.8, 0.1); opacity: 0; }
+    }
+
+    @keyframes dropFall3 {
+      0% { transform: translate(0, 0) scale(0.3); opacity: 0; }
+      15% { opacity: 0.95; }
+      80% { transform: translate(110px, 230px) scale(1); opacity: 1; }
+      92% { transform: translate(120px, 250px) scale(1.3, 0.4); opacity: 0.8; }
+      100% { transform: translate(120px, 252px) scale(2.2, 0.1); opacity: 0; }
+    }
+
+    @keyframes dropFall4 {
+      0% { transform: translate(0, 0) scale(0.3); opacity: 0; }
+      15% { opacity: 0.9; }
+      80% { transform: translate(55px, 155px) scale(0.9); opacity: 1; }
+      92% { transform: translate(62px, 170px) scale(1.2, 0.4); opacity: 0.8; }
+      100% { transform: translate(62px, 172px) scale(1.8, 0.1); opacity: 0; }
+    }
+
+    @keyframes rippleExpand {
+      0% { r: 2px; opacity: 0.9; stroke-width: 2.5; }
+      100% { r: 24px; opacity: 0; stroke-width: 0.5; }
+    }
+
+    @keyframes sparkleFloat {
+      0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+      30% { opacity: 1; transform: translate(5px, -15px) scale(1.2); }
+      70% { opacity: 0.8; transform: translate(-5px, -35px) scale(0.9); }
+      100% { transform: translate(3px, -55px) scale(0.2); opacity: 0; }
+    }
+
+    @keyframes wheatWaveLeft {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-3.5deg); }
+    }
+
+    @keyframes wheatWaveRight {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(4deg); }
+    }
+
+    /* Assigning classes */
+    .anim-plant-root {
+      transform-origin: 250px 380px;
+      animation: plantSway 4.5s ease-in-out infinite;
+    }
+    .anim-leaf-left {
+      transform-origin: 250px 300px;
+      animation: leafLeftSway 3.6s ease-in-out infinite;
+    }
+    .anim-leaf-right {
+      transform-origin: 250px 300px;
+      animation: leafRightSway 4s ease-in-out infinite;
+    }
+    .anim-bud {
+      transform-origin: 250px 225px;
+      animation: budPulse 3s ease-in-out infinite;
+    }
+    .anim-can {
+      animation: canHover 3.8s ease-in-out infinite;
+    }
+    .drop-1 { animation: dropFall1 1.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite; }
+    .drop-2 { animation: dropFall2 1.9s 0.45s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite; }
+    .drop-3 { animation: dropFall3 1.8s 0.85s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite; }
+    .drop-4 { animation: dropFall4 2.1s 1.25s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite; }
+
+    .ripple-1 { animation: rippleExpand 1.7s 1.36s cubic-bezier(0.1, 0.8, 0.3, 1) infinite; }
+    .ripple-2 { animation: rippleExpand 1.8s 1.44s cubic-bezier(0.1, 0.8, 0.3, 1) infinite; }
+
+    .sparkle-1 { animation: sparkleFloat 3.2s 0.2s ease-out infinite; }
+    .sparkle-2 { animation: sparkleFloat 2.8s 1.1s ease-out infinite; }
+    .sparkle-3 { animation: sparkleFloat 3.5s 1.9s ease-out infinite; }
+
+    .wheat-left {
+      transform-origin: 100px 420px;
+      animation: wheatWaveLeft 5s ease-in-out infinite;
+    }
+    .wheat-right {
+      transform-origin: 400px 420px;
+      animation: wheatWaveRight 5.2s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background is transparent -->
+
+  <!-- Decorative Wheat Stalk Left -->
+  <g class="wheat-left" opacity="0.85">
+    <path d="M100 420 C105 340 100 260 85 190" stroke="url(#wheatGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Wheat grains left -->
+    <path d="M85 190 C78 180 72 175 70 160 C78 165 84 175 85 190 Z" fill="#F59E0B"/>
+    <path d="M85 210 C76 200 68 200 65 185 C75 190 82 200 85 210 Z" fill="#EAB308"/>
+    <path d="M88 230 C78 220 72 220 68 208 C78 212 85 220 88 230 Z" fill="#F59E0B"/>
+    <path d="M92 255 C82 245 76 245 72 232 C82 238 89 246 92 255 Z" fill="#EAB308"/>
+    <!-- Wheat grains right side of stalk -->
+    <path d="M86 180 C95 170 102 170 106 155 C98 160 92 170 86 180 Z" fill="#FDE047"/>
+    <path d="M88 200 C98 190 105 190 110 178 C100 182 94 192 88 200 Z" fill="#F59E0B"/>
+    <path d="M92 225 C102 215 108 215 114 202 C104 208 98 218 92 225 Z" fill="#EAB308"/>
+  </g>
+
+  <!-- Decorative Wheat Stalk Right -->
+  <g class="wheat-right" opacity="0.85">
+    <path d="M395 420 C390 340 395 260 410 185" stroke="url(#wheatGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M410 185 C418 175 424 170 426 155 C418 160 412 170 410 185 Z" fill="#F59E0B"/>
+    <path d="M408 205 C418 195 426 195 429 180 C419 185 412 195 408 205 Z" fill="#EAB308"/>
+    <path d="M404 230 C414 220 420 220 424 205 C414 210 407 220 404 230 Z" fill="#F59E0B"/>
+    <path d="M400 255 C410 245 416 245 420 230 C410 236 403 245 400 255 Z" fill="#EAB308"/>
+    <!-- Inner grains -->
+    <path d="M409 175 C400 165 393 165 389 150 C397 155 403 165 409 175 Z" fill="#FDE047"/>
+    <path d="M406 195 C396 185 389 185 384 172 C394 176 400 186 406 195 Z" fill="#F59E0B"/>
+  </g>
+
+  <!-- Mound of Rich Fertile Soil -->
+  <g id="soilGroup">
+    <!-- Soft shadow below soil -->
+    <ellipse cx="250" cy="418" rx="145" ry="18" fill="#1C1917" opacity="0.35"/>
+    
+    <!-- Soil base layer -->
+    <path d="M125 410 C160 380 200 370 250 368 C300 370 340 380 375 410 C350 435 300 442 250 442 C200 442 150 435 125 410 Z" fill="url(#soilGrad)"/>
+    
+    <!-- Top soil rim highlight -->
+    <path d="M140 406 C175 378 210 370 250 368 C290 370 325 378 360 406" stroke="#A76E43" stroke-width="3" fill="none" opacity="0.6"/>
+
+    <!-- Organic pebbles and earth crumbles -->
+    <circle cx="180" cy="402" r="5" fill="#452714"/>
+    <circle cx="215" cy="415" r="7" fill="#3D2414"/>
+    <circle cx="285" cy="410" r="6" fill="#452714"/>
+    <circle cx="320" cy="405" r="5" fill="#3D2414"/>
+    <circle cx="245" cy="425" r="8" fill="#2E1B0E"/>
+    <!-- Small organic seeds -->
+    <ellipse cx="160" cy="412" rx="4" ry="2.5" fill="#B45309" transform="rotate(-20 160 412)"/>
+    <ellipse cx="335" cy="416" rx="4" ry="2.5" fill="#B45309" transform="rotate(25 335 416)"/>
+  </g>
+
+  <!-- Water Splash Ripples on Soil -->
+  <ellipse class="ripple-1" cx="255" cy="382" rx="2" ry="1" fill="none" stroke="#38BDF8"/>
+  <ellipse class="ripple-2" cx="305" cy="318" rx="2" ry="1" fill="none" stroke="#7DD3FC"/>
+
+  <!-- Growing Green Plant / Sprout (Animated Root) -->
+  <g class="anim-plant-root">
+    <!-- Main Plant Stem -->
+    <path d="M250 378 C252 340 248 280 250 225" stroke="url(#stemGrad)" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M249 378 C251 340 247 280 249 225" stroke="#86EFAC" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+    <!-- Left Mature Leaf -->
+    <g class="anim-leaf-left">
+      <!-- Leaf Shadow / Depth -->
+      <path d="M249 308 C215 305 160 280 145 235 C175 240 215 265 249 308 Z" fill="#14532D" opacity="0.4"/>
+      <!-- Main Leaf Body -->
+      <path d="M249 305 C210 300 155 275 140 230 C175 232 220 260 249 305 Z" fill="url(#leafGradLeft)" filter="url(#softGlow)"/>
+      <!-- Top Half Highlight -->
+      <path d="M249 305 C210 300 170 270 140 230 C175 232 205 245 249 305 Z" fill="#4ADE80" opacity="0.45"/>
+      <!-- Leaf Vein -->
+      <path d="M249 305 C210 285 180 260 140 230" stroke="#BBF7D0" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <path d="M220 286 C210 275 205 265 205 258" stroke="#BBF7D0" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+      <path d="M195 268 C185 258 180 250 180 244" stroke="#BBF7D0" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+    </g>
+
+    <!-- Right Large Leaf (Catching Water) -->
+    <g class="anim-leaf-right">
+      <!-- Leaf Shadow -->
+      <path d="M251 298 C290 292 345 265 365 215 C335 220 285 250 251 298 Z" fill="#14532D" opacity="0.4"/>
+      <!-- Main Leaf Body -->
+      <path d="M251 295 C295 288 355 260 370 210 C335 212 280 245 251 295 Z" fill="url(#leafGradRight)" filter="url(#softGlow)"/>
+      <!-- Top Half Highlight -->
+      <path d="M251 295 C295 288 340 250 370 210 C335 212 300 228 251 295 Z" fill="#86EFAC" opacity="0.45"/>
+      <!-- Leaf Veins -->
+      <path d="M251 295 C295 272 330 245 370 210" stroke="#DCFCE7" stroke-width="2.8" stroke-linecap="round" fill="none" opacity="0.9"/>
+      <path d="M285 275 C298 262 305 252 305 244" stroke="#DCFCE7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+      <path d="M320 252 C332 240 338 230 338 222" stroke="#DCFCE7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+      <!-- Shimmering Dew Drop on Leaf -->
+      <ellipse cx="308" cy="254" rx="4.5" ry="3.5" fill="#E0F2FE" opacity="0.95"/>
+      <circle cx="306.5" cy="252.5" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Young Center Bud / Heart Leaflet -->
+    <g class="anim-bud">
+      <path d="M250 230 C242 205 240 185 250 165 C260 185 258 205 250 230 Z" fill="#86EFAC"/>
+      <path d="M250 230 C246 205 245 185 250 165 Z" fill="#4ADE80"/>
+      <path d="M250 228 L250 170" stroke="#F0FDF4" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Golden Watering Can (Top Left) -->
+  <g class="anim-can">
+    <!-- Can Body -->
+    <rect x="75" y="85" width="85" height="75" rx="20" fill="url(#canGrad)" stroke="#B45309" stroke-width="3.5"/>
+    <path d="M90 95 L145 95" stroke="#FEF08A" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- Top Fill Opening Handle -->
+    <path d="M85 85 C85 65 150 65 150 85" stroke="#D97706" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M85 85 C85 65 150 65 150 85" stroke="#FDE047" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Back Ergonomic Handle -->
+    <path d="M75 105 C40 105 40 150 75 150" stroke="#B45309" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M75 105 C40 105 40 150 75 150" stroke="#FBBF24" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+    <!-- Long Spout -->
+    <path d="M155 135 L208 95" stroke="#B45309" stroke-width="12" stroke-linecap="round"/>
+    <path d="M155 135 L208 95" stroke="#FDE047" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Shower Head / Rose Nozzle -->
+    <g transform="translate(208, 95) rotate(42)">
+      <ellipse cx="0" cy="0" rx="11" ry="18" fill="#D97706" stroke="#FDE047" stroke-width="3"/>
+      <!-- Holes -->
+      <circle cx="-3" cy="-7" r="1.5" fill="#FEF08A"/>
+      <circle cx="2" cy="-4" r="1.5" fill="#FEF08A"/>
+      <circle cx="-1" cy="0" r="1.5" fill="#FEF08A"/>
+      <circle cx="3" cy="4" r="1.5" fill="#FEF08A"/>
+      <circle cx="-3" cy="7" r="1.5" fill="#FEF08A"/>
+    </g>
+
+    <!-- Animated Water Droplets Spawning from Rose Nozzle (around 220, 105) -->
+    <g>
+      <!-- Drop 1 -->
+      <path class="drop-1" d="M220 105 C220 105 217 113 217 117 C217 121 223 121 223 117 C223 113 220 105 220 105 Z" fill="url(#waterGrad)"/>
+      <!-- Drop 2 -->
+      <path class="drop-2" d="M218 108 C218 108 215 115 215 118 C215 122 221 122 221 118 C221 115 218 108 218 108 Z" fill="url(#waterGrad)"/>
+      <!-- Drop 3 -->
+      <path class="drop-3" d="M224 104 C224 104 221 112 221 116 C221 120 227 120 227 116 C227 112 224 104 224 104 Z" fill="url(#waterGrad)"/>
+      <!-- Drop 4 -->
+      <path class="drop-4" d="M215 106 C215 106 213 112 213 115 C213 118 217 118 217 115 C217 112 215 106 215 106 Z" fill="url(#waterGrad)"/>
+    </g>
+  </g>
+
+  <!-- Golden Magic Sparkles & Sun Dust Floating Upwards -->
+  <g filter="url(#sparkleGlow)">
+    <!-- Sparkle 1 -->
+    <g class="sparkle-1" transform="translate(285, 270)">
+      <path d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#FDE047"/>
+      <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+    </g>
+    <!-- Sparkle 2 -->
+    <g class="sparkle-2" transform="translate(190, 230)">
+      <path d="M0 -10 L2.5 -2.5 L10 0 L2.5 2.5 L0 10 L-2.5 2.5 L-10 0 L-2.5 -2.5 Z" fill="#FACC15"/>
+      <circle cx="0" cy="0" r="2.5" fill="#FFFFFF"/>
+    </g>
+    <!-- Sparkle 3 -->
+    <g class="sparkle-3" transform="translate(245, 170)">
+      <path d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z" fill="#FDE047"/>
+      <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>

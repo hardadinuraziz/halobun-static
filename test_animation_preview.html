@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Preview Animasi Ilustrasi Transparan Hallobun</title>
+<style>
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: #0f172a;
+    color: #f8fafc;
+  }
+  h1 { text-align: center; margin-bottom: 8px; }
+  p { text-align: center; color: #94a3b8; margin-bottom: 40px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .card {
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  .card.light-bg {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    color: #14532d;
+  }
+  .card.dark-bg {
+    background: linear-gradient(135deg, #064e3b, #022c22);
+    color: #ecfdf5;
+  }
+  .card.brand-green {
+    background: linear-gradient(135deg, #15803d, #166534);
+    color: #ffffff;
+  }
+  .card.checkerboard {
+    background-color: #ffffff;
+    background-image: linear-gradient(45deg, #e2e8f0 25%, transparent 25%), linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e2e8f0 75%), linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    color: #0f172a;
+  }
+  .anim-box {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  .anim-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .badge {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(0,0,0,0.08);
+  }
+</style>
+</head>
+<body>
+  <h1>Ilustrasi Animasi Bergerak Background Transparan</h1>
+  <p>Dua format siap pakai: GIF (Pixel-art/Raster Looping) &amp; SVG (Ultra-smooth 60fps Vector)</p>
+
+  <div class="grid">
+    <!-- SVG on Checkerboard to prove 100% transparency -->
+    <div class="card checkerboard">
+      <span class="badge">Uji Transparansi (Checkerboard)</span>
+      <h3>Vector Animated SVG</h3>
+      <div class="anim-box">
+        <img src="images/halobun_growth_animation.svg" alt="Animated Vector SVG">
+      </div>
+      <p style="color:#475569;font-size:13px">100% Transparan tanpa kotak latar belakang</p>
+    </div>
+
+    <!-- SVG on Light Background -->
+    <div class="card light-bg">
+      <span class="badge">Latar Terang (Light Theme)</span>
+      <h3>Penyiraman &amp; Tunas Tumbuh</h3>
+      <div class="anim-box">
+        <img src="images/halobun_growth_animation.svg" alt="Animated Vector SVG">
+      </div>
+      <p style="font-size:13px">Halus 60 FPS, tajam di layar Retina / 4K</p>
+    </div>
+
+    <!-- SVG on Dark Brand Green -->
+    <div class="card brand-green">
+      <span class="badge">Banner Hijau Hallobun</span>
+      <h3>Pertumbuhan Optimal</h3>
+      <div class="anim-box">
+        <img src="images/halobun_growth_animation.svg" alt="Animated Vector SVG">
+      </div>
+      <p style="color:#dcfce7;font-size:13px">Serasi di hero / banner promo diskon</p>
+    </div>
+
+    <!-- Animated GIF on Checkerboard -->
+    <div class="card checkerboard">
+      <span class="badge">Format GIF Universal</span>
+      <h3>GIF Looping Transparan</h3>
+      <div class="anim-box">
+        <img src="images/halobun_sprout_animation.gif" alt="Animated Sprout GIF">
+      </div>
+      <p style="color:#475569;font-size:13px">Bisa di-copy/paste ke WhatsApp, PPT, Canva</p>
+    </div>
+  </div>
+</body>
+</html>
