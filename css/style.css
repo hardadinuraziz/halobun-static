@@ -339,7 +339,7 @@ textarea {
   left: -8%;
   width: 116%;
   height: 116%;
-  background: url('../images/nature_landscape_bg.jpg') center/cover no-repeat;
+  background: url('../images/onion_farmland_bg.jpg') center/cover no-repeat;
   opacity: 0.48;
   filter: saturate(1.24) contrast(1.06);
   animation: smoothKenBurns 28s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;

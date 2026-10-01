@@ -1,0 +1,334 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Soil Mound Gradient -->
+    <radialGradient id="soilGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4E342E" />
+      <stop offset="65%" stop-color="#3E2723" />
+      <stop offset="100%" stop-color="#27160c" stop-opacity="0.85" />
+    </radialGradient>
+
+    <!-- Shallot Bulb Purple/Ruby Gradients -->
+    <linearGradient id="bulbGradMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48" />
+      <stop offset="35%" stop-color="#BE123C" />
+      <stop offset="70%" stop-color="#881337" />
+      <stop offset="100%" stop-color="#4C0519" />
+    </linearGradient>
+
+    <linearGradient id="bulbGradLeft" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="40%" stop-color="#9F1239" />
+      <stop offset="85%" stop-color="#4C0519" />
+    </linearGradient>
+
+    <linearGradient id="bulbGradRight" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FB7185" />
+      <stop offset="35%" stop-color="#BE123C" />
+      <stop offset="80%" stop-color="#4C0519" />
+    </linearGradient>
+
+    <!-- Shallot Stalk Green Gradients (Tubular foliage) -->
+    <linearGradient id="stemGrad1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FACC15" />
+      <stop offset="15%" stop-color="#84CC16" />
+      <stop offset="50%" stop-color="#22C55E" />
+      <stop offset="85%" stop-color="#15803D" />
+      <stop offset="100%" stop-color="#14532D" />
+    </linearGradient>
+
+    <linearGradient id="stemGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="12%" stop-color="#A3E635" />
+      <stop offset="45%" stop-color="#16A34A" />
+      <stop offset="80%" stop-color="#15803D" />
+      <stop offset="100%" stop-color="#166534" />
+    </linearGradient>
+
+    <linearGradient id="stemGrad3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="15%" stop-color="#86EFAC" />
+      <stop offset="60%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#14532D" />
+    </linearGradient>
+
+    <!-- Dewdrop Gradient -->
+    <linearGradient id="dewGrad" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Watering Can Brass/Gold Gradient -->
+    <linearGradient id="canGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="50%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* CSS Animations for Onion Plant */
+    @keyframes rootBreath {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.025); }
+    }
+
+    @keyframes onionSwayMain {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(2deg) skewX(1deg); }
+      75% { transform: rotate(-2.5deg) skewX(-1.2deg); }
+    }
+
+    @keyframes onionSwayLeft {
+      0%, 100% { transform: rotate(-8deg); }
+      30% { transform: rotate(-13deg); }
+      70% { transform: rotate(-4deg); }
+    }
+
+    @keyframes onionSwayRight {
+      0%, 100% { transform: rotate(9deg); }
+      35% { transform: rotate(14deg); }
+      80% { transform: rotate(5deg); }
+    }
+
+    @keyframes onionSwayFarLeft {
+      0%, 100% { transform: rotate(-18deg); }
+      40% { transform: rotate(-24deg); }
+      85% { transform: rotate(-13deg); }
+    }
+
+    @keyframes onionSwayFarRight {
+      0%, 100% { transform: rotate(19deg); }
+      28% { transform: rotate(25deg); }
+      78% { transform: rotate(14deg); }
+    }
+
+    @keyframes canTilt {
+      0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+      50% { transform: translate(-6px, -4px) rotate(-3.5deg); }
+    }
+
+    @keyframes waterDrop {
+      0% { opacity: 0; transform: translate(0, -10px) scale(0.6); }
+      25% { opacity: 0.95; }
+      85% { opacity: 0.9; transform: translate(2px, 85px) scale(1); }
+      100% { opacity: 0; transform: translate(3px, 100px) scale(1.2); }
+    }
+
+    @keyframes waterRipple {
+      0% { r: 4px; opacity: 0.8; stroke-width: 2.5px; }
+      100% { r: 38px; opacity: 0; stroke-width: 0.5px; }
+    }
+
+    @keyframes sparkleFloat {
+      0% { opacity: 0; transform: translateY(0px) scale(0.4); }
+      50% { opacity: 0.95; transform: translateY(-24px) scale(1.1); }
+      100% { opacity: 0; transform: translateY(-48px) scale(0.3); }
+    }
+
+    .group-onion-bulb {
+      transform-origin: 200px 315px;
+      animation: rootBreath 4s ease-in-out infinite;
+    }
+
+    .stalk-main {
+      transform-origin: 200px 255px;
+      animation: onionSwayMain 4.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    }
+
+    .stalk-left {
+      transform-origin: 195px 260px;
+      animation: onionSwayLeft 5.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.3s;
+    }
+
+    .stalk-right {
+      transform-origin: 205px 260px;
+      animation: onionSwayRight 4.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.7s;
+    }
+
+    .stalk-far-left {
+      transform-origin: 190px 265px;
+      animation: onionSwayFarLeft 5.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.2s;
+    }
+
+    .stalk-far-right {
+      transform-origin: 210px 265px;
+      animation: onionSwayFarRight 4.9s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.5s;
+    }
+
+    .watering-can-group {
+      transform-origin: 90px 105px;
+      animation: canTilt 4.2s ease-in-out infinite;
+    }
+
+    .drop-1 { animation: waterDrop 2.2s infinite ease-in 0.1s; }
+    .drop-2 { animation: waterDrop 2.2s infinite ease-in 0.6s; }
+    .drop-3 { animation: waterDrop 2.2s infinite ease-in 1.1s; }
+    .drop-4 { animation: waterDrop 2.2s infinite ease-in 1.6s; }
+
+    .ripple-1 { animation: waterRipple 2.4s infinite cubic-bezier(0.1, 0.7, 0.1, 1) 0.5s; }
+    .ripple-2 { animation: waterRipple 2.4s infinite cubic-bezier(0.1, 0.7, 0.1, 1) 1.5s; }
+
+    .sparkle-1 { animation: sparkleFloat 3.4s infinite ease-out 0.2s; }
+    .sparkle-2 { animation: sparkleFloat 3.8s infinite ease-out 1.2s; }
+    .sparkle-3 { animation: sparkleFloat 4.1s infinite ease-out 2.1s; }
+  </style>
+
+  <!-- 1. SOIL & ROOT BED -->
+  <g id="soil-bed">
+    <!-- Ground Shadow -->
+    <ellipse cx="200" cy="350" rx="90" ry="24" fill="#000000" opacity="0.32" />
+
+    <!-- Water Ripple Effects -->
+    <ellipse class="ripple-1" cx="200" cy="330" rx="6" ry="3" fill="none" stroke="#38BDF8" opacity="0.6" />
+    <ellipse class="ripple-2" cx="200" cy="330" rx="6" ry="3" fill="none" stroke="#7DD3FC" opacity="0.6" />
+
+    <!-- Root hairs emerging from base -->
+    <g stroke="#E2E8F0" stroke-width="1.8" stroke-linecap="round" opacity="0.75" fill="none">
+      <path d="M195,335 Q180,355 168,368" />
+      <path d="M198,337 Q192,360 188,375" />
+      <path d="M200,338 Q200,365 201,380" />
+      <path d="M203,337 Q208,360 215,376" />
+      <path d="M205,335 Q220,356 233,369" />
+      <path d="M188,336 Q175,350 162,358" />
+      <path d="M212,336 Q228,348 240,358" />
+    </g>
+
+    <!-- Fertile Humus Mound -->
+    <path d="M120,345 Q200,315 280,345 Q200,365 120,345 Z" fill="url(#soilGrad)" />
+    <!-- Soil pebbles & texture -->
+    <circle cx="155" cy="342" r="3.5" fill="#795548" />
+    <circle cx="178" cy="338" r="2" fill="#8D6E63" />
+    <circle cx="225" cy="341" r="3" fill="#6D4C41" />
+    <circle cx="248" cy="345" r="2.5" fill="#5D4037" />
+  </g>
+
+  <!-- 2. SHALLOT BULB CLUSTER (Umbi Bawang Merah) -->
+  <g class="group-onion-bulb">
+    <!-- Left Clove Bulb -->
+    <g transform="translate(170, 275) rotate(-14)">
+      <path d="M25,0 C45,0 48,32 38,52 C28,68 12,68 6,52 C-2,34 5,0 25,0 Z" fill="url(#bulbGradLeft)" />
+      <!-- Bulb Longitudinal Veins -->
+      <path d="M25,3 Q35,28 28,58" fill="none" stroke="#FDA4AF" stroke-width="1.2" opacity="0.45" />
+      <path d="M25,3 Q16,30 14,56" fill="none" stroke="#4C0519" stroke-width="1" opacity="0.6" />
+      <!-- Sheen Highlight -->
+      <ellipse cx="20" cy="22" rx="4" ry="12" fill="#FFFFFF" opacity="0.32" transform="rotate(-10 20 22)" />
+    </g>
+
+    <!-- Right Clove Bulb -->
+    <g transform="translate(195, 275) rotate(14)">
+      <path d="M15,0 C35,0 42,34 34,52 C26,68 10,68 4,52 C-4,32 0,0 15,0 Z" fill="url(#bulbGradRight)" />
+      <!-- Bulb Longitudinal Veins -->
+      <path d="M15,3 Q26,28 22,58" fill="none" stroke="#FDA4AF" stroke-width="1.2" opacity="0.55" />
+      <path d="M15,3 Q8,28 6,56" fill="none" stroke="#4C0519" stroke-width="1" opacity="0.6" />
+      <!-- Sheen Highlight -->
+      <ellipse cx="14" cy="22" rx="4" ry="12" fill="#FFFFFF" opacity="0.35" transform="rotate(10 14 22)" />
+    </g>
+
+    <!-- Center Dominant Shallot Bulb -->
+    <g transform="translate(180, 260)">
+      <!-- Oval Bulb Body -->
+      <path d="M20,0 C46,0 52,42 42,66 C32,84 8,84 0,66 C-8,42 0,0 20,0 Z" fill="url(#bulbGradMain)" filter="drop-shadow(0px 3px 5px rgba(0,0,0,0.3))" />
+      
+      <!-- Characteristic Papery Striations (Garis Bawang) -->
+      <path d="M20,2 Q36,36 32,74" fill="none" stroke="#FECDD3" stroke-width="1.5" opacity="0.6" />
+      <path d="M20,2 Q24,38 22,78" fill="none" stroke="#FFE4E6" stroke-width="1.4" opacity="0.75" />
+      <path d="M20,2 Q8,36 6,74" fill="none" stroke="#701A75" stroke-width="1.2" opacity="0.5" />
+
+      <!-- Glossy Reflection for fresh juicy shallot -->
+      <path d="M14,14 C20,12 24,14 25,24 C23,28 17,28 14,24 Z" fill="#FFFFFF" opacity="0.45" />
+      <circle cx="21" cy="40" r="2.5" fill="#FFFFFF" opacity="0.35" />
+
+      <!-- Neck Collar (Leher Bawang) transitioning to green leaves -->
+      <path d="M14,4 C14,-6 26,-6 26,4 Z" fill="#84CC16" />
+    </g>
+  </g>
+
+  <!-- 3. TUBULAR ONION LEAVES / SHOOTS (Daun Bawang Merah yang Rimbun dan Segar) -->
+  <!-- Far Left Stalk -->
+  <g class="stalk-far-left">
+    <path d="M194,260 Q160,200 130,120 Q120,90 115,70 Q118,72 124,96 Q140,165 198,260 Z" fill="url(#stemGrad1)" />
+    <!-- Leaf Spine Highlight -->
+    <path d="M196,260 Q150,185 120,85" fill="none" stroke="#DCFCE7" stroke-width="1.2" opacity="0.5" />
+  </g>
+
+  <!-- Left Stalk -->
+  <g class="stalk-left">
+    <path d="M196,260 Q170,180 152,100 Q146,70 144,50 Q148,54 156,85 Q176,170 200,260 Z" fill="url(#stemGrad2)" />
+    <path d="M198,260 Q172,170 150,65" fill="none" stroke="#DCFCE7" stroke-width="1.3" opacity="0.55" />
+    <!-- Water Dewdrop on Leaf -->
+    <circle cx="162" cy="125" r="3.2" fill="url(#dewGrad)" />
+    <circle cx="161" cy="124" r="1" fill="#FFFFFF" />
+  </g>
+
+  <!-- Center Tall Stalk (Primary Spire) -->
+  <g class="stalk-main">
+    <path d="M197,258 Q195,150 196,80 Q197,45 198,30 Q201,45 203,80 Q205,150 203,258 Z" fill="url(#stemGrad3)" />
+    <path d="M199,258 Q198,140 199,40" fill="none" stroke="#F0FDF4" stroke-width="1.6" opacity="0.65" />
+    <!-- Big Dewdrop rolling down center leaf -->
+    <circle cx="199" cy="140" r="4.2" fill="url(#dewGrad)" />
+    <circle cx="197.8" cy="138.8" r="1.3" fill="#FFFFFF" />
+  </g>
+
+  <!-- Right Stalk -->
+  <g class="stalk-right">
+    <path d="M200,260 Q225,180 242,100 Q248,70 250,52 Q246,55 238,85 Q220,170 198,260 Z" fill="url(#stemGrad2)" />
+    <path d="M200,260 Q224,170 245,68" fill="none" stroke="#DCFCE7" stroke-width="1.3" opacity="0.55" />
+    <!-- Droplet -->
+    <circle cx="230" cy="130" r="3.5" fill="url(#dewGrad)" />
+    <circle cx="229" cy="129" r="1" fill="#FFFFFF" />
+  </g>
+
+  <!-- Far Right Stalk -->
+  <g class="stalk-far-right">
+    <path d="M202,260 Q238,200 268,125 Q278,95 282,75 Q278,77 272,100 Q254,168 200,260 Z" fill="url(#stemGrad1)" />
+    <path d="M202,260 Q245,185 275,90" fill="none" stroke="#DCFCE7" stroke-width="1.2" opacity="0.5" />
+  </g>
+
+  <!-- 4. FLOATING SPARKLING POLLEN / NUTRIENTS -->
+  <g id="sparkles">
+    <g class="sparkle-1" transform="translate(140, 220)">
+      <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#FDE047" opacity="0.9" filter="url(#glow)" />
+    </g>
+    <g class="sparkle-2" transform="translate(255, 195)">
+      <polygon points="0,-8 2.5,-2.5 8,0 2.5,2.5 0,8 -2.5,2.5 -8,0 -2.5,-2.5" fill="#4ADE80" opacity="0.95" filter="url(#glow)" />
+    </g>
+    <g class="sparkle-3" transform="translate(210, 100)">
+      <polygon points="0,-6 1.8,-1.8 6,0 1.8,1.8 0,6 -1.8,1.8 -6,0 -1.8,-1.8" fill="#67E8F9" opacity="0.9" filter="url(#glow)" />
+    </g>
+  </g>
+
+  <!-- 5. GARDENER'S WATERING CAN & CRYSTAL WATER FLOW -->
+  <g class="watering-can-group">
+    <!-- Can Body -->
+    <path d="M45,95 C45,80 65,75 85,75 C105,75 125,80 125,95 L120,135 C120,145 105,150 85,150 C65,150 50,145 50,135 Z" fill="url(#canGold)" stroke="#A16207" stroke-width="1.5" />
+    <!-- Handle -->
+    <path d="M50,90 C25,75 20,130 50,135" fill="none" stroke="url(#canGold)" stroke-width="6" stroke-linecap="round" />
+    <path d="M50,90 C25,75 20,130 50,135" fill="none" stroke="#A16207" stroke-width="1.2" stroke-linecap="round" />
+    <!-- Top Arch Handle -->
+    <path d="M65,75 C65,50 105,50 105,75" fill="none" stroke="url(#canGold)" stroke-width="5" stroke-linecap="round" />
+    
+    <!-- Spout Pipe -->
+    <path d="M120,115 L160,105 L165,115 L120,130 Z" fill="url(#canGold)" stroke="#A16207" stroke-width="1" />
+    <!-- Rose Head (Showerhead) -->
+    <ellipse cx="166" cy="110" rx="6" ry="12" fill="#EAB308" stroke="#A16207" stroke-width="1.2" transform="rotate(20 166 110)" />
+    
+    <!-- Falling Droplets from Rose Head -->
+    <g transform="translate(170, 115)">
+      <!-- Drop 1 -->
+      <path class="drop-1" d="M4,0 C4,-3 8,-3 8,0 C8,6 4,14 4,14 C4,14 0,6 0,0 C0,-3 4,-3 4,0 Z" fill="url(#dewGrad)" transform="scale(0.85)" />
+      <!-- Drop 2 -->
+      <path class="drop-2" d="M12,12 C12,9 16,9 16,12 C16,18 12,25 12,25 C12,25 8,18 8,12 C8,9 12,9 12,12 Z" fill="url(#dewGrad)" transform="scale(0.9)" />
+      <!-- Drop 3 -->
+      <path class="drop-3" d="M2,20 C2,17 6,17 6,20 C6,26 2,33 2,33 C2,33 -2,26 -2,20 C-2,17 2,17 2,20 Z" fill="url(#dewGrad)" transform="scale(0.8)" />
+      <!-- Drop 4 -->
+      <path class="drop-4" d="M10,32 C10,29 14,29 14,32 C14,38 10,45 10,45 C10,45 6,38 6,32 C6,29 10,29 10,32 Z" fill="url(#dewGrad)" transform="scale(0.75)" />
+    </g>
+  </g>
+</svg>
