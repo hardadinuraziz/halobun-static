@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Platform tele-agronomi dan bimbingan berkebun terpercaya Indonesia.">
-<title>Daftar Akun Baru — Hallobun</title>
+<title>Riwayat Lengkap Booking — Hallobun</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
@@ -16,43 +16,61 @@
   </div>
   <button class="hbg" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div style="min-height:calc(100vh - 66px);display:flex;align-items:center;justify-content:center;padding:40px 16px;background:var(--s50)">
-  <div style="width:100%;max-width:500px">
-    <div style="text-align:center;margin-bottom:28px">
-      <img src="../images/logo.png" alt="Hallobun" style="height:48px;margin:0 auto 12px">
-      <div style="font-size:24px;font-weight:900;color:var(--s900)">Buat Akun Hallobun</div>
-      <p class="tsm" style="color:var(--s500)">Gratis selamanya &bull; Terhubung dengan ratusan praktisi kebun</p>
-    </div>
-    <div style="background:#fff;border:1.5px solid var(--s200);border-radius:18px;padding:32px;box-shadow:var(--shd)">
-      <div class="grid g2" style="gap:12px">
-        <div class="fg"><label class="fl">Nama Lengkap <span style="color:var(--g)">*</span></label><input type="text" id="rg_name" class="fc" placeholder="Budi Santoso"></div>
-        <div class="fg"><label class="fl">No. WhatsApp <span style="color:var(--g)">*</span></label><input type="tel" id="rg_wa" class="fc" placeholder="0812-xxxx-xxxx"></div>
-      </div>
-      <div class="fg"><label class="fl">Email Aktif <span style="color:var(--g)">*</span></label><input type="email" id="rg_email" class="fc" placeholder="budi@contoh.com"></div>
-      <div class="fg"><label class="fl">Kata Sandi Baru <span style="color:var(--g)">*</span></label>
-        <input type="password" id="rg_pass" class="fc" placeholder="Minimal 8 karakter" oninput="checkStrength(this.value)">
-        <div id="passStrength" style="height:4px;border-radius:9999px;margin-top:6px;background:var(--s200);transition:all .3s"></div>
-        <div id="passLabel" style="font-size:11px;color:var(--s400);margin-top:3px"></div>
-      </div>
-      <div class="fg"><label class="fl">Peran / Kebutuhan Utama</label>
-        <select class="fc" id="rg_role">
-          <option>Pekebun Rumahan &amp; Urban Farming</option>
-          <option>Petani Hortikultura / Palawija Komersial</option>
-          <option>Pengelola Kebun &amp; Greenhouse</option>
-          <option>Kelompok Tani / Komunitas</option>
-        </select>
-      </div>
-      <div style="margin-bottom:20px;font-size:13px;color:var(--s500)">
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;line-height:1.5">
-          <input type="checkbox" id="rg_terms" checked style="accent-color:var(--g);margin-top:3px;flex-shrink:0">
-          Saya menyetujui <a href="#" style="color:var(--g)">Ketentuan Layanan</a> &amp; <a href="#" style="color:var(--g)">Kebijakan Privasi</a> Hallobun.
-        </label>
-      </div>
-      <button type="button" onclick="doRegister()" class="btn btn-g w100 btn-lg">Daftar Akun Sekarang</button>
-      <div style="text-align:center;margin-top:16px;font-size:13px;color:var(--s500)">Sudah memiliki akun? <a href="login.html" style="color:var(--g);font-weight:700">Masuk</a></div>
-    </div>
+<div class="ph ph-lt" style="background:var(--s50);border-bottom:1px solid var(--s200);padding:32px 24px">
+  <div class="ph-inner" style="color:var(--s900)">
+    <h1 style="font-size:26px;font-weight:900">📋 Riwayat Lengkap Booking</h1>
+    <p style="color:var(--s500)">Daftar seluruh transaksi konsultasi tele-agronomi, kunjungan lapangan, dan pengadaan sarana kebun Anda.</p>
   </div>
 </div>
+<section class="sec"><div class="con">
+  <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;align-items:center">
+    <input type="text" id="searchInput" class="fc" placeholder="🔍 Cari nomor booking atau nama praktisi..." style="max-width:320px">
+    <select class="fc" style="max-width:180px" onchange="filterByStatusRw(this)">
+      <option value="">Semua Status</option>
+      <option value="confirmed">Confirmed</option>
+      <option value="selesai">Selesai</option>
+      <option value="pending">Pending</option>
+    </select>
+    <a href="konsultasi.html" class="btn btn-g btn-sm" style="margin-left:auto">+ Booking Konsultasi Baru</a>
+  </div>
+  <div class="tw">
+    <table id="mainTable">
+      <thead><tr><th>#Kode</th><th>Praktisi Ahli</th><th>Jenis Layanan</th><th>Jadwal Sesi</th><th>Status</th><th>Pembayaran</th><th>Total</th><th>Aksi</th></tr></thead>
+      <tbody>
+<tr>
+  <td><span class="tsm tm">#BK-0003</span></td>
+  <td><div class="fw7">Dr. Budi Santoso</div><div class="txs tm">Hama &amp; Penyakit Tanaman</div></td>
+  <td>Konsultasi Online</td>
+  <td>1 Okt 2026, 14.00 WIB</td>
+  <td class="status-cell"><span class="sts sts-c">Confirmed</span></td>
+  <td>QRIS</td>
+  <td class="fw7 tg">Rp 150.000</td>
+  <td><a href="meeting.html" class="btn btn-g btn-sm">🎥 Buka Jitsi</a></td>
+</tr>
+<tr>
+  <td><span class="tsm tm">#BK-0002</span></td>
+  <td><div class="fw7">Ir. Siti Rahayu</div><div class="txs tm">Padi &amp; Palawija</div></td>
+  <td>Konsultasi Online</td>
+  <td>20 Sep 2026, 10.00 WIB</td>
+  <td class="status-cell"><span class="sts sts-d">Selesai</span></td>
+  <td>BCA VA</td>
+  <td class="fw7">Rp 120.000</td>
+  <td><button type="button" class="btn btn-o btn-sm" onclick="openModal('ulasModal')">⭐ Beri Ulasan</button></td>
+</tr>
+<tr>
+  <td><span class="tsm tm">#KJ-0001</span></td>
+  <td><div class="fw7">Prof. Ahmad Fauzi</div><div class="txs tm">Agronomi &amp; Kesuburan</div></td>
+  <td>Kunjungan Lahan</td>
+  <td>10 Sep 2026, 09.00 WIB</td>
+  <td class="status-cell"><span class="sts sts-d">Selesai</span></td>
+  <td>BNI VA</td>
+  <td class="fw7">Rp 350.000</td>
+  <td><a href="javascript:toast('Laporan hasil uji tanah komprehensif berhasil diunduh','ok')" class="btn btn-o btn-sm">📄 Unduh Laporan</a></td>
+</tr>
+</tbody>
+    </table>
+  </div>
+</div></section>
 <footer class="ft"><div class="ft-in">
   <div class="ft-g">
     <div class="ft-brand"><img class="ft-logo" src="../images/logo.png" alt="Hallobun">
@@ -86,21 +104,10 @@
 </div></footer>
 <div class="wa"><a href="https://wa.me/6281234567890" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp CS</a></div>
 <script src="../js/app.js"></script><script>
-function checkStrength(v){
-  var bar=document.getElementById("passStrength");var lbl=document.getElementById("passLabel");
-  if(!v){bar.style.width="0";lbl.textContent="";return;}
-  var s=0;if(v.length>=8)s++;if(/[A-Z]/.test(v))s++;if(/[0-9]/.test(v))s++;if(/[^A-Za-z0-9]/.test(v))s++;
-  var cols=["#EF4444","#F59E0B","#16A34A","#15803D"];var txt=["Lemah","Sedang","Kuat","Sangat Kuat"];
-  bar.style.width=(s*25)+"%";bar.style.background=cols[s-1]||"#EF4444";
-  lbl.textContent=txt[s-1]||"";lbl.style.color=cols[s-1]||"#EF4444";
-}
-function doRegister(){
-  var nm=document.getElementById("rg_name").value;
-  var em=document.getElementById("rg_email").value;
-  var wa=document.getElementById("rg_wa").value;
-  var pw=document.getElementById("rg_pass").value;
-  if(!nm||!em||!wa||!pw){toast("Mohon lengkapi semua field bertanda (*)","er");return;}
-  toast("Pendaftaran akun berhasil! Selamat datang di Hallobun.","ok");
-  setTimeout(function(){window.location.href="dashboard.html";},1200);
+function filterByStatusRw(sel){
+  var v=sel.value.toLowerCase();
+  document.querySelectorAll("#mainTable tbody tr").forEach(function(r){
+    r.style.display=(!v||r.textContent.toLowerCase().includes(v))?"":"none";
+  });
 }
 </script></body></html>

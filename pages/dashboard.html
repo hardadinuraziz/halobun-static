@@ -1,110 +1,154 @@
 <!DOCTYPE html>
-<html lang="id"><head>
+<html lang="id">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dashboard &#8212; Hallobun</title>
+<meta name="description" content="Platform tele-agronomi dan bimbingan berkebun terpercaya Indonesia.">
+<title>Dashboard Pengguna — Hallobun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
-</head><body>
-<nav class="nb">
-  <div class="nb-in">
-    <a class="nb-brand" href="../index.html"><img src="../images/logo.svg" alt="Hallobun"></a>
-    <ul class="nb-nav" id="navLinks">
-      <li><a href="../index.html">Beranda</a></li>
-      <li><a href="konsultasi.html">Konsultasi</a></li>
-      <li><a href="kunjungan.html">Kunjungan</a></li>
-      <li><a href="narsum.html">Narsum</a></li>
-      <li><a href="sarana.html">Sarana</a></li>
-    </ul>
-    <div class="nb-act" id="navActions">
-      <a href="login.html" class="b-out">Masuk</a>
-      <a href="register.html" class="b-grn">Daftar</a>
-    </div>
-    <button class="hbg" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+</head><body><nav class="nb">
+  <a class="nb-brand" href="../index.html"><img src="../images/logo.png" alt="Hallobun"><span>Hallobun</span></a>
+  <ul class="nb-nav" id="navLinks"><li><a href="../index.html" class="active">Beranda</a></li><li><a href="../pages/konsultasi.html">Konsultasi</a></li><li><a href="../pages/kunjungan.html">Kunjungan</a></li><li><a href="../pages/narsum.html">Narsum</a></li><li><a href="../pages/layanan.html">Layanan</a></li><li><a href="../pages/sarana.html">Sarana</a></li></ul>
+  <div class="nb-act" id="navActions">
+    <a href="../pages/login.html" class="b-out">Masuk</a>
+    <a href="../pages/register.html" class="b-grn">Daftar</a>
   </div>
+  <button class="hbg" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div style="background:linear-gradient(135deg,var(--gx),var(--g));color:#fff;padding:32px 24px">
-  <div class="con" style="display:flex;align-items:center;gap:20px">
-    <div style="width:56px;height:56px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px">&#128100;</div>
-    <div><div style="font-size:20px;font-weight:800">Halo, Budi Santoso &#128075;</div><p style="opacity:.8;font-size:14px">Petani / Pecinta Tanaman &bull; Member sejak Oktober 2026</p></div>
-    <div style="margin-left:auto;display:flex;gap:8px">
-      <a href="konsultasi.html" class="btn btn-w btn-sm">+ Booking Baru</a>
+<div style="background:linear-gradient(135deg,var(--gx),var(--g));color:#fff;padding:36px 28px">
+  <div class="con" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <div style="width:64px;height:64px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0">👨‍🌾</div>
+    <div style="flex:1">
+      <div style="font-size:22px;font-weight:900">Selamat Datang, Budi Santoso 👋</div>
+      <p style="opacity:.8;font-size:13.5px">Pengguna Terdaftar &bull; Komoditas: Cabai &amp; Sayuran Hidroponik</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a href="konsultasi.html" class="btn btn-w btn-sm">+ Booking Konsultasi Baru</a>
+      <a href="kunjungan.html" class="btn btn-sm" style="background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.3)">+ Pesan Kunjungan Lahan</a>
     </div>
   </div>
 </div>
+
 <section class="sec"><div class="con">
   <div class="grid g4 mb6">
-    <div class="stat"><div class="sv">3</div><div class="sl">Total Booking</div></div>
-    <div class="stat"><div class="sv tg">1</div><div class="sl">Sesi Aktif</div></div>
-    <div class="stat"><div class="sv">Rp 420K</div><div class="sl">Total Bayar</div></div>
-    <div class="stat"><div class="sv">4.9&#9733;</div><div class="sl">Avg Rating</div></div>
+    <div class="stat"><div style="font-size:22px;margin-bottom:4px">📋</div><div class="sv">3</div><div class="sl">Total Booking Sesi</div></div>
+    <div class="stat"><div style="font-size:22px;margin-bottom:4px">🟢</div><div class="sv tg">1</div><div class="sl">Sesi Aktif Hari Ini</div></div>
+    <div class="stat"><div style="font-size:22px;margin-bottom:4px">💰</div><div class="sv">Rp 620K</div><div class="sl">Total Pembayaran</div></div>
+    <div class="stat"><div style="font-size:22px;margin-bottom:4px">⭐</div><div class="sv">5.0</div><div class="sl">Kepuasan Layanan</div></div>
   </div>
 
-  <div class="alert al-in mb6">&#128172; Sesi Konsultasi <strong>Dr. Ir. Hendra Gunawan</strong> hari ini pukul <strong>14.00 WIB</strong>. <a href="#" style="color:#1D4ED8;font-weight:700">Buka Link Jitsi &rarr;</a></div>
+  <div class="alert al-ok mb6" style="display:flex;align-items:center;gap:14px;padding:18px">
+    <span style="font-size:28px">🎥</span>
+    <div style="flex:1">
+      <strong style="font-size:15px">Sesi Konsultasi Anda Hari Ini Siap:</strong><br>
+      <span class="tsm">Dr. Budi Santoso &bull; Pukul 14.00 WIB &bull; Topik: Penanganan Hama Kutu Putih &amp; Pemupukan Daun</span>
+    </div>
+    <a href="meeting.html" class="btn btn-g btn-sm" style="flex-shrink:0">Masuk Ruang Jitsi &rarr;</a>
+  </div>
 
-  <div style="font-weight:800;font-size:17px;margin-bottom:16px">Riwayat Booking</div>
-  <div class="tw"><table>
-    <thead><tr><th>#</th><th>Praktisi</th><th>Layanan</th><th>Tanggal &amp; Waktu</th><th>Status</th><th>Bayar</th><th>Aksi</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><span class="tsm tm">#BK-0003</span></td>
-        <td><div style="font-weight:600">Dr. Ir. Hendra Gunawan</div><div class="txs tm">Hama &amp; Penyakit</div></td>
-        <td>Konsultasi Online</td>
-        <td>1 Okt 2026, 14.00</td>
-        <td><span class="sts sts-c">Confirmed</span></td>
-        <td>Rp 150.000</td>
-        <td><a href="#" class="btn btn-g btn-sm">Buka Jitsi</a></td>
-      </tr>
-      <tr>
-        <td><span class="tsm tm">#BK-0002</span></td>
-        <td><div style="font-weight:600">Ir. Dian Wulandari</div><div class="txs tm">Padi &amp; Palawija</div></td>
-        <td>Konsultasi Online</td>
-        <td>20 Sep 2026, 10.00</td>
-        <td><span class="sts sts-d">Selesai</span></td>
-        <td>Rp 120.000</td>
-        <td><a href="#" class="btn btn-o btn-sm">Nilai Sesi</a></td>
-      </tr>
-      <tr>
-        <td><span class="tsm tm">#BK-0001</span></td>
-        <td><div style="font-weight:600">Prof. Dr. Ir. Arif Wicaksono</div><div class="txs tm">Agronomi</div></td>
-        <td>Kunjungan Lahan</td>
-        <td>10 Sep 2026, 09.00</td>
-        <td><span class="sts sts-d">Selesai</span></td>
-        <td>Rp 350.000</td>
-        <td><a href="#" class="btn btn-o btn-sm">Lihat Laporan</a></td>
-      </tr>
-    </tbody>
-  </table></div>
-
-  <div style="font-weight:800;font-size:17px;margin:32px 0 16px">Rekomendasi untuk Anda</div>
-  <div class="grid g3">
-    <div class="card"><div class="card-b"><div style="font-size:28px;margin-bottom:8px">&#128027;</div><div style="font-weight:700;margin-bottom:6px">Hama Kutu Putih</div><p class="tsm" style="color:var(--s500)">Solusi cepat pengendalian kutu putih pada tanaman cabai dan tomat.</p><a href="konsultasi.html" class="btn btn-g btn-sm mt4">Konsultasi Sekarang</a></div></div>
-    <div class="card"><div class="card-b"><div style="font-size:28px;margin-bottom:8px">&#127807;</div><div style="font-weight:700;margin-bottom:6px">Pupuk Organik</div><p class="tsm" style="color:var(--s500)">Tingkatkan kesuburan tanah dengan pupuk organik kompos terfermentasi.</p><a href="sarana.html" class="btn btn-g btn-sm mt4">Lihat Produk</a></div></div>
-    <div class="card"><div class="card-b"><div style="font-size:28px;margin-bottom:8px">&#129388;</div><div style="font-weight:700;margin-bottom:6px">Sistem Hidroponik</div><p class="tsm" style="color:var(--s500)">Mulai berkebun hidroponik di rumah dengan panduan dari praktisi ahli.</p><a href="konsultasi.html" class="btn btn-g btn-sm mt4">Mulai Belajar</a></div></div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <div style="font-weight:800;font-size:18px">📋 Riwayat Aktivitas &amp; Pemesanan Terkini</div>
+    <a href="riwayat.html" class="btn btn-o btn-sm">Lihat Semua Riwayat &rarr;</a>
+  </div>
+  <div class="tw mb8">
+    <table id="mainTable">
+      <thead><tr><th>#Kode</th><th>Praktisi Ahli</th><th>Jenis Layanan</th><th>Jadwal Sesi</th><th>Status</th><th>Pembayaran</th><th>Total</th><th>Aksi</th></tr></thead>
+      <tbody>
+<tr>
+  <td><span class="tsm tm">#BK-0003</span></td>
+  <td><div class="fw7">Dr. Budi Santoso</div><div class="txs tm">Hama &amp; Penyakit Tanaman</div></td>
+  <td>Konsultasi Online</td>
+  <td>1 Okt 2026, 14.00 WIB</td>
+  <td class="status-cell"><span class="sts sts-c">Confirmed</span></td>
+  <td>QRIS</td>
+  <td class="fw7 tg">Rp 150.000</td>
+  <td><a href="meeting.html" class="btn btn-g btn-sm">🎥 Buka Jitsi</a></td>
+</tr>
+<tr>
+  <td><span class="tsm tm">#BK-0002</span></td>
+  <td><div class="fw7">Ir. Siti Rahayu</div><div class="txs tm">Padi &amp; Palawija</div></td>
+  <td>Konsultasi Online</td>
+  <td>20 Sep 2026, 10.00 WIB</td>
+  <td class="status-cell"><span class="sts sts-d">Selesai</span></td>
+  <td>BCA VA</td>
+  <td class="fw7">Rp 120.000</td>
+  <td><button type="button" class="btn btn-o btn-sm" onclick="openModal('ulasModal')">⭐ Beri Ulasan</button></td>
+</tr>
+<tr>
+  <td><span class="tsm tm">#KJ-0001</span></td>
+  <td><div class="fw7">Prof. Ahmad Fauzi</div><div class="txs tm">Agronomi &amp; Kesuburan</div></td>
+  <td>Kunjungan Lahan</td>
+  <td>10 Sep 2026, 09.00 WIB</td>
+  <td class="status-cell"><span class="sts sts-d">Selesai</span></td>
+  <td>BNI VA</td>
+  <td class="fw7">Rp 350.000</td>
+  <td><a href="javascript:toast('Laporan hasil uji tanah komprehensif berhasil diunduh','ok')" class="btn btn-o btn-sm">📄 Unduh Laporan</a></td>
+</tr>
+</tbody>
+    </table>
   </div>
 </div></section>
+
+<!-- Modal Ulasan -->
+<div class="mo" id="ulasModal">
+  <div class="mo-box">
+    <button class="mo-close" onclick="closeModal('ulasModal')">✕</button>
+    <div style="font-weight:800;font-size:20px;margin-bottom:14px">⭐ Berikan Penilaian &amp; Ulasan</div>
+    <div style="font-size:14px;color:var(--s600);margin-bottom:16px">Sesi bersama: <strong>Ir. Siti Rahayu, M.P</strong></div>
+    <div style="display:flex;gap:8px;justify-content:center;margin-bottom:20px;font-size:36px" id="starRow">
+      <span class="star-opt" onclick="setStars(1)" data-val="1" style="cursor:pointer;opacity:1">⭐</span>
+      <span class="star-opt" onclick="setStars(2)" data-val="2" style="cursor:pointer;opacity:1">⭐</span>
+      <span class="star-opt" onclick="setStars(3)" data-val="3" style="cursor:pointer;opacity:1">⭐</span>
+      <span class="star-opt" onclick="setStars(4)" data-val="4" style="cursor:pointer;opacity:1">⭐</span>
+      <span class="star-opt" onclick="setStars(5)" data-val="5" style="cursor:pointer;opacity:1">⭐</span>
+    </div>
+    <div class="fg"><label class="fl">Ulasan Anda</label><textarea class="fc" id="ulas_text" rows="3" placeholder="Sangat puas! Penjelasan praktisi sangat mudah dipahami dan takaran pupuk manjur..."></textarea></div>
+    <button type="button" onclick="submitUlasan()" class="btn btn-g w100">Kirim Penilaian</button>
+  </div>
+</div>
 <footer class="ft"><div class="ft-in">
   <div class="ft-g">
-    <div class="ft-brand"><img class="ft-logo" src="../images/logo_white.svg" alt="Hallobun">
-      <p>Platform tele-agronomi &amp; layanan kebun terpercaya. Konsultasi bersama praktisi agronom bersertifikasi Indonesia.</p></div>
+    <div class="ft-brand"><img class="ft-logo" src="../images/logo.png" alt="Hallobun">
+      <p>Platform tele-agronomi & layanan kebun terpercaya. Konsultasi bersama praktisi agronom bersertifikasi Indonesia.</p>
+      <div style="display:flex;gap:12px;margin-top:16px">
+        <a href="https://wa.me/6281234567890" style="color:rgba(255,255,255,.5)" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+      </div>
+    </div>
     <div class="ft-col"><h4>Layanan</h4><ul>
-      <li><a href="konsultasi.html">Konsultasi Online</a></li>
-      <li><a href="kunjungan.html">Kunjungan Lahan</a></li>
-      <li><a href="narsum.html">Undang Narsum</a></li>
-      <li><a href="sarana.html">Sarana Tani</a></li>
+      <li><a href="../pages/konsultasi.html">Konsultasi Online</a></li>
+      <li><a href="../pages/kunjungan.html">Kunjungan Lahan</a></li>
+      <li><a href="../pages/narsum.html">Undang Narsum</a></li>
+      <li><a href="../pages/layanan.html">Semua Layanan</a></li>
+      <li><a href="../pages/sarana.html">Sarana Tani</a></li>
     </ul></div>
     <div class="ft-col"><h4>Akun</h4><ul>
-      <li><a href="login.html">Masuk</a></li>
-      <li><a href="register.html">Daftar</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
-      <li><a href="admin/dashboard.html">Panel Admin</a></li>
+      <li><a href="../pages/login.html">Masuk</a></li>
+      <li><a href="../pages/register.html">Daftar</a></li>
+      <li><a href="../pages/dashboard.html">Dashboard</a></li>
+      <li><a href="../pages/riwayat.html">Riwayat Booking</a></li>
+      <li><a href="../pages/admin/dashboard.html">Panel Admin</a></li>
     </ul></div>
     <div class="ft-col"><h4>Kontak</h4><ul>
       <li><a href="https://wa.me/6281234567890">WhatsApp CS</a></li>
       <li><a href="mailto:info@hallobun.com">info@hallobun.com</a></li>
-      <li><a href="#">Instagram</a></li><li><a href="#">YouTube</a></li>
+      <li><a href="#">Instagram @hallobun</a></li>
+      <li><a href="#">YouTube Hallobun</a></li>
     </ul></div>
   </div>
-  <div class="ft-bot"><span>&copy; 2026 Hallobun Indonesia</span><span>Seluruh hak dilindungi</span></div>
+  <div class="ft-bot"><span>&copy; 2026 Hallobun Indonesia. Seluruh hak dilindungi.</span><span style="display:flex;gap:16px"><a href="#">Privasi</a><a href="#">S&K</a></span></div>
 </div></footer>
-<div class="wa"><a href="https://wa.me/6281234567890" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp CS</a></div>
-<script src="../js/app.js"></script>
-</body></html>
+<div class="wa"><a href="https://wa.me/6281234567890" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp CS</a></div>
+<script src="../js/app.js"></script><script>
+var selectedStars=5;
+function setStars(n){
+  selectedStars=n;
+  document.querySelectorAll(".star-opt").forEach(function(s){
+    s.style.opacity=parseInt(s.getAttribute("data-val"))<=n?"1":".25";
+  });
+}
+function submitUlasan(){
+  toast("Terima kasih! Ulasan bintang "+selectedStars+" berhasil dikirimkan.","ok");
+  closeModal("ulasModal");
+}
+</script></body></html>

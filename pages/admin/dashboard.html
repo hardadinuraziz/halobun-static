@@ -1,73 +1,73 @@
 <!DOCTYPE html>
-<html lang="id"><head>
+<html lang="id">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Admin Dashboard &#8212; Hallobun</title>
+<meta name="description" content="Platform tele-agronomi dan bimbingan berkebun terpercaya Indonesia.">
+<title>Admin Dashboard — Hallobun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css">
-</head><body>
+</head><body><body>
 <div class="adm-lay">
 <div class="sb">
-  <div class="sb-hd" style="display:flex;align-items:center;justify-content:space-between">
-    <img src="../../images/logo_white.svg" alt="Hallobun" style="height:34px;width:auto;object-fit:contain">
-    <span style="background:rgba(255,255,255,.12);color:#86EFAC;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.5px">ADMIN</span>
+  <div class="sb-hd">
+    <img src="../../images/logo.png" alt="Hallobun" style="height:28px;filter:brightness(0) invert(1);flex-shrink:0">
+    <div><div class="bt">Hallobun</div><div class="bs">Panel Admin</div></div>
   </div>
-  <div class="sb-nav"><a href="dashboard.html" class="active">&#128200; Dashboard</a>
-<div class="sb-lbl">Layanan</div><a href="konsultasi.html">&#128187; Konsultasi</a>
-<a href="kunjungan.html">&#127968; Kunjungan</a>
-<a href="narsum.html">&#127891; Narsum</a>
-<a href="sarana.html">&#127807; Sarana</a>
-<div class="sb-lbl">Master Data</div><a href="users.html">&#128100; Pengguna</a>
-<a href="praktisi.html">&#127807; Praktisi</a>
-<a href="payments.html">&#128179; Pembayaran</a>
-</div>
-  <div style="padding:16px;border-top:1px solid rgba(255,255,255,.08)">
-    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:13px">&#128682; Keluar</a>
+  <div class="sb-nav"><a href="dashboard.html" class="active">📊 Dashboard</a><div class="sb-lbl">Pemesanan</div><a href="konsultasi.html">💬 Konsultasi</a><a href="kunjungan.html">🚜 Kunjungan</a><a href="narsum.html">🎤 Narsum</a><div class="sb-lbl">Katalog</div><a href="sarana.html">🌿 Sarana</a><div class="sb-lbl">Pengguna</div><a href="users.html">👥 Semua User</a><a href="praktisi.html">🌾 Praktisi</a><div class="sb-lbl">Keuangan</div><a href="payments.html">💳 Pembayaran</a></div>
+  <div style="padding:14px;border-top:1px solid rgba(255,255,255,.08)">
+    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.45);font-size:13px">🚪 Keluar</a>
   </div>
 </div>
 <div class="adm-main">
 <div class="adm-top">
-  <h2>&#128200; Dashboard Admin</h2>
+  <h2>📊 Ringkasan Ekosistem Hallobun</h2>
   <div style="display:flex;align-items:center;gap:12px">
-    <span style="font-size:13px;color:var(--s500)">&#128100; Admin Hallobun</span>
+    
+    <span style="font-size:13px;color:var(--s500)">👤 Admin Hallobun</span>
     <a href="../login.html" class="btn btn-o btn-sm">Keluar</a>
   </div>
 </div>
 <div class="adm-body">
   <div class="grid g4 mb6">
-    <div class="stat"><div style="color:var(--g);font-size:24px;margin-bottom:4px">&#128187;</div><div class="sv">47</div><div class="sl">Konsultasi Bulan Ini</div></div>
-    <div class="stat"><div style="color:#1D4ED8;font-size:24px;margin-bottom:4px">&#127968;</div><div class="sv">12</div><div class="sl">Kunjungan Lahan</div></div>
-    <div class="stat"><div style="color:#7C3AED;font-size:24px;margin-bottom:4px">&#127891;</div><div class="sv">8</div><div class="sl">Permintaan Narsum</div></div>
-    <div class="stat"><div style="color:#F59E0B;font-size:24px;margin-bottom:4px">&#128179;</div><div class="sv">Rp 18.4jt</div><div class="sl">Pendapatan Bulan Ini</div></div>
+    <div class="stat"><div style="font-size:24px;margin-bottom:4px">💬</div><div class="sv">47</div><div class="sl">Konsultasi Selesai</div></div>
+    <div class="stat"><div style="font-size:24px;margin-bottom:4px">🚜</div><div class="sv">12</div><div class="sl">Survei Lapangan</div></div>
+    <div class="stat"><div style="font-size:24px;margin-bottom:4px">🎤</div><div class="sv">8</div><div class="sl">Undangan Narsum</div></div>
+    <div class="stat"><div style="font-size:24px;margin-bottom:4px">💰</div><div class="sv tg">18.4jt</div><div class="sl">Pendapatan Bersih</div></div>
   </div>
+
   <div class="grid g2 mb6">
-    <div class="stat"><div style="font-weight:700;margin-bottom:12px">&#128202; Status Booking Aktif</div>
-      <div style="display:flex;gap:12px;font-size:14px">
-        <div style="flex:1;text-align:center;background:var(--gl);border-radius:10px;padding:12px"><div style="font-size:22px;font-weight:800;color:var(--g)">15</div><div style="font-size:11px;color:var(--s500)">Pending</div></div>
-        <div style="flex:1;text-align:center;background:#EFF6FF;border-radius:10px;padding:12px"><div style="font-size:22px;font-weight:800;color:#1D4ED8">23</div><div style="font-size:11px;color:var(--s500)">Confirmed</div></div>
-        <div style="flex:1;text-align:center;background:var(--s100);border-radius:10px;padding:12px"><div style="font-size:22px;font-weight:800;color:var(--s600)">9</div><div style="font-size:11px;color:var(--s500)">Selesai</div></div>
+    <div class="stat"><div style="font-weight:700;font-size:15px;margin-bottom:14px">📊 Status Pemesanan Berjalan</div>
+      <div style="display:flex;gap:12px">
+        <div style="flex:1;text-align:center;background:var(--gl);border-radius:12px;padding:16px"><div style="font-size:26px;font-weight:900;color:var(--g)">15</div><div style="font-size:11px;color:var(--s500)">Pending Bayar</div></div>
+        <div style="flex:1;text-align:center;background:#EFF6FF;border-radius:12px;padding:16px"><div style="font-size:26px;font-weight:900;color:#1D4ED8">23</div><div style="font-size:11px;color:var(--s500)">Siap Sesi / Confirmed</div></div>
+        <div style="flex:1;text-align:center;background:var(--s100);border-radius:12px;padding:16px"><div style="font-size:26px;font-weight:900;color:var(--s600)">9</div><div style="font-size:11px;color:var(--s500)">Telah Selesai</div></div>
       </div>
     </div>
-    <div class="stat"><div style="font-weight:700;margin-bottom:12px">&#128100; Pengguna Terdaftar</div>
-      <div style="font-size:13px;color:var(--s600);line-height:2">
-        <div style="display:flex;justify-content:space-between"><span>Total Pengguna</span><span class="fw7">524</span></div>
-        <div style="display:flex;justify-content:space-between"><span>Baru Bulan Ini</span><span class="fw7 tg">+38</span></div>
-        <div style="display:flex;justify-content:space-between"><span>Praktisi Aktif</span><span class="fw7">6</span></div>
-        <div style="display:flex;justify-content:space-between"><span>Admin</span><span class="fw7">2</span></div>
+    <div class="stat"><div style="font-weight:700;font-size:15px;margin-bottom:14px">👥 Pertumbuhan Pengguna</div>
+      <div style="font-size:13.5px;color:var(--s600);line-height:2.2">
+        <div style="display:flex;justify-content:space-between"><span>Total Pengguna Terdaftar</span><span class="fw8">524</span></div>
+        <div style="display:flex;justify-content:space-between"><span>Pertumbuhan Pengguna Baru</span><span class="fw8 tg">+38 Minggu Ini</span></div>
+        <div style="display:flex;justify-content:space-between"><span>Praktisi Aktif On-Duty</span><span class="fw8">6 Pakar</span></div>
       </div>
     </div>
   </div>
 
-  <div class="stat"><div style="font-weight:700;margin-bottom:16px">&#128336; Booking Terbaru</div>
-    <div class="tw"><table>
-      <thead><tr><th>#ID</th><th>Pengguna</th><th>Layanan</th><th>Praktisi</th><th>Tanggal</th><th>Bayar</th><th>Status</th><th>Aksi</th></tr></thead>
-      <tbody>
-        <tr><td class="txs tm">#BK-0052</td><td>Ahmad Fauzi</td><td>Konsultasi</td><td>Dr. Hendra G.</td><td>1 Okt, 14.00</td><td>Rp 150k</td><td><span class="sts sts-c">Confirmed</span></td><td><a href="#" class="btn btn-g btn-sm">Detail</a></td></tr>
-        <tr><td class="txs tm">#BK-0051</td><td>Siti Aminah</td><td>Kunjungan</td><td>Ir. Bambang P.</td><td>2 Okt, 09.00</td><td>Rp 600k</td><td><span class="sts sts-p">Pending</span></td><td><a href="#" class="btn btn-g btn-sm">Detail</a></td></tr>
-        <tr><td class="txs tm">#BK-0050</td><td>Budi Santoso</td><td>Narsum</td><td>Prof. Arif W.</td><td>5 Okt, TBD</td><td>Rp 2.5jt</td><td><span class="sts sts-p">Pending</span></td><td><a href="#" class="btn btn-g btn-sm">Detail</a></td></tr>
-        <tr><td class="txs tm">#BK-0049</td><td>Dewi Lestari</td><td>Konsultasi</td><td>Dr. Ratna K.</td><td>30 Sep, 10.00</td><td>Rp 160k</td><td><span class="sts sts-d">Selesai</span></td><td><a href="#" class="btn btn-o btn-sm">Lihat</a></td></tr>
-      </tbody>
-    </table></div>
-    <div style="margin-top:12px"><a href="konsultasi.html" class="btn btn-o btn-sm">Lihat Semua Booking &rarr;</a></div>
+  <div class="stat mb4">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <div style="font-weight:700;font-size:15px">🕐 Transaksi &amp; Booking Terbaru</div>
+      <a href="konsultasi.html" class="btn btn-o btn-sm">Buka Semua Data &rarr;</a>
+    </div>
+    <div class="tw">
+      <table id="mainTable">
+        <thead><tr><th>#Kode</th><th>Nama Klien</th><th>Layanan</th><th>Praktisi</th><th>Waktu</th><th>Metode</th><th>Nominal</th><th>Status</th><th>Aksi</th></tr></thead>
+        <tbody>
+          <tr><td class="txs tm">#BK-0052</td><td><div class="fw7">Ahmad Fauzi</div></td><td>Konsultasi Online</td><td>Dr. Budi Santoso</td><td>Hari ini, 14.00</td><td>QRIS</td><td>Rp 150.000</td><td class="status-cell"><span class="sts sts-c">Confirmed</span></td><td><a href="konsultasi.html" class="btn btn-g btn-sm">Detail</a></td></tr>
+          <tr><td class="txs tm">#KJ-0015</td><td><div class="fw7">Siti Aminah</div></td><td>Kunjungan Kebun</td><td>Ir. Rudi Hartono</td><td>Besok, 09.00</td><td>BCA VA</td><td>Rp 600.000</td><td class="status-cell"><span class="sts sts-p">Pending</span></td><td><button type="button" onclick="confirmBooking(this,'#')" class="btn btn-g btn-sm">Konfirmasi</button></td></tr>
+          <tr><td class="txs tm">#NS-0008</td><td><div class="fw7">Poktan Maju</div></td><td>Undang Narsum</td><td>Prof. Ahmad Fauzi</td><td>10 Okt 2026</td><td>BNI VA</td><td>Rp 4.000.000</td><td class="status-cell"><span class="sts sts-p">Pending</span></td><td><a href="narsum.html" class="btn btn-g btn-sm">Verifikasi</a></td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div></div></div>
-<script src="../../js/app.js"></script>
-</body></html>
+<script src="../../js/app.js"></script></body></html>

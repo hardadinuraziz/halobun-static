@@ -1,89 +1,112 @@
 <!DOCTYPE html>
-<html lang="id"><head>
+<html lang="id">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Admin Praktisi &#8212; Hallobun</title>
+<meta name="description" content="Platform tele-agronomi dan bimbingan berkebun terpercaya Indonesia.">
+<title>Admin Praktisi — Hallobun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css">
-</head><body>
+</head><body><body>
 <div class="adm-lay">
 <div class="sb">
-  <div class="sb-hd" style="display:flex;align-items:center;justify-content:space-between">
-    <img src="../../images/logo_white.svg" alt="Hallobun" style="height:34px;width:auto;object-fit:contain">
-    <span style="background:rgba(255,255,255,.12);color:#86EFAC;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.5px">ADMIN</span>
+  <div class="sb-hd">
+    <img src="../../images/logo.png" alt="Hallobun" style="height:28px;filter:brightness(0) invert(1);flex-shrink:0">
+    <div><div class="bt">Hallobun</div><div class="bs">Panel Admin</div></div>
   </div>
-  <div class="sb-nav"><a href="dashboard.html">&#128200; Dashboard</a>
-<div class="sb-lbl">Layanan</div><a href="konsultasi.html">&#128187; Konsultasi</a>
-<a href="kunjungan.html">&#127968; Kunjungan</a>
-<a href="narsum.html">&#127891; Narsum</a>
-<a href="sarana.html">&#127807; Sarana</a>
-<div class="sb-lbl">Master Data</div><a href="users.html">&#128100; Pengguna</a>
-<a href="praktisi.html" class="active">&#127807; Praktisi</a>
-<a href="payments.html">&#128179; Pembayaran</a>
-</div>
-  <div style="padding:16px;border-top:1px solid rgba(255,255,255,.08)">
-    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:13px">&#128682; Keluar</a>
+  <div class="sb-nav"><a href="dashboard.html">📊 Dashboard</a><div class="sb-lbl">Pemesanan</div><a href="konsultasi.html">💬 Konsultasi</a><a href="kunjungan.html">🚜 Kunjungan</a><a href="narsum.html">🎤 Narsum</a><div class="sb-lbl">Katalog</div><a href="sarana.html">🌿 Sarana</a><div class="sb-lbl">Pengguna</div><a href="users.html">👥 Semua User</a><a href="praktisi.html" class="active">🌾 Praktisi</a><div class="sb-lbl">Keuangan</div><a href="payments.html">💳 Pembayaran</a></div>
+  <div style="padding:14px;border-top:1px solid rgba(255,255,255,.08)">
+    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.45);font-size:13px">🚪 Keluar</a>
   </div>
 </div>
 <div class="adm-main">
 <div class="adm-top">
-  <h2>&#127807; Manajemen Praktisi</h2>
+  <h2>🌾 Manajemen Praktisi Agronom</h2>
   <div style="display:flex;align-items:center;gap:12px">
-    <span style="font-size:13px;color:var(--s500)">&#128100; Admin Hallobun</span>
+    <button type="button" onclick="toast('Formulir pendaftaran mitra praktisi baru','in')" class="btn btn-g btn-sm">+ Rekrut Praktisi</button>
+    <span style="font-size:13px;color:var(--s500)">👤 Admin Hallobun</span>
     <a href="../login.html" class="btn btn-o btn-sm">Keluar</a>
   </div>
 </div>
 <div class="adm-body">
-  <div style="display:flex;justify-content:flex-end;margin-bottom:20px">
-    <button onclick="openModal('addPraktisi')" class="btn btn-g btn-sm">+ Tambah Praktisi</button>
+  <div class="grid g3 mb4"><div class="stat" style="text-align:center">
+  <img src="../../images/halobun_real_practitioner.jpg" style="width:84px;height:84px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid var(--gl)">
+  <div class="fw8" style="font-size:16px;color:var(--s900)">Dr. Budi Santoso, M.Si</div>
+  <div class="tsm tm mb2">🌿 Penyakit & Hama Tanaman</div>
+  <div class="mb4"><span class="sts sts-c">Aktif Bertugas</span></div>
+  <div style="font-size:13px;color:var(--s600);margin-bottom:14px;line-height:1.9">
+    <div>Tarif: <strong class="tg">Rp 150.000/sesi</strong></div>
+    <div>Rating: <strong>⭐ 4.9</strong> (47 sesi)</div>
   </div>
-  <div class="grid g3">
-    <div class="stat" style="text-align:center">
-      <img src="../../images/halobun_real_practitioner.jpg" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto 12px">
-      <div class="fw8" style="font-size:15px">Dr. Ir. Hendra Gunawan, M.Sc.</div>
-      <div class="tsm tm mb2">Penyakit &amp; Hama Tanaman</div>
-      <div style="margin-bottom:12px"><span class="sts sts-c">Aktif</span></div>
-      <div style="font-size:13px;color:var(--s600);margin-bottom:12px">
-        <div>Tarif: <strong class="tg">Rp 150.000/sesi</strong></div>
-        <div>Rating: <strong>4.9 &#9733;</strong> (47 sesi)</div>
-      </div>
-      <div style="display:flex;gap:8px;justify-content:center"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Nonaktif</a></div>
-    </div>
-    <div class="stat" style="text-align:center">
-      <img src="../../images/halobun_real_female_1.jpg" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto 12px">
-      <div class="fw8" style="font-size:15px">Ir. Dian Wulandari, M.P.</div>
-      <div class="tsm tm mb2">Padi &amp; Palawija</div>
-      <div style="margin-bottom:12px"><span class="sts sts-c">Aktif</span></div>
-      <div style="font-size:13px;color:var(--s600);margin-bottom:12px">
-        <div>Tarif: <strong class="tg">Rp 120.000/sesi</strong></div>
-        <div>Rating: <strong>4.8 &#9733;</strong> (32 sesi)</div>
-      </div>
-      <div style="display:flex;gap:8px;justify-content:center"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Nonaktif</a></div>
-    </div>
-    <div class="stat" style="text-align:center">
-      <img src="../../images/halobun_real_practitioner_2.jpg" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto 12px">
-      <div class="fw8" style="font-size:15px">Prof. Dr. Ir. Arif Wicaksono, Ph.D.</div>
-      <div class="tsm tm mb2">Agronomi &amp; Kesuburan Tanah</div>
-      <div style="margin-bottom:12px"><span class="sts sts-c">Aktif</span></div>
-      <div style="font-size:13px;color:var(--s600);margin-bottom:12px">
-        <div>Tarif: <strong class="tg">Rp 200.000/sesi</strong></div>
-        <div>Rating: <strong>5.0 &#9733;</strong> (58 sesi)</div>
-      </div>
-      <div style="display:flex;gap:8px;justify-content:center"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Nonaktif</a></div>
-    </div>
+  <div style="display:flex;gap:8px;justify-content:center">
+    <button type="button" onclick="toast('Membuka formulir jadwal praktisi','in')" class="btn btn-o btn-sm">Edit Roster</button>
+    <button type="button" onclick="this.closest('.stat').querySelector('.sts').className='sts sts-x';this.closest('.stat').querySelector('.sts').textContent='Cuti';toast('Status praktisi diubah ke Cuti','wa')" class="btn btn-red btn-sm">Cuti</button>
   </div>
-  <div class="mo" id="addPraktisi">
-    <div class="mo-box">
-      <button class="mo-close" onclick="closeModal('addPraktisi')">&#215;</button>
-      <div class="fw8" style="font-size:18px;margin-bottom:16px">Tambah Praktisi Baru</div>
-      <div class="fg"><label class="fl">Nama Lengkap + Gelar</label><input type="text" class="fc" placeholder="Dr. Nama, M.Si"></div>
-      <div class="fg"><label class="fl">Email</label><input type="email" class="fc"></div>
-      <div class="fg"><label class="fl">WhatsApp</label><input type="tel" class="fc"></div>
-      <div class="fg"><label class="fl">Spesialisasi</label><input type="text" class="fc" placeholder="Contoh: Hama &amp; Penyakit Tanaman"></div>
-      <div class="fg"><label class="fl">Tarif per Sesi (Rp)</label><input type="number" class="fc" placeholder="150000"></div>
-      <div class="fg"><label class="fl">Pengalaman (tahun)</label><input type="number" class="fc" placeholder="8"></div>
-      <div class="fg"><label class="fl">Jadwal Tersedia</label><input type="text" class="fc" placeholder="Senin-Jumat, 08.00-17.00"></div>
-      <button onclick="toast('Praktisi berhasil ditambahkan!','ok');closeModal('addPraktisi')" class="btn btn-g w100">Simpan Praktisi</button>
-    </div>
+</div><div class="stat" style="text-align:center">
+  <img src="../../images/halobun_praktisi_hero.jpg" style="width:84px;height:84px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid var(--gl)">
+  <div class="fw8" style="font-size:16px;color:var(--s900)">Ir. Siti Rahayu, M.P</div>
+  <div class="tsm tm mb2">🌿 Padi & Palawija</div>
+  <div class="mb4"><span class="sts sts-c">Aktif Bertugas</span></div>
+  <div style="font-size:13px;color:var(--s600);margin-bottom:14px;line-height:1.9">
+    <div>Tarif: <strong class="tg">Rp 120.000/sesi</strong></div>
+    <div>Rating: <strong>⭐ 4.8</strong> (32 sesi)</div>
   </div>
+  <div style="display:flex;gap:8px;justify-content:center">
+    <button type="button" onclick="toast('Membuka formulir jadwal praktisi','in')" class="btn btn-o btn-sm">Edit Roster</button>
+    <button type="button" onclick="this.closest('.stat').querySelector('.sts').className='sts sts-x';this.closest('.stat').querySelector('.sts').textContent='Cuti';toast('Status praktisi diubah ke Cuti','wa')" class="btn btn-red btn-sm">Cuti</button>
+  </div>
+</div><div class="stat" style="text-align:center">
+  <img src="../../images/halobun_hero_halodoc.jpg" style="width:84px;height:84px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid var(--gl)">
+  <div class="fw8" style="font-size:16px;color:var(--s900)">Prof. Ahmad Fauzi, Ph.D</div>
+  <div class="tsm tm mb2">🌿 Agronomi & Kesuburan Tanah</div>
+  <div class="mb4"><span class="sts sts-c">Aktif Bertugas</span></div>
+  <div style="font-size:13px;color:var(--s600);margin-bottom:14px;line-height:1.9">
+    <div>Tarif: <strong class="tg">Rp 200.000/sesi</strong></div>
+    <div>Rating: <strong>⭐ 5.0</strong> (58 sesi)</div>
+  </div>
+  <div style="display:flex;gap:8px;justify-content:center">
+    <button type="button" onclick="toast('Membuka formulir jadwal praktisi','in')" class="btn btn-o btn-sm">Edit Roster</button>
+    <button type="button" onclick="this.closest('.stat').querySelector('.sts').className='sts sts-x';this.closest('.stat').querySelector('.sts').textContent='Cuti';toast('Status praktisi diubah ke Cuti','wa')" class="btn btn-red btn-sm">Cuti</button>
+  </div>
+</div><div class="stat" style="text-align:center">
+  <img src="../../images/halobun_real_sarana.jpg" style="width:84px;height:84px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid var(--gl)">
+  <div class="fw8" style="font-size:16px;color:var(--s900)">Dr. Dewi Lestari, M.Si</div>
+  <div class="tsm tm mb2">🌿 Hortikultura & Florikultura</div>
+  <div class="mb4"><span class="sts sts-c">Aktif Bertugas</span></div>
+  <div style="font-size:13px;color:var(--s600);margin-bottom:14px;line-height:1.9">
+    <div>Tarif: <strong class="tg">Rp 130.000/sesi</strong></div>
+    <div>Rating: <strong>⭐ 4.7</strong> (24 sesi)</div>
+  </div>
+  <div style="display:flex;gap:8px;justify-content:center">
+    <button type="button" onclick="toast('Membuka formulir jadwal praktisi','in')" class="btn btn-o btn-sm">Edit Roster</button>
+    <button type="button" onclick="this.closest('.stat').querySelector('.sts').className='sts sts-x';this.closest('.stat').querySelector('.sts').textContent='Cuti';toast('Status praktisi diubah ke Cuti','wa')" class="btn btn-red btn-sm">Cuti</button>
+  </div>
+</div><div class="stat" style="text-align:center">
+  <img src="../../images/halobun_real_livestock.jpg" style="width:84px;height:84px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid var(--gl)">
+  <div class="fw8" style="font-size:16px;color:var(--s900)">Ir. Rudi Hartono, M.P</div>
+  <div class="tsm tm mb2">🌿 Perkebunan & Tanaman Industri</div>
+  <div class="mb4"><span class="sts sts-c">Aktif Bertugas</span></div>
+  <div style="font-size:13px;color:var(--s600);margin-bottom:14px;line-height:1.9">
+    <div>Tarif: <strong class="tg">Rp 175.000/sesi</strong></div>
+    <div>Rating: <strong>⭐ 4.9</strong> (41 sesi)</div>
+  </div>
+  <div style="display:flex;gap:8px;justify-content:center">
+    <button type="button" onclick="toast('Membuka formulir jadwal praktisi','in')" class="btn btn-o btn-sm">Edit Roster</button>
+    <button type="button" onclick="this.closest('.stat').querySelector('.sts').className='sts sts-x';this.closest('.stat').querySelector('.sts').textContent='Cuti';toast('Status praktisi diubah ke Cuti','wa')" class="btn btn-red btn-sm">Cuti</button>
+  </div>
+</div><div class="stat" style="text-align:center">
+  <img src="../../images/halobun_real_training.jpg" style="width:84px;height:84px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid var(--gl)">
+  <div class="fw8" style="font-size:16px;color:var(--s900)">Dr. Nina Kusuma, M.Si</div>
+  <div class="tsm tm mb2">🌿 Pertanian Organik & Agroekologi</div>
+  <div class="mb4"><span class="sts sts-c">Aktif Bertugas</span></div>
+  <div style="font-size:13px;color:var(--s600);margin-bottom:14px;line-height:1.9">
+    <div>Tarif: <strong class="tg">Rp 160.000/sesi</strong></div>
+    <div>Rating: <strong>⭐ 4.8</strong> (29 sesi)</div>
+  </div>
+  <div style="display:flex;gap:8px;justify-content:center">
+    <button type="button" onclick="toast('Membuka formulir jadwal praktisi','in')" class="btn btn-o btn-sm">Edit Roster</button>
+    <button type="button" onclick="this.closest('.stat').querySelector('.sts').className='sts sts-x';this.closest('.stat').querySelector('.sts').textContent='Cuti';toast('Status praktisi diubah ke Cuti','wa')" class="btn btn-red btn-sm">Cuti</button>
+  </div>
+</div></div>
 </div></div></div>
-<script src="../../js/app.js"></script>
-</body></html>
+<script src="../../js/app.js"></script></body></html>

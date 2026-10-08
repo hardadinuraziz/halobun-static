@@ -1,159 +1,352 @@
 <!DOCTYPE html>
-<html lang="id"><head>
+<html lang="id">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Konsultasi Agronom Online &#8212; Hallobun</title>
+<meta name="description" content="Pilih dan booking sesi konsultasi online dengan pakar agronom bersertifikasi berdasarkan klasifikasi: Praktisi Umum, Praktisi Spesialis, dan Praktisi Super Spesialis.">
+<title>Konsultasi Praktisi & Dokter Kebun — Hallobun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
-</head><body>
-<nav class="nb">
-  <div class="nb-in">
-    <a class="nb-brand" href="../index.html"><img src="../images/logo.svg" alt="Hallobun"></a>
-    <ul class="nb-nav" id="navLinks">
-      <li><a href="../index.html">Beranda</a></li>
-      <li><a href="konsultasi.html" class="active">Konsultasi</a></li>
-      <li><a href="kunjungan.html">Kunjungan</a></li>
-      <li><a href="narsum.html">Narsum</a></li>
-      <li><a href="sarana.html">Sarana</a></li>
-    </ul>
-    <div class="nb-act" id="navActions">
-      <a href="login.html" class="b-out">Masuk</a>
-      <a href="register.html" class="b-grn">Daftar</a>
-    </div>
-    <button class="hbg" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+<style>
+.klas-pill {
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: 1.5px solid var(--s200);
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--s700);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.klas-pill:hover {
+  border-color: var(--g);
+  background: #F0FDF4;
+}
+.klas-pill.active {
+  background: var(--g);
+  color: #fff;
+  border-color: var(--g);
+  box-shadow: 0 4px 12px rgba(22,163,74,0.2);
+}
+.klas-pill.active .pill-cnt {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+.pill-cnt {
+  font-size: 11px;
+  background: var(--s100);
+  color: var(--s600);
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+.tier-banner {
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+</style>
+</head><body><nav class="nb">
+  <a class="nb-brand" href="../index.html"><img src="../images/logo.png" alt="Hallobun"><span>Hallobun</span></a>
+  <ul class="nb-nav" id="navLinks"><li><a href="../index.html">Beranda</a></li><li><a href="../pages/konsultasi.html" class="active">Konsultasi</a></li><li><a href="../pages/kunjungan.html">Kunjungan</a></li><li><a href="../pages/narsum.html">Narsum</a></li><li><a href="../pages/layanan.html">Layanan</a></li><li><a href="../pages/sarana.html">Sarana</a></li></ul>
+  <div class="nb-act" id="navActions">
+    <a href="../pages/login.html" class="b-out">Masuk</a>
+    <a href="../pages/register.html" class="b-grn">Daftar</a>
   </div>
+  <button class="hbg" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="ph"><div class="con"><h1>&#128187; Konsultasi Agronom Online</h1><p>Pilih praktisi ahli dan booking sesi video call. Konsultasi hama, penyakit, nutrisi, dan teknik berkebun langsung dengan pakar.</p></div></div>
-<section class="sec"><div class="con">
-  <div style="display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap;align-items:center">
-    <input type="text" class="fc" placeholder="&#128269; Cari praktisi atau spesialisasi..." style="max-width:360px">
-    <select class="fc" style="max-width:200px">
-      <option>Semua Spesialisasi</option>
-      <option>Hama &amp; Penyakit</option>
-      <option>Padi &amp; Palawija</option>
-      <option>Hortikultura</option>
-      <option>Perkebunan</option>
-      <option>Pertanian Organik</option>
-    </select>
-    <select class="fc" style="max-width:180px">
-      <option>Semua Harga</option>
-      <option>Di bawah Rp 150.000</option>
-      <option>Rp 150.000 - 200.000</option>
-      <option>Di atas Rp 200.000</option>
-    </select>
-  </div>
-  <div class="grid g3"><div class="pk-card">
-  <img src="../images/halobun_real_practitioner.jpg" alt="Dr. Ir. Hendra Gunawan, M.Sc.">
-  <div class="pk-b">
-    <div class="pk-name">Dr. Ir. Hendra Gunawan, M.Sc.</div>
-    <div class="pk-spec">&#127807; Penyakit &amp; Hama Tanaman &bull; 8 tahun pengalaman</div>
-    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Senin-Jumat, 08.00-17.00</div>
-    <div class="pk-ft">
-      <div class="price">Rp 150.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 4.9</div>
-    </div>
-    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
-  </div>
-</div><div class="pk-card">
-  <img src="../images/halobun_real_female_1.jpg" alt="Ir. Dian Wulandari, M.P.">
-  <div class="pk-b">
-    <div class="pk-name">Ir. Dian Wulandari, M.P.</div>
-    <div class="pk-spec">&#127807; Padi &amp; Palawija &bull; 6 tahun pengalaman</div>
-    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Senin-Sabtu, 09.00-16.00</div>
-    <div class="pk-ft">
-      <div class="price">Rp 120.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 4.8</div>
-    </div>
-    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
-  </div>
-</div><div class="pk-card">
-  <img src="../images/halobun_real_practitioner_2.jpg" alt="Prof. Dr. Ir. Arif Wicaksono, Ph.D.">
-  <div class="pk-b">
-    <div class="pk-name">Prof. Dr. Ir. Arif Wicaksono, Ph.D.</div>
-    <div class="pk-spec">&#127807; Agronomi &amp; Kesuburan Tanah &bull; 15 tahun pengalaman</div>
-    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Selasa-Kamis, 10.00-15.00</div>
-    <div class="pk-ft">
-      <div class="price">Rp 200.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 5.0</div>
-    </div>
-    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
-  </div>
-</div><div class="pk-card">
-  <img src="../images/halobun_real_female_2.jpg" alt="Dr. Anisa Maharani, M.Si.">
-  <div class="pk-b">
-    <div class="pk-name">Dr. Anisa Maharani, M.Si.</div>
-    <div class="pk-spec">&#127807; Hortikultura &amp; Florikultura &bull; 10 tahun pengalaman</div>
-    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Senin-Jumat, 08.00-17.00</div>
-    <div class="pk-ft">
-      <div class="price">Rp 130.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 4.7</div>
-    </div>
-    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
-  </div>
-</div><div class="pk-card">
-  <img src="../images/dashboard_praktisi_banner.jpg" alt="Ir. Bambang Prasetyo, M.M.">
-  <div class="pk-b">
-    <div class="pk-name">Ir. Bambang Prasetyo, M.M.</div>
-    <div class="pk-spec">&#127807; Perkebunan &amp; Tanaman Industri &bull; 12 tahun pengalaman</div>
-    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Senin-Jumat, 09.00-16.00</div>
-    <div class="pk-ft">
-      <div class="price">Rp 175.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 4.9</div>
-    </div>
-    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
-  </div>
-</div><div class="pk-card">
-  <img src="../images/halobun_real_female_3.jpg" alt="Dr. Ratna Kusumaningrum, M.Si.">
-  <div class="pk-b">
-    <div class="pk-name">Dr. Ratna Kusumaningrum, M.Si.</div>
-    <div class="pk-spec">&#127807; Pertanian Organik &amp; Agroekologi &bull; 7 tahun pengalaman</div>
-    <div style="font-size:12px;color:var(--s500);margin-bottom:10px">&#128336; Rabu-Sabtu, 09.00-15.00</div>
-    <div class="pk-ft">
-      <div class="price">Rp 160.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 4.8</div>
-    </div>
-    <button onclick="openModal('bookModal')" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</button>
-  </div>
-</div></div>
-</div></section>
 
-<div class="mo" id="bookModal">
-  <div class="mo-box">
-    <button class="mo-close" onclick="closeModal('bookModal')">&#215;</button>
-    <div style="font-weight:800;font-size:20px;margin-bottom:4px">Booking Konsultasi</div>
-    <p class="tsm" style="color:var(--s500);margin-bottom:20px">Isi data berikut untuk memesan sesi konsultasi video call.</p>
-    <div class="fg"><label class="fl">Nama Lengkap</label><input type="text" class="fc" placeholder="Nama Anda"></div>
-    <div class="fg"><label class="fl">WhatsApp Aktif</label><input type="tel" class="fc" placeholder="08xx-xxxx-xxxx"></div>
-    <div class="fg"><label class="fl">Tanggal Sesi</label><input type="date" class="fc"></div>
-    <div class="fg"><label class="fl">Waktu Sesi</label><select class="fc"><option>08.00 WIB</option><option>09.00 WIB</option><option>10.00 WIB</option><option>14.00 WIB</option><option>15.00 WIB</option></select></div>
-    <div class="fg"><label class="fl">Deskripsi Masalah</label><textarea class="fc" rows="3" placeholder="Ceritakan kendala tanaman Anda..."></textarea></div>
-    <div class="alert al-in">&#128139; Link video call Jitsi Meet akan dikirim otomatis ke WhatsApp Anda setelah pembayaran selesai.</div>
-    <button onclick="toast('Booking berhasil! Kami akan menghubungi Anda via WhatsApp.','ok');closeModal('bookModal')" class="btn btn-g w100">Konfirmasi Booking &amp; Bayar</button>
+<div class="ph"><div class="ph-inner">
+  <div class="hero-tag"><span class="dot"></span> Konsultasi Online via Jitsi Meet</div>
+  <h1>💬 Konsultasi Praktisi &amp; Agronom</h1>
+  <p>Pilih tingkatan praktisi sesuai kebutuhan kendala lahan Anda: Praktisi Umum (pekarangan &amp; hobi), Praktisi Spesialis (komoditas &amp; OPT), atau Praktisi Super Spesialis (riset lab &amp; audit perkebunan).</p>
+</div></div>
+
+<section class="sec"><div class="con">
+
+  <!-- Halodoc-style Category Tiers Bar -->
+  <div style="margin-bottom:24px">
+    <div style="font-size:12px;font-weight:800;color:var(--s400);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px">
+      PILIH TINGKATAN KLASIFIKASI:
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:12px" id="klasPills">
+      <button type="button" class="klas-pill active" data-filter="all" onclick="setKlasFilter('all', this)">
+        <span>🌿 Semua Praktisi</span>
+        <span class="pill-cnt">6</span>
+      </button>
+      <button type="button" class="klas-pill" data-filter="umum" onclick="setKlasFilter('umum', this)">
+        <span>🌱 Praktisi Umum</span>
+        <span class="pill-cnt">2</span>
+      </button>
+      <button type="button" class="klas-pill" data-filter="spesialis" onclick="setKlasFilter('spesialis', this)">
+        <span>🔬 Praktisi Spesialis</span>
+        <span class="pill-cnt">2</span>
+      </button>
+      <button type="button" class="klas-pill" data-filter="super_spesialis" onclick="setKlasFilter('super_spesialis', this)">
+        <span>🏛️ Super Spesialis</span>
+        <span class="pill-cnt">2</span>
+      </button>
+    </div>
   </div>
-</div>
+
+  <!-- Dynamic Tier Info Banner -->
+  <div id="tierBannerUmum" class="tier-banner" style="display:none;background:#F0FDF4;border:1.5px solid #BBF7D0;color:#166534">
+    <span style="font-size:24px">🌱</span>
+    <div>
+      <strong style="font-size:14px;display:block;margin-bottom:2px">Klasifikasi: Praktisi Umum (Dokter Kebun Pemula)</strong>
+      Bimbingan perawatan harian pekarangan rumah, tanaman hias, sayuran pot/polybag, dan pencegahan hama dasar. Kualifikasi Sarjana Pertanian (S.P. / S.Pt) &amp; PPL. Tarif mulai Rp 35.000 – Rp 50.000 / sesi.
+    </div>
+  </div>
+
+  <div id="tierBannerSpesialis" class="tier-banner" style="display:none;background:#EFF6FF;border:1.5px solid #BFDBFE;color:#1E40AF">
+    <span style="font-size:24px">🔬</span>
+    <div>
+      <strong style="font-size:14px;display:block;margin-bottom:2px">Klasifikasi: Praktisi Spesialis (Dokter Tanaman Berlisensi)</strong>
+      Diagnosa mendalam organisme pengganggu tanaman (OPT), manajemen nutrisi presisi hidroponik komersial, cabai, bawang merah, dan padi. Kualifikasi Magister Pertanian (M.P. / M.Si). Tarif mulai Rp 100.000 – Rp 150.000 / sesi.
+    </div>
+  </div>
+
+  <div id="tierBannerSuper" class="tier-banner" style="display:none;background:#FAF5FF;border:1.5px solid #E9D5FF;color:#6B21A8">
+    <span style="font-size:24px">🏛️</span>
+    <div>
+      <strong style="font-size:14px;display:block;margin-bottom:2px">Klasifikasi: Praktisi Super Spesialis (Guru Besar &amp; Riset Lab)</strong>
+      Analisis laboratorium uji kimia tanah &amp; pH, bioteknologi hayati, formulasi pupuk, dan audit kelayakan perkebunan industri luas berhektar-hektar. Kualifikasi Doktor (Dr.) / Ph.D / Profesor (Prof.). Tarif Rp 200.000 – Rp 250.000 / sesi.
+    </div>
+  </div>
+
+  <!-- Search & Filter Controls -->
+  <div style="background:#fff;border:1.5px solid var(--s200);border-radius:14px;padding:18px;margin-bottom:28px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+    <div style="position:relative;flex:1;min-width:220px">
+      <svg style="position:absolute;left:12px;top:50%;transform:translateY(-50%)" width="16" height="16" fill="none" stroke="#9CA3AF" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input type="text" id="searchCards" class="fc" placeholder="Cari nama praktisi atau topik..." style="padding-left:38px">
+    </div>
+    <select class="fc" id="filterSpesialisasi" style="max-width:240px">
+      <option value="">Semua Spesialisasi</option>
+      <option value="pekarangan">Pekarangan &amp; Kebun Hobi</option>
+      <option value="hama">Penyakit &amp; Hama Tanaman (OPT)</option>
+      <option value="padi">Padi &amp; Palawija Komersial</option>
+      <option value="tanah">Agronomi &amp; Uji Laboratorium Tanah</option>
+      <option value="industri">Perkebunan Industri &amp; Bioteknologi</option>
+    </select>
+    <select class="fc" id="filterHarga" style="max-width:200px">
+      <option value="">Semua Tarif</option>
+      <option value="50000">&le; Rp 50.000</option>
+      <option value="150000">&le; Rp 150.000</option>
+      <option value="200000">&gt; Rp 150.000</option>
+    </select>
+  </div>
+
+  <!-- Doctors Card Grid -->
+  <div class="grid g3" id="konsultanGrid">
+    
+    <!-- 1. PRAKTISI UMUM 1 -->
+    <div class="pk-card filterable-card" data-klasifikasi="umum" data-spesialisasi="pekarangan" data-harga="45000" data-id="4">
+      <img src="../images/halobun_real_training.jpg" alt="Bayu Pratama, S.P.">
+      <div class="pk-b">
+        <span class="bdg bdg-g" style="font-size:10.5px;margin-bottom:6px;display:inline-block">🌱 Praktisi Umum</span>
+        <div class="pk-name">Bayu Pratama, S.P.</div>
+        <div class="pk-spec">Hortikultura &amp; Tanaman Pekarangan</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:6px">🕐 Senin-Jumat, 09.00-17.00 WIB</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:10px">📋 4 tahun pengalaman</div>
+        <div class="pk-ft">
+          <div class="price">Rp 45.000<span>/sesi</span></div>
+          <div class="rating"><span class="star">⭐</span> 4.8 (24)</div>
+        </div>
+        <a href="konsultan-4.html" class="btn btn-g w100 mt4" style="justify-content:center">Lihat Profil &amp; Booking</a>
+      </div>
+    </div>
+
+    <!-- 2. PRAKTISI UMUM 2 -->
+    <div class="pk-card filterable-card" data-klasifikasi="umum" data-spesialisasi="pekarangan" data-harga="50000" data-id="6">
+      <img src="../images/halobun_real_sarana.jpg" alt="Dewi Lestari, S.Pt">
+      <div class="pk-b">
+        <span class="bdg bdg-g" style="font-size:10.5px;margin-bottom:6px;display:inline-block">🌱 Praktisi Umum</span>
+        <div class="pk-name">Dewi Lestari, S.Pt</div>
+        <div class="pk-spec">Urban Farming &amp; Kebun Sayur Rumah</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:6px">🕐 Selasa-Minggu, 08.00-16.00 WIB</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:10px">📋 5 tahun pengalaman</div>
+        <div class="pk-ft">
+          <div class="price">Rp 50.000<span>/sesi</span></div>
+          <div class="rating"><span class="star">⭐</span> 4.9 (31)</div>
+        </div>
+        <a href="konsultan-6.html" class="btn btn-g w100 mt4" style="justify-content:center">Lihat Profil &amp; Booking</a>
+      </div>
+    </div>
+
+    <!-- 3. PRAKTISI SPESIALIS 1 -->
+    <div class="pk-card filterable-card" data-klasifikasi="spesialis" data-spesialisasi="hama" data-harga="150000" data-id="1">
+      <img src="../images/halobun_real_practitioner.jpg" alt="Dr. Budi Santoso, M.Si">
+      <div class="pk-b">
+        <span class="bdg bdg-b" style="font-size:10.5px;margin-bottom:6px;display:inline-block;background:#DBEAFE;color:#1E40AF">🔬 Praktisi Spesialis</span>
+        <div class="pk-name">Dr. Budi Santoso, M.Si</div>
+        <div class="pk-spec">Penyakit &amp; Hama Tanaman (OPT)</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:6px">🕐 Senin-Jumat, 08.00-17.00 WIB</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:10px">📋 8 tahun pengalaman</div>
+        <div class="pk-ft">
+          <div class="price">Rp 150.000<span>/sesi</span></div>
+          <div class="rating"><span class="star">⭐</span> 4.9 (47)</div>
+        </div>
+        <a href="konsultan-1.html" class="btn btn-g w100 mt4" style="justify-content:center;background:#2563EB;border-color:#2563EB">Lihat Profil &amp; Booking</a>
+      </div>
+    </div>
+
+    <!-- 4. PRAKTISI SPESIALIS 2 -->
+    <div class="pk-card filterable-card" data-klasifikasi="spesialis" data-spesialisasi="padi" data-harga="120000" data-id="2">
+      <img src="../images/halobun_praktisi_hero.jpg" alt="Ir. Siti Rahayu, M.P">
+      <div class="pk-b">
+        <span class="bdg bdg-b" style="font-size:10.5px;margin-bottom:6px;display:inline-block;background:#DBEAFE;color:#1E40AF">🔬 Praktisi Spesialis</span>
+        <div class="pk-name">Ir. Siti Rahayu, M.P</div>
+        <div class="pk-spec">Padi &amp; Palawija Komersial</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:6px">🕐 Senin-Sabtu, 09.00-16.00 WIB</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:10px">📋 6 tahun pengalaman</div>
+        <div class="pk-ft">
+          <div class="price">Rp 120.000<span>/sesi</span></div>
+          <div class="rating"><span class="star">⭐</span> 4.8 (32)</div>
+        </div>
+        <a href="konsultan-2.html" class="btn btn-g w100 mt4" style="justify-content:center;background:#2563EB;border-color:#2563EB">Lihat Profil &amp; Booking</a>
+      </div>
+    </div>
+
+    <!-- 5. PRAKTISI SUPER SPESIALIS 1 -->
+    <div class="pk-card filterable-card" data-klasifikasi="super_spesialis" data-spesialisasi="tanah" data-harga="200000" data-id="3">
+      <img src="../images/halobun_hero_halodoc.jpg" alt="Prof. Ahmad Fauzi, Ph.D">
+      <div class="pk-b">
+        <span class="bdg" style="background:#F3E8FF;color:#7E22CE;font-size:10.5px;margin-bottom:6px;display:inline-block;font-weight:800">🏛️ Super Spesialis</span>
+        <div class="pk-name">Prof. Ahmad Fauzi, Ph.D</div>
+        <div class="pk-spec">Agronomi &amp; Riset Uji Kesuburan Tanah</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:6px">🕐 Selasa-Kamis, 10.00-15.00 WIB</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:10px">📋 15 tahun pengalaman</div>
+        <div class="pk-ft">
+          <div class="price">Rp 200.000<span>/sesi</span></div>
+          <div class="rating"><span class="star">⭐</span> 5.0 (58)</div>
+        </div>
+        <a href="konsultan-3.html" class="btn btn-g w100 mt4" style="justify-content:center;background:#7E22CE;border-color:#7E22CE">Lihat Profil &amp; Booking</a>
+      </div>
+    </div>
+
+    <!-- 6. PRAKTISI SUPER SPESIALIS 2 -->
+    <div class="pk-card filterable-card" data-klasifikasi="super_spesialis" data-spesialisasi="industri" data-harga="250000" data-id="5">
+      <img src="../images/halobun_real_soil_test.jpg" alt="Dr. Ir. Suwandi, M.Si">
+      <div class="pk-b">
+        <span class="bdg" style="background:#F3E8FF;color:#7E22CE;font-size:10.5px;margin-bottom:6px;display:inline-block;font-weight:800">🏛️ Super Spesialis</span>
+        <div class="pk-name">Dr. Ir. Suwandi, M.Si</div>
+        <div class="pk-spec">Audit Perkebunan &amp; Bioteknologi Hayati</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:6px">🕐 Senin-Jumat, 09.00-16.00 WIB</div>
+        <div style="font-size:12px;color:var(--s500);margin-bottom:10px">📋 12 tahun pengalaman</div>
+        <div class="pk-ft">
+          <div class="price">Rp 250.000<span>/sesi</span></div>
+          <div class="rating"><span class="star">⭐</span> 4.9 (41)</div>
+        </div>
+        <a href="konsultan-5.html" class="btn btn-g w100 mt4" style="justify-content:center;background:#7E22CE;border-color:#7E22CE">Lihat Profil &amp; Booking</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="alert al-in mt6">💡 Butuh rekomendasi praktisi yang cocok dengan komoditas Anda? <a href="https://wa.me/6281234567890?text=Halo%20CS,%20saya%20butuh%20rekomendasi%20praktisi%20untuk..." target="_blank" style="font-weight:700">Hubungi WhatsApp CS Kami &rarr;</a></div>
+</div></section>
 
 <footer class="ft"><div class="ft-in">
   <div class="ft-g">
-    <div class="ft-brand"><img class="ft-logo" src="../images/logo_white.svg" alt="Hallobun">
-      <p>Platform tele-agronomi &amp; layanan kebun terpercaya. Konsultasi bersama praktisi agronom bersertifikasi Indonesia.</p></div>
+    <div class="ft-brand"><img class="ft-logo" src="../images/logo.png" alt="Hallobun">
+      <p>Platform tele-agronomi & layanan kebun terpercaya. Konsultasi bersama praktisi agronom bersertifikasi Indonesia.</p>
+      <div style="display:flex;gap:12px;margin-top:16px">
+        <a href="https://wa.me/6281234567890" style="color:rgba(255,255,255,.5)" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+      </div>
+    </div>
     <div class="ft-col"><h4>Layanan</h4><ul>
-      <li><a href="konsultasi.html">Konsultasi Online</a></li>
-      <li><a href="kunjungan.html">Kunjungan Lahan</a></li>
-      <li><a href="narsum.html">Undang Narsum</a></li>
-      <li><a href="sarana.html">Sarana Tani</a></li>
+      <li><a href="../pages/konsultasi.html">Konsultasi Online</a></li>
+      <li><a href="../pages/kunjungan.html">Kunjungan Lahan</a></li>
+      <li><a href="../pages/narsum.html">Undang Narsum</a></li>
+      <li><a href="../pages/layanan.html">Semua Layanan</a></li>
+      <li><a href="../pages/sarana.html">Sarana Tani</a></li>
     </ul></div>
     <div class="ft-col"><h4>Akun</h4><ul>
-      <li><a href="login.html">Masuk</a></li>
-      <li><a href="register.html">Daftar</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
-      <li><a href="admin/dashboard.html">Panel Admin</a></li>
+      <li><a href="../pages/login.html">Masuk</a></li>
+      <li><a href="../pages/register.html">Daftar</a></li>
+      <li><a href="../pages/dashboard.html">Dashboard</a></li>
+      <li><a href="../pages/riwayat.html">Riwayat Booking</a></li>
+      <li><a href="../pages/admin/dashboard.html">Panel Admin</a></li>
     </ul></div>
     <div class="ft-col"><h4>Kontak</h4><ul>
       <li><a href="https://wa.me/6281234567890">WhatsApp CS</a></li>
       <li><a href="mailto:info@hallobun.com">info@hallobun.com</a></li>
-      <li><a href="#">Instagram</a></li><li><a href="#">YouTube</a></li>
+      <li><a href="#">Instagram @hallobun</a></li>
+      <li><a href="#">YouTube Hallobun</a></li>
     </ul></div>
   </div>
-  <div class="ft-bot"><span>&copy; 2026 Hallobun Indonesia</span><span>Seluruh hak dilindungi</span></div>
+  <div class="ft-bot"><span>&copy; 2026 Hallobun Indonesia. Seluruh hak dilindungi.</span><span style="display:flex;gap:16px"><a href="#">Privasi</a><a href="#">S&K</a></span></div>
 </div></footer>
-<div class="wa"><a href="https://wa.me/6281234567890" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp CS</a></div>
+<div class="wa"><a href="https://wa.me/6281234567890" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp CS</a></div>
+
 <script src="../js/app.js"></script>
+<script>
+let currentKlas = 'all';
+
+function setKlasFilter(klas, btn) {
+  currentKlas = klas;
+  document.querySelectorAll('.klas-pill').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  // Toggle banners
+  document.getElementById('tierBannerUmum').style.display = klas === 'umum' ? 'flex' : 'none';
+  document.getElementById('tierBannerSpesialis').style.display = klas === 'spesialis' ? 'flex' : 'none';
+  document.getElementById('tierBannerSuper').style.display = klas === 'super_spesialis' ? 'flex' : 'none';
+
+  applyCombinedFilters();
+}
+
+function applyCombinedFilters() {
+  const search = (document.getElementById('searchCards').value || '').toLowerCase();
+  const spec = (document.getElementById('filterSpesialisasi').value || '').toLowerCase();
+  const harga = document.getElementById('filterHarga').value;
+
+  document.querySelectorAll('.filterable-card').forEach(card => {
+    const cardKlas = card.getAttribute('data-klasifikasi');
+    const cardSpec = (card.getAttribute('data-spesialisasi') || '').toLowerCase();
+    const cardPrice = parseInt(card.getAttribute('data-harga') || '0');
+    const cardText = card.innerText.toLowerCase();
+
+    let matchKlas = (currentKlas === 'all' || cardKlas === currentKlas);
+    let matchSearch = (!search || cardText.includes(search));
+    let matchSpec = (!spec || cardSpec.includes(spec));
+    let matchPrice = true;
+    if (harga === '50000') matchPrice = cardPrice <= 50000;
+    else if (harga === '150000') matchPrice = cardPrice <= 150000;
+    else if (harga === '200000') matchPrice = cardPrice > 150000;
+
+    if (matchKlas && matchSearch && matchSpec && matchPrice) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+document.getElementById('searchCards').addEventListener('input', applyCombinedFilters);
+document.getElementById('filterSpesialisasi').addEventListener('change', applyCombinedFilters);
+document.getElementById('filterHarga').addEventListener('change', applyCombinedFilters);
+
+// Check URL param on load (e.g. ?klasifikasi=umum)
+window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const qKlas = urlParams.get('klasifikasi');
+  if (qKlas) {
+    const targetBtn = document.querySelector(`.klas-pill[data-filter="${qKlas}"]`);
+    if (targetBtn) {
+      setKlasFilter(qKlas, targetBtn);
+    }
+  }
+});
+</script>
 </body></html>

@@ -2,254 +2,718 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Platform tele-agronomi dan bimbingan berkebun terpercaya. Konsultasi agronom via video call, kunjungan lahan, narsum, dan sarana tani.">
-<title>Solusi Perawatan Kebun &amp; Pertanian &#8212; Hallobun</title>
-<link rel="stylesheet" href="css/style.css?v=2.5">
-</head><body>
-<nav class="nb">
-  <div class="nb-in">
-    <a class="nb-brand" href="index.html"><img src="images/logo.svg" alt="Hallobun"></a>
-    <ul class="nb-nav" id="navLinks">
-      <li><a href="index.html" class="active">Beranda</a></li>
-      <li><a href="pages/konsultasi.html">Konsultasi</a></li>
-      <li><a href="pages/kunjungan.html">Kunjungan</a></li>
-      <li><a href="pages/narsum.html">Narsum</a></li>
-      <li><a href="pages/sarana.html">Sarana</a></li>
-    </ul>
-    <div class="nb-act" id="navActions">
-      <a href="pages/login.html" class="b-out">Masuk</a>
-      <a href="pages/register.html" class="b-grn">Daftar</a>
-    </div>
-    <button class="hbg" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+<meta name="description" content="Platform tele-agronomi dan bimbingan berkebun terpercaya Indonesia.">
+<title>Solusi Perawatan Kebun & Pertanian Terlengkap — Hallobun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head><body><nav class="nb">
+  <a class="nb-brand" href="index.html"><img src="images/logo.png" alt="Hallobun"><span>Hallobun</span></a>
+  <ul class="nb-nav" id="navLinks"><li><a href="index.html" class="active">Beranda</a></li><li><a href="pages/konsultasi.html">Konsultasi</a></li><li><a href="pages/kunjungan.html">Kunjungan</a></li><li><a href="pages/narsum.html">Narsum</a></li><li><a href="pages/layanan.html">Layanan</a></li><li><a href="pages/sarana.html">Sarana</a></li></ul>
+  <div class="nb-act" id="navActions">
+    <a href="pages/login.html" class="b-out">Masuk</a>
+    <a href="pages/register.html" class="b-grn">Daftar</a>
   </div>
+  <button class="hbg" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-ov"></div>
-  <div class="hero-shimmer"></div>
   <div class="hero-in">
     <div>
       <div class="hero-tag"><span class="dot"></span> Tele-Agronomi &amp; Layanan Kebun #1 Indonesia</div>
-      <h1>Perawatan Kebun &amp; Tanaman<br><span>Bersama Praktisi Ahli</span></h1>
-      <p class="hero-lead">Konsultasi langsung via video call, inspeksi lahan fisik, hingga bimbingan budidaya tanaman bawang merah dan holtikultura terpercaya.</p>
+      <h1>Solusi Perawatan Kebun &amp; Pertanian<br><span>Terlengkap di Tanganmu</span></h1>
+      <p class="hero-lead">Bimbingan langsung bersama praktisi perkebunan &amp; agronomis terpercaya, beli nutrisi &amp; bibit unggul, hingga booking kunjungan lapangan langsung ke kebun Anda. Praktis, ilmiah, dan ramah pemula.</p>
+      
       <div class="hero-search">
-        <svg width="18" height="18" fill="none" stroke="#9CA3AF" stroke-width="2.2" viewBox="0 0 24 24" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        <input type="text" placeholder="Cari praktisi bawang, kendala hama ulat/moler...">
+        <svg width="18" height="18" fill="none" stroke="#9CA3AF" stroke-width="2.2" viewBox="0 0 24 24" style="flex-shrink:0;margin-left:8px"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" placeholder="Cari praktisi kebun, agronomis, hama kutu kebul, pupuk NPK..." id="heroSearch">
         <a href="pages/konsultasi.html" class="btn btn-g btn-sm">Cari Solusi</a>
       </div>
+      
       <div class="hero-chips">
         <span class="lbl">Populer:</span>
-        <a href="pages/konsultasi.html" class="chip">&#129477; Bawang Merah</a>
-        <a href="pages/konsultasi.html" class="chip">&#127812; Moler Bawang</a>
-        <a href="pages/konsultasi.html" class="chip">&#128027; Ulat Grayak</a>
-        <a href="pages/sarana.html" class="chip">&#129514; Nutrisi Umbi</a>
-        <a href="pages/konsultasi.html" class="chip">&#127807; Daun Kuning</a>
+        <a href="pages/konsultasi.html" class="chip">🐛 Kutu Putih</a>
+        <a href="pages/konsultasi.html" class="chip">🍂 Daun Kuning</a>
+        <a href="pages/sarana.html" class="chip">🌱 Pupuk Organik</a>
+        <a href="pages/konsultasi.html" class="chip">🥬 Hidroponik</a>
+        <a href="pages/konsultasi.html" class="chip">🌾 Padi</a>
       </div>
+      
       <div class="hero-trust">
-        <div class="trust-it"><span class="chk">&#10003;</span> Respon Cepat</div>
-        <div class="trust-it"><span class="chk">&#10003;</span> Praktisi Bersertifikasi</div>
-        <div class="trust-it"><span class="chk">&#10003;</span> Tarif Terjangkau</div>
+        <div class="trust-it"><span class="chk">✓</span> Respon Cepat &lt;5 Menit</div>
+        <div class="trust-it"><span class="chk">✓</span> 150+ Praktisi Berpengalaman</div>
+        <div class="trust-it"><span class="chk">✓</span> Bayar QRIS / Transfer</div>
       </div>
     </div>
-    <div class="slider-wrap">
-      <div class="slider" id="heroSlider">
-        <div class="s-track">
-          <div class="s-slide"><img src="images/halobun_real_practitioner.jpg" alt="Praktisi agronom bersertifikasi Indonesia"></div>
-          <div class="s-slide"><img src="images/halobun_real_hydroponics.jpg" alt="Solusi pertanian hidroponik modern"></div>
-          <div class="s-slide"><img src="images/halobun_real_pest_control.jpg" alt="Pengendalian hama tanaman"></div>
-          <div class="s-slide"><img src="images/halobun_real_livestock.jpg" alt="Peternakan terpadu"></div>
-          <div class="s-slide"><img src="images/halobun_real_training.jpg" alt="Pelatihan teknis petani"></div>
-        </div>
-        <button class="s-btn prev" aria-label="Sebelumnya">
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <button class="s-btn next" aria-label="Selanjutnya">
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </button>
-        <div class="s-dots">
-          <button class="s-dot active" aria-label="Slide 1"></button>
-          <button class="s-dot" aria-label="Slide 2"></button>
-          <button class="s-dot" aria-label="Slide 3"></button>
-          <button class="s-dot" aria-label="Slide 4"></button>
-          <button class="s-dot" aria-label="Slide 5"></button>
-        </div>
-      </div>
+    
+    <div class="slider" id="heroSlider">
+      <div class="s-track"><div class="s-slide"><img src="images/halobun_real_practitioner.jpg" alt="Praktisi agronom bersertifikasi IPB & UGM"></div><div class="s-slide"><img src="images/halobun_real_hydroponics.jpg" alt="Solusi hidroponik modern & nutrisi presisi"></div><div class="s-slide"><img src="images/halobun_real_pest_control.jpg" alt="Pengendalian hama & diagnosa penyakit daun"></div><div class="s-slide"><img src="images/halobun_real_livestock.jpg" alt="Pertanian & peternakan sirkular terpadu"></div><div class="s-slide"><img src="images/halobun_real_training.jpg" alt="Pelatihan & bimtek kelompok tani nusantara"></div></div>
+      <button class="s-btn prev">&#8592;</button>
+      <button class="s-btn next">&#8594;</button>
+      <div class="s-dots"><button class="s-dot active" aria-label="Slide 1"></button><button class="s-dot" aria-label="Slide 2"></button><button class="s-dot" aria-label="Slide 3"></button><button class="s-dot" aria-label="Slide 4"></button><button class="s-dot" aria-label="Slide 5"></button></div>
     </div>
   </div>
 </section>
 
-<section class="stat-bar">
-  <div class="con">
-    <div class="stat-grid">
-      <div class="stat-item">
-        <div class="stat-icon">&#128101;</div>
-        <div>
-          <div class="stat-val">500+</div>
-          <div class="stat-lbl">Petani Terbantu</div>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">&#127807;</div>
-        <div>
-          <div class="stat-val">6 Ahli</div>
-          <div class="stat-lbl">Praktisi Bersertifikasi</div>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">&#11088;</div>
-        <div>
-          <div class="stat-val">4.9 <span style="font-size:16px;color:#F59E0B">&#9733;</span></div>
-          <div class="stat-lbl">Rating Kepuasan</div>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">&#128172;</div>
-        <div>
-          <div class="stat-val">24/7</div>
-          <div class="stat-lbl">Konsultasi Siaga</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- Trust Metric Bar -->
+<section class="sec-sm" style="background:var(--s50);border-bottom:1px solid var(--s200)">
+  <div class="con"><div class="grid g4" style="text-align:center">
+    <div><div style="font-size:32px;font-weight:900;color:var(--g)">500+</div><div class="tsm" style="color:var(--s500)">Pekebun Terbantu</div></div>
+    <div><div style="font-size:32px;font-weight:900;color:var(--g)">6</div><div class="tsm" style="color:var(--s500)">Praktisi Bersertifikasi</div></div>
+    <div><div style="font-size:32px;font-weight:900;color:var(--g)">4.9⭐</div><div class="tsm" style="color:var(--s500)">Rating Rata-rata</div></div>
+    <div><div style="font-size:32px;font-weight:900;color:var(--g)">24/7</div><div class="tsm" style="color:var(--s500)">Dukungan WhatsApp</div></div>
+  </div></div>
 </section>
 
+<!-- Layanan Cards -->
 <section class="sec"><div class="con">
-  <div class="sec-hd"><div class="sec-ttl">Layanan Kami</div>
-    <p class="sec-sub">Solusi lengkap untuk kebutuhan kebun dan pertanian dari konsultasi hingga pengadaan sarana tani.</p></div>
-  <div class="grid g4">
-    <div class="card">
-      <div class="card-b">
-        <div class="srv-icon">&#128187;</div>
-        <div style="font-weight:800;font-size:16px;margin-bottom:8px;color:var(--s900)">Konsultasi Online</div>
-        <p style="font-size:13.5px;color:var(--s500);line-height:1.6;margin-bottom:18px">Sesi video call real-time dengan agronom ahli. Konsultasi hama, penyakit, nutrisi, dan teknik berkebun.</p>
-        <a href="pages/konsultasi.html" class="btn btn-g btn-sm">Mulai Konsultasi</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-b">
-        <div class="srv-icon">&#127968;</div>
-        <div style="font-weight:800;font-size:16px;margin-bottom:8px;color:var(--s900)">Kunjungan Lahan</div>
-        <p style="font-size:13.5px;color:var(--s500);line-height:1.6;margin-bottom:18px">Tim agronom datang langsung ke kebun Anda untuk inspeksi fisik, audit tanah, dan rekomendasi praktis.</p>
-        <a href="pages/kunjungan.html" class="btn btn-g btn-sm">Jadwalkan Kunjungan</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-b">
-        <div class="srv-icon">&#127891;</div>
-        <div style="font-weight:800;font-size:16px;margin-bottom:8px;color:var(--s900)">Undang Narasumber</div>
-        <p style="font-size:13.5px;color:var(--s500);line-height:1.6;margin-bottom:18px">Hadirkan pakar agronomi untuk workshop, bimtek poktan, webinar, atau seminar komunitas berkebun.</p>
-        <a href="pages/narsum.html" class="btn btn-g btn-sm">Undang Narsum</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-b">
-        <div class="srv-icon">&#127807;</div>
-        <div style="font-weight:800;font-size:16px;margin-bottom:8px;color:var(--s900)">Sarana Tani</div>
-        <p style="font-size:13.5px;color:var(--s500);line-height:1.6;margin-bottom:18px">Bibit bersertifikat, pupuk organik, pestisida nabati, dan sarana pertanian berkualitas teruji.</p>
-        <a href="pages/sarana.html" class="btn btn-g btn-sm">Lihat Produk</a>
-      </div>
-    </div>
-  </div>
+  <div class="sec-hd"><div class="sec-ttl">Layanan Unggulan Hallobun</div>
+  <p class="sec-sub" style="margin:0 auto">Solusi terintegrasi dari bimbingan online hingga sarana tanam berkualitas.</p></div>
+  <div class="grid g4"><div class="card"><div class="card-b" style="text-align:center">
+  <div style="font-size:40px;margin-bottom:14px">💬</div>
+  <div style="font-weight:800;font-size:16px;margin-bottom:8px;color:var(--s900)">Konsultasi Online</div>
+  <p style="font-size:13.5px;color:var(--s500);line-height:1.6;margin-bottom:18px">Sesi 1-on-1 via video call dengan pakar agronomi bersertifikasi.</p>
+  <a href="pages/konsultasi.html" class="btn btn-g btn-sm">Pilih Praktisi</a>
+</div></div><div class="card"><div class="card-b" style="text-align:center">
+  <div style="font-size:40px;margin-bottom:14px">🎤</div>
+  <div style="font-weight:800;font-size:16px;margin-bottom:8px;color:var(--s900)">Undang Narasumber</div>
+  <p style="font-size:13.5px;color:var(--s500);line-height:1.6;margin-bottom:18px">Hadirkan pakar untuk seminar, penyuluhan, atau workshop komunitas.</p>
+  <a href="pages/narsum.html" class="btn btn-g btn-sm">Undang Sekarang</a>
+</div></div><div class="card"><div class="card-b" style="text-align:center">
+  <div style="font-size:40px;margin-bottom:14px">🚜</div>
+  <div style="font-weight:800;font-size:16px;margin-bottom:8px;color:var(--s900)">Kunjungan Offline</div>
+  <p style="font-size:13.5px;color:var(--s500);line-height:1.6;margin-bottom:18px">Tim ahli kami siap datang langsung ke kebun atau lahan Anda.</p>
+  <a href="pages/kunjungan.html" class="btn btn-g btn-sm">Jadwalkan Kunjungan</a>
+</div></div><div class="card"><div class="card-b" style="text-align:center">
+  <div style="font-size:40px;margin-bottom:14px">🌿</div>
+  <div style="font-weight:800;font-size:16px;margin-bottom:8px;color:var(--s900)">Sarana Pertanian</div>
+  <p style="font-size:13.5px;color:var(--s500);line-height:1.6;margin-bottom:18px">Bibit unggul, pupuk organik, nutrisi tanaman & alat kebun berkualitas.</p>
+  <a href="pages/sarana.html" class="btn btn-g btn-sm">Lihat Katalog</a>
+</div></div></div>
+  <div class="tc mt8"><a href="pages/layanan.html" class="btn btn-o btn-lg">Lihat Semua 7 Layanan Kami →</a></div>
 </div></section>
 
-<section class="sec" style="background:var(--s50)"><div class="con">
-  <div class="sec-hd"><div class="sec-ttl">Praktisi Unggulan</div>
-    <p class="sec-sub">Konsultasi langsung dengan pakar agronom bersertifikasi nasional.</p></div>
-  <div class="grid g3"><div class="pk-card">
-  <img src="images/halobun_real_practitioner.jpg" alt="Dr. Ir. Hendra Gunawan, M.Sc.">
-  <div class="pk-b">
-    <div class="pk-name">Dr. Ir. Hendra Gunawan, M.Sc.</div>
-    <div class="pk-spec">&#127807; Penyakit &amp; Hama Tanaman</div>
-    <div class="pk-ft">
-      <div class="price">Rp 150.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 4.9</div>
+<!-- CEK GEJALA MANDIRI (Symptom Triage) -->
+<section class="sec" style="background:#FAFBF9;border-top:1px solid var(--s200);border-bottom:1px solid var(--s200)"><div class="con">
+  <div class="sec-hd">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:var(--gl);border:1px solid var(--g100);padding:4px 14px;border-radius:9999px;font-size:12px;font-weight:700;color:var(--g);margin-bottom:10px">
+      🩺 Fitur Cek Mandiri
     </div>
-    <a href="pages/konsultasi.html" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</a>
+    <div class="sec-ttl">Diagnosa Gejala Masalah Tanaman</div>
+    <p class="sec-sub" style="margin:0 auto">Pilih gejala yang dialami tanaman Anda untuk mendapatkan diagnosa awal ilmiah dan solusi tepat.</p>
   </div>
-</div><div class="pk-card">
-  <img src="images/halobun_real_female_1.jpg" alt="Ir. Dian Wulandari, M.P.">
-  <div class="pk-b">
-    <div class="pk-name">Ir. Dian Wulandari, M.P.</div>
-    <div class="pk-spec">&#127807; Padi &amp; Palawija</div>
-    <div class="pk-ft">
-      <div class="price">Rp 120.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 4.8</div>
-    </div>
-    <a href="pages/konsultasi.html" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</a>
+  <div class="grid g2" style="gap:32px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:12px"><button class="gejala-btn active" onclick="selectGejala('daun-kuning', this)">
+  <span style="font-size:24px">🍂</span>
+  <div>
+    <div style="font-weight:700;font-size:14px;color:var(--s900)">Daun Menguning & Bercak</div>
+    <div style="font-size:11.5px;color:var(--s500)">Contoh: Cabai, Tomat, Sayuran</div>
   </div>
-</div><div class="pk-card">
-  <img src="images/halobun_real_practitioner_2.jpg" alt="Prof. Dr. Ir. Arif Wicaksono, Ph.D.">
-  <div class="pk-b">
-    <div class="pk-name">Prof. Dr. Ir. Arif Wicaksono, Ph.D.</div>
-    <div class="pk-spec">&#127807; Agronomi &amp; Kesuburan Tanah</div>
-    <div class="pk-ft">
-      <div class="price">Rp 200.000<span>/sesi</span></div>
-      <div class="rating"><span class="star">&#11088;</span> 5.0</div>
+</button><button class="gejala-btn" onclick="selectGejala('daun-keriting', this)">
+  <span style="font-size:24px">🐛</span>
+  <div>
+    <div style="font-weight:700;font-size:14px;color:var(--s900)">Daun Keriting & Kerdil</div>
+    <div style="font-size:11.5px;color:var(--s500)">Contoh: Cabai, Melon, Terong</div>
+  </div>
+</button><button class="gejala-btn" onclick="selectGejala('batang-layu', this)">
+  <span style="font-size:24px">🥀</span>
+  <div>
+    <div style="font-weight:700;font-size:14px;color:var(--s900)">Batang Layu Mendadak</div>
+    <div style="font-size:11.5px;color:var(--s500)">Contoh: Cabai, Tomat, Padi</div>
+  </div>
+</button><button class="gejala-btn" onclick="selectGejala('buah-busuk', this)">
+  <span style="font-size:24px">🍅</span>
+  <div>
+    <div style="font-weight:700;font-size:14px;color:var(--s900)">Buah Busuk Ujung / Rontok</div>
+    <div style="font-size:11.5px;color:var(--s500)">Contoh: Tomat, Cabai, Melon</div>
+  </div>
+</button></div>
+    <div><div class="gejala-res show" id="res-daun-kuning">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+    <span style="font-size:28px">🍂</span>
+    <div>
+      <div style="font-size:16px;font-weight:800;color:var(--s900)">Hasil Diagnosa Cepat: Daun Menguning & Bercak</div>
+      <div style="font-size:12px;color:var(--s500)">Komoditas rentan: Cabai, Tomat, Sayuran</div>
     </div>
-    <a href="pages/konsultasi.html" class="btn btn-g w100 mt4" style="justify-content:center">Booking Konsultasi</a>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--s200);margin-bottom:14px">
+    <div style="font-size:12px;font-weight:700;color:var(--s400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Kemungkinan Penyebab</div>
+    <p style="font-size:14px;color:var(--s700);line-height:1.6">Kekurangan nitrogen (N) atau infeksi bercak daun cercospora</p>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--s200);margin-bottom:18px">
+    <div style="font-size:12px;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Rekomendasi Tindakan Awal</div>
+    <p style="font-size:14px;color:var(--s700);line-height:1.6">Aplikasi pupuk N seimbang, pangkas daun terinfeksi, dan gunakan fungisida nabati atau Trichoderma.</p>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:8px">
+    <div style="font-size:13px;color:var(--s600)">Rekomendasi praktisi: <strong>Dr. Budi Santoso (Hama & Penyakit)</strong></div>
+    <a href="pages/konsultasi.html" class="btn btn-g btn-sm">Konsultasikan Langsung →</a>
+  </div>
+</div><div class="gejala-res" id="res-daun-keriting">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+    <span style="font-size:28px">🐛</span>
+    <div>
+      <div style="font-size:16px;font-weight:800;color:var(--s900)">Hasil Diagnosa Cepat: Daun Keriting & Kerdil</div>
+      <div style="font-size:12px;color:var(--s500)">Komoditas rentan: Cabai, Melon, Terong</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--s200);margin-bottom:14px">
+    <div style="font-size:12px;font-weight:700;color:var(--s400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Kemungkinan Penyebab</div>
+    <p style="font-size:14px;color:var(--s700);line-height:1.6">Serangan kutu kebul (Bemisia tabaci), tungau merah, atau thrips pembawa virus Gemini</p>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--s200);margin-bottom:18px">
+    <div style="font-size:12px;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Rekomendasi Tindakan Awal</div>
+    <p style="font-size:14px;color:var(--s700);line-height:1.6">Semprot pestisida nabati neem oil / ekstrak tembakau tiap 3 hari sore hari, pasang perangkap kuning.</p>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:8px">
+    <div style="font-size:13px;color:var(--s600)">Rekomendasi praktisi: <strong>Dr. Budi Santoso (Hama & Penyakit)</strong></div>
+    <a href="pages/konsultasi.html" class="btn btn-g btn-sm">Konsultasikan Langsung →</a>
+  </div>
+</div><div class="gejala-res" id="res-batang-layu">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+    <span style="font-size:28px">🥀</span>
+    <div>
+      <div style="font-size:16px;font-weight:800;color:var(--s900)">Hasil Diagnosa Cepat: Batang Layu Mendadak</div>
+      <div style="font-size:12px;color:var(--s500)">Komoditas rentan: Cabai, Tomat, Padi</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--s200);margin-bottom:14px">
+    <div style="font-size:12px;font-weight:700;color:var(--s400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Kemungkinan Penyebab</div>
+    <p style="font-size:14px;color:var(--s700);line-height:1.6">Layu bakteri (Ralstonia) atau jamur Fusarium oxysporum pada media tanam terlalu lembab</p>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--s200);margin-bottom:18px">
+    <div style="font-size:12px;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Rekomendasi Tindakan Awal</div>
+    <p style="font-size:14px;color:var(--s700);line-height:1.6">Perbaiki drainase tanah, kurangi penyiraman, taburkan kapur dolomit jika tanah asam (pH < 6), kocor agens hayati.</p>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:8px">
+    <div style="font-size:13px;color:var(--s600)">Rekomendasi praktisi: <strong>Prof. Ahmad Fauzi (Kesuburan Tanah)</strong></div>
+    <a href="pages/konsultasi.html" class="btn btn-g btn-sm">Konsultasikan Langsung →</a>
+  </div>
+</div><div class="gejala-res" id="res-buah-busuk">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+    <span style="font-size:28px">🍅</span>
+    <div>
+      <div style="font-size:16px;font-weight:800;color:var(--s900)">Hasil Diagnosa Cepat: Buah Busuk Ujung / Rontok</div>
+      <div style="font-size:12px;color:var(--s500)">Komoditas rentan: Tomat, Cabai, Melon</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--s200);margin-bottom:14px">
+    <div style="font-size:12px;font-weight:700;color:var(--s400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Kemungkinan Penyebab</div>
+    <p style="font-size:14px;color:var(--s700);line-height:1.6">Blossom End Rot (kekurangan kalsium Ca) atau serangan lalat buah (Bactrocera)</p>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:16px;border:1px solid var(--s200);margin-bottom:18px">
+    <div style="font-size:12px;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Rekomendasi Tindakan Awal</div>
+    <p style="font-size:14px;color:var(--s700);line-height:1.6">Semprot kalsium nitrat cair (CaNO3), pasang perangkap feromon metil eugenol untuk lalat buah.</p>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:8px">
+    <div style="font-size:13px;color:var(--s600)">Rekomendasi praktisi: <strong>Dr. Dewi Lestari (Hortikultura)</strong></div>
+    <a href="pages/konsultasi.html" class="btn btn-g btn-sm">Konsultasikan Langsung →</a>
   </div>
 </div></div>
-  <div class="tc mt8"><a href="pages/konsultasi.html" class="btn btn-g btn-lg">Lihat Semua Praktisi</a></div>
-</div></section>
-
-<section class="sec"><div class="con">
-  <div class="sec-hd"><div class="sec-ttl">Cara Kerja</div><p class="sec-sub">Mulai konsultasi dalam 3 langkah mudah.</p></div>
-  <div class="grid g3">
-    <div style="text-align:center;padding:24px"><div style="width:56px;height:56px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px">&#128269;</div><div style="font-weight:800;font-size:16px;margin-bottom:8px">1. Pilih Praktisi</div><p class="tsm" style="color:var(--s500)">Jelajahi profil praktisi ahli sesuai kebutuhan tanaman atau permasalahan kebun Anda.</p></div>
-    <div style="text-align:center;padding:24px"><div style="width:56px;height:56px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px">&#128197;</div><div style="font-weight:800;font-size:16px;margin-bottom:8px">2. Booking &amp; Bayar</div><p class="tsm" style="color:var(--s500)">Tentukan jadwal sesi dan selesaikan pembayaran aman via QRIS atau Transfer Bank.</p></div>
-    <div style="text-align:center;padding:24px"><div style="width:56px;height:56px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px">&#128172;</div><div style="font-weight:800;font-size:16px;margin-bottom:8px">3. Konsultasi Video Call</div><p class="tsm" style="color:var(--s500)">Tautan video call dikirim otomatis ke WhatsApp. Mulai sesi langsung dengan praktisi ahli.</p></div>
   </div>
 </div></section>
 
-<section class="sec-promo" style="background:linear-gradient(135deg,#064E3B 0%,#047857 50%,#059669 100%);color:#fff;overflow:hidden;position:relative;padding:50px 24px">
-  <div class="con" style="display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap">
-    <div style="flex:1;min-width:280px">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);padding:6px 16px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:16px;color:#A7F3D0">
-        <span>&#129477;</span> Panduan Budidaya Bawang Merah &amp; Pertanian Modern
-      </div>
-      <h2 style="font-size:32px;font-weight:800;line-height:1.25;margin-bottom:14px;color:#fff">
-        Panen Bawang Merah Melimpah <br><span style="color:#FDE047">Bebas Moler &amp; Hama</span>
-      </h2>
-      <p style="font-size:15px;color:#D1FAE5;line-height:1.6;margin-bottom:24px;max-width:540px">
-        Konsultasi rutin dengan praktisi agronom spesialis hortikultura &amp; bawang merah. Panduan pemupukan umbi presisi, mitigasi penyakit moler (fusarium), dan manajemen air lahan.
-      </p>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
-        <a href="pages/register.html" class="btn btn-w btn-lg" style="box-shadow:0 10px 25px rgba(0,0,0,0.15)">Daftar Sekarang</a>
-        <a href="pages/konsultasi.html" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:#fff;border:1.5px solid rgba(255,255,255,0.4)">Lihat Praktisi</a>
-      </div>
-    </div>
-    <div style="flex:0 0 320px;max-width:360px;display:flex;justify-content:center;align-items:center">
-      <img src="images/halobun_onion_animation.svg" alt="Ilustrasi Tanaman Bawang Merah Hallobun" style="width:100%;max-width:320px;height:auto;filter:drop-shadow(0 15px 30px rgba(0,0,0,0.25))">
-    </div>
+<!-- HARGA PANGAN TERKINI -->
+<section class="sec-sm" style="background:var(--s50);border-bottom:1px solid var(--s200)">
+  <div class="con">
+    <div class="sec-hd"><div style="display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:6px"><span style="font-size:22px">📊</span><div class="sec-ttl" style="margin-bottom:0">Harga Pangan &amp; Komoditas Terkini</div></div>
+    <p class="sec-sub" style="margin:0 auto">Pantau pergerakan harga pasar hortikultura &amp; pangan rata-rata nasional hari ini.</p></div>
+    <div class="grid g3"><div class="harga-card">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <span style="font-size:26px">🌶️</span>
+    <span style="font-size:12px;font-weight:700;color:#16A34A">▲ +3.2%</span>
+  </div>
+  <div style="font-weight:800;font-size:14px;color:var(--s900);margin-bottom:2px">Cabai Rawit Merah</div>
+  <div style="font-size:11px;color:var(--s400);margin-bottom:8px">Hortikultura · Rata-rata Nasional</div>
+  <div style="font-size:20px;font-weight:900;color:var(--g)">Rp 42.500<span style="font-size:12px;font-weight:500;color:var(--s400)">/kg</span></div>
+  <div style="font-size:10.5px;color:var(--s400);margin-top:4px">🕐 Hari ini, 08:30 WIB</div>
+</div><div class="harga-card">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <span style="font-size:26px">🧅</span>
+    <span style="font-size:12px;font-weight:700;color:#EF4444">▼ -1.8%</span>
+  </div>
+  <div style="font-weight:800;font-size:14px;color:var(--s900);margin-bottom:2px">Bawang Merah Brebes</div>
+  <div style="font-size:11px;color:var(--s400);margin-bottom:8px">Hortikultura · Pasar Induk</div>
+  <div style="font-size:20px;font-weight:900;color:var(--g)">Rp 34.000<span style="font-size:12px;font-weight:500;color:var(--s400)">/kg</span></div>
+  <div style="font-size:10.5px;color:var(--s400);margin-top:4px">🕐 Hari ini, 08:30 WIB</div>
+</div><div class="harga-card">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <span style="font-size:26px">🌾</span>
+    <span style="font-size:12px;font-weight:700;color:#6B7280">● 0.0%</span>
+  </div>
+  <div style="font-weight:800;font-size:14px;color:var(--s900);margin-bottom:2px">Beras Medium Pandan</div>
+  <div style="font-size:11px;color:var(--s400);margin-bottom:8px">Pangan Pokok · Stabil</div>
+  <div style="font-size:20px;font-weight:900;color:var(--g)">Rp 14.500<span style="font-size:12px;font-weight:500;color:var(--s400)">/kg</span></div>
+  <div style="font-size:10.5px;color:var(--s400);margin-top:4px">🕐 Hari ini, 08:30 WIB</div>
+</div><div class="harga-card">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <span style="font-size:26px">🥬</span>
+    <span style="font-size:12px;font-weight:700;color:#16A34A">▲ +4.1%</span>
+  </div>
+  <div style="font-weight:800;font-size:14px;color:var(--s900);margin-bottom:2px">Sayur Pakcoy Segar</div>
+  <div style="font-size:11px;color:var(--s400);margin-bottom:8px">Sayuran · Segar Petani</div>
+  <div style="font-size:20px;font-weight:900;color:var(--g)">Rp 8.500<span style="font-size:12px;font-weight:500;color:var(--s400)">/kg</span></div>
+  <div style="font-size:10.5px;color:var(--s400);margin-top:4px">🕐 Hari ini, 08:30 WIB</div>
+</div><div class="harga-card">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <span style="font-size:26px">🍅</span>
+    <span style="font-size:12px;font-weight:700;color:#EF4444">▼ -2.4%</span>
+  </div>
+  <div style="font-weight:800;font-size:14px;color:var(--s900);margin-bottom:2px">Tomat Buah Unggul</div>
+  <div style="font-size:11px;color:var(--s400);margin-bottom:8px">Hortikultura · Panen Raya</div>
+  <div style="font-size:20px;font-weight:900;color:var(--g)">Rp 12.000<span style="font-size:12px;font-weight:500;color:var(--s400)">/kg</span></div>
+  <div style="font-size:10.5px;color:var(--s400);margin-top:4px">🕐 Hari ini, 08:30 WIB</div>
+</div><div class="harga-card">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <span style="font-size:26px">🌽</span>
+    <span style="font-size:12px;font-weight:700;color:#16A34A">▲ +1.5%</span>
+  </div>
+  <div style="font-weight:800;font-size:14px;color:var(--s900);margin-bottom:2px">Jagung Manis Pipil</div>
+  <div style="font-size:11px;color:var(--s400);margin-bottom:8px">Pangan Pokok · Pasar Tradisional</div>
+  <div style="font-size:20px;font-weight:900;color:var(--g)">Rp 9.500<span style="font-size:12px;font-weight:500;color:var(--s400)">/kg</span></div>
+  <div style="font-size:10.5px;color:var(--s400);margin-top:4px">🕐 Hari ini, 08:30 WIB</div>
+</div></div>
   </div>
 </section>
 
+<!-- KLASIFIKASI PRAKTISI & DOKTER KEBUN (HALODOC-STYLE TIERS) -->
+<section class="sec" style="background:#fff;border-bottom:1px solid var(--s200);padding:60px 0">
+  <div class="con">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:32px">
+      <div>
+        <span class="bdg bdg-g" style="font-size:11px;font-weight:800;letter-spacing:0.5px;margin-bottom:8px;display:inline-block">
+          🩺 KONSULTASI TERSTRUKTUR SESUAI KEBUTUHAN
+        </span>
+        <div class="sec-ttl" style="font-size:26px;text-align:left;margin-bottom:6px">Klasifikasi Praktisi &amp; Pakar Kebun</div>
+        <p class="sec-sub" style="text-align:left;margin:0;max-width:640px;color:var(--s500);font-size:13.5px">
+          Pilih tingkatan praktisi berdasarkan kompleksitas kendala lahan Anda — mulai dari bimbingan pekarangan rumah, diagnosa OPT komersial, hingga uji lab &amp; riset tanah.
+        </p>
+      </div>
+      <a href="pages/konsultasi.html" class="btn btn-out" style="font-size:13px;font-weight:700">
+        Buka Direktori Lengkap &rarr;
+      </a>
+    </div>
 
+    <!-- 3 Halodoc-style Classification Cards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:24px;margin-bottom:36px">
+      
+      <!-- Card 1: Praktisi Umum -->
+      <div style="background:linear-gradient(180deg, #F0FDF4 0%, #FFFFFF 100%);border:1.5px solid #BBF7D0;border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 15px rgba(22,163,74,0.06);transition:transform 0.2s, box-shadow 0.2s" class="hover-shadow">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <span style="font-size:32px;background:#fff;width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.04);border:1px solid #E5E7EB">🌱</span>
+            <span class="bdg bdg-g" style="font-size:11px;font-weight:800">Bimbingan Dasar</span>
+          </div>
+          <div style="font-size:18px;font-weight:800;color:var(--s900);margin-bottom:2px">Praktisi Umum</div>
+          <div style="font-size:12px;font-weight:600;color:var(--s500);margin-bottom:12px">General Agronomist / Dokter Kebun Umum</div>
+          <p style="font-size:12.5px;color:var(--s600);line-height:1.55;margin-bottom:14px">
+            Konsultasi keluhan harian tanaman pekarangan rumah, sayuran hobi/urban farming, media tanam, pemupukan dasar, dan pencegahan hama pemula.
+          </p>
+          <div style="font-size:11.5px;color:var(--s600);padding:8px 10px;background:#fff;border-radius:10px;border:1px solid #E5E7EB;margin-bottom:14px">
+            🎓 <strong style="color:var(--g)">Kualifikasi:</strong> Sarjana Pertanian (S.P. / S.Pt) &amp; PPL
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Pekarangan Rumah</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Sayuran Daun</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Tanaman Hias</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Kompos Dasar</span>
+          </div>
+        </div>
+        <div style="border-top:1px solid #E5E7EB;padding-top:16px;margin-top:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <div>
+              <div style="font-size:10.5px;color:var(--s400)">Tarif Mulai</div>
+              <div style="font-size:18px;font-weight:900;color:var(--s900)">Rp 35.000<span style="font-size:11px;font-weight:500;color:var(--s400)">/sesi</span></div>
+            </div>
+            <span style="font-size:11.5px;font-weight:700;color:var(--g)">● Tersedia Online</span>
+          </div>
+          <a href="pages/konsultasi.html?klasifikasi=umum" class="btn btn-g w100" style="justify-content:center;padding:10px">
+            Pilih Praktisi Umum &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Praktisi Spesialis -->
+      <div style="background:linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 100%);border:1.5px solid #BFDBFE;border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 15px rgba(37,99,235,0.06);transition:transform 0.2s, box-shadow 0.2s" class="hover-shadow">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <span style="font-size:32px;background:#fff;width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.04);border:1px solid #E5E7EB">🔬</span>
+            <span class="bdg bdg-b" style="font-size:11px;font-weight:800;background:#DBEAFE;color:#1E40AF">Paling Populer</span>
+          </div>
+          <div style="font-size:18px;font-weight:800;color:var(--s900);margin-bottom:2px">Praktisi Spesialis</div>
+          <div style="font-size:12px;font-weight:600;color:var(--s500);margin-bottom:12px">Specialist Agronomist / Pakar Komoditas &amp; OPT</div>
+          <p style="font-size:12.5px;color:var(--s600);line-height:1.55;margin-bottom:14px">
+            Diagnosa mendalam hama &amp; penyakit (OPT), manajemen nutrisi presisi hidroponik, budidaya komersial cabai, bawang merah, padi, &amp; hortikultura.
+          </p>
+          <div style="font-size:11.5px;color:var(--s600);padding:8px 10px;background:#fff;border-radius:10px;border:1px solid #E5E7EB;margin-bottom:14px">
+            🎓 <strong style="color:#2563EB">Kualifikasi:</strong> Magister Pertanian (M.P./M.Si) &amp; Dokter Tanaman
+          </div>
+          <div style="display:flex;flex-wrap:gap:6px;margin-bottom:16px;flex-wrap:wrap">
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Penyakit &amp; Hama (OPT)</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Cabai &amp; Bawang</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Hidroponik Presisi</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Padi &amp; Palawija</span>
+          </div>
+        </div>
+        <div style="border-top:1px solid #E5E7EB;padding-top:16px;margin-top:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <div>
+              <div style="font-size:10.5px;color:var(--s400)">Tarif Mulai</div>
+              <div style="font-size:18px;font-weight:900;color:var(--s900)">Rp 100.000<span style="font-size:11px;font-weight:500;color:var(--s400)">/sesi</span></div>
+            </div>
+            <span style="font-size:11.5px;font-weight:700;color:#2563EB">● Tersedia Online</span>
+          </div>
+          <a href="pages/konsultasi.html?klasifikasi=spesialis" class="btn btn-g w100" style="justify-content:center;padding:10px;background:#2563EB;border-color:#2563EB">
+            Pilih Praktisi Spesialis &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Praktisi Super Spesialis -->
+      <div style="background:linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 100%);border:1.5px solid #E9D5FF;border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 15px rgba(126,34,206,0.06);transition:transform 0.2s, box-shadow 0.2s" class="hover-shadow">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <span style="font-size:32px;background:#fff;width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.04);border:1px solid #E5E7EB">🏛️</span>
+            <span class="bdg" style="font-size:11px;font-weight:800;background:#F3E8FF;color:#7E22CE">Pakar Riset &amp; Audit</span>
+          </div>
+          <div style="font-size:18px;font-weight:800;color:var(--s900);margin-bottom:2px">Praktisi Super Spesialis</div>
+          <div style="font-size:12px;font-weight:600;color:var(--s500);margin-bottom:12px">Senior Consultant / Guru Besar &amp; Peneliti Utama</div>
+          <p style="font-size:12.5px;color:var(--s600);line-height:1.55;margin-bottom:14px">
+            Analisis laboratorium kimia tanah &amp; mikrobiologi, formulasi pupuk/hayati khusus, audit perkebunan industri luas, dan bioteknologi tanaman.
+          </p>
+          <div style="font-size:11.5px;color:var(--s600);padding:8px 10px;background:#fff;border-radius:10px;border:1px solid #E5E7EB;margin-bottom:14px">
+            🎓 <strong style="color:#7E22CE">Kualifikasi:</strong> Doktor (Dr.) / Ph.D / Profesor (Prof.)
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Uji Tanah Lab &amp; pH</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Audit Kebun Hektaran</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Bioteknologi Tanaman</span>
+            <span style="font-size:10.5px;background:#fff;padding:4px 8px;border-radius:6px;border:1px solid #E5E7EB;color:var(--s700)">Formulasi Hayati</span>
+          </div>
+        </div>
+        <div style="border-top:1px solid #E5E7EB;padding-top:16px;margin-top:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <div>
+              <div style="font-size:10.5px;color:var(--s400)">Tarif Mulai</div>
+              <div style="font-size:18px;font-weight:900;color:var(--s900)">Rp 200.000<span style="font-size:11px;font-weight:500;color:var(--s400)">/sesi</span></div>
+            </div>
+            <span style="font-size:11.5px;font-weight:700;color:#7E22CE">● Tersedia Online</span>
+          </div>
+          <a href="pages/konsultasi.html?klasifikasi=super_spesialis" class="btn btn-g w100" style="justify-content:center;padding:10px;background:#7E22CE;border-color:#7E22CE">
+            Pilih Super Spesialis &rarr;
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quick Tab Intip Dokter -->
+    <div style="background:var(--s50);border:1.5px solid var(--s200);border-radius:20px;padding:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--s200)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:20px">👀</span>
+          <div>
+            <div style="font-size:13.5px;font-weight:800;color:var(--s900)">Intip Profil Praktisi Berdasarkan Klasifikasi</div>
+            <div style="font-size:11.5px;color:var(--s500)">Klik tab di bawah untuk melihat dokter yang bertugas di klasifikasi tersebut</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;background:#fff;padding:4px;border-radius:12px;border:1px solid var(--s200);overflow-x:auto;max-width:100%">
+          <button type="button" class="tab-btn-klas active" style="flex-shrink:0;white-space:nowrap;" onclick="switchKlasTab('umum', this)" style="border:none;background:var(--g);color:#fff;font-weight:700;font-size:11.5px;padding:6px 14px;border-radius:8px;cursor:pointer">
+            🌱 Praktisi Umum
+          </button>
+          <button type="button" class="tab-btn-klas" style="flex-shrink:0;white-space:nowrap;" onclick="switchKlasTab('spesialis', this)" style="border:none;background:transparent;color:var(--s600);font-weight:700;font-size:11.5px;padding:6px 14px;border-radius:8px;cursor:pointer">
+            🔬 Praktisi Spesialis
+          </button>
+          <button type="button" class="tab-btn-klas" style="flex-shrink:0;white-space:nowrap;" onclick="switchKlasTab('super_spesialis', this)" style="border:none;background:transparent;color:var(--s600);font-weight:700;font-size:11.5px;padding:6px 14px;border-radius:8px;cursor:pointer">
+            🏛️ Super Spesialis
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab content umum -->
+      <div id="klas-tab-umum" class="klas-tab-panel" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:16px">
+        <div class="pk-card" style="margin:0">
+          <img src="images/halobun_real_training.jpg" alt="Bayu Pratama, S.P." style="height:140px">
+          <div class="pk-b">
+            <span class="bdg bdg-g" style="font-size:10px;margin-bottom:6px;display:inline-block">🌱 Praktisi Umum</span>
+            <div class="pk-name">Bayu Pratama, S.P.</div>
+            <div class="pk-spec">Hortikultura &amp; Tanaman Pekarangan</div>
+            <div class="pk-ft mt4">
+              <div class="price">Rp 45.000<span>/sesi</span></div>
+              <div class="rating"><span class="star">⭐</span> 4.8 (24)</div>
+            </div>
+            <a href="pages/konsultan-4.html" class="btn btn-g w100 mt4" style="justify-content:center">Lihat Profil &amp; Jadwal</a>
+          </div>
+        </div>
+        <div class="pk-card" style="margin:0">
+          <img src="images/halobun_real_sarana.jpg" alt="Dewi Lestari, S.Pt" style="height:140px">
+          <div class="pk-b">
+            <span class="bdg bdg-g" style="font-size:10px;margin-bottom:6px;display:inline-block">🌱 Praktisi Umum</span>
+            <div class="pk-name">Dewi Lestari, S.Pt</div>
+            <div class="pk-spec">Urban Farming &amp; Kebun Sayur Rumah</div>
+            <div class="pk-ft mt4">
+              <div class="price">Rp 50.000<span>/sesi</span></div>
+              <div class="rating"><span class="star">⭐</span> 4.9 (31)</div>
+            </div>
+            <a href="pages/konsultan-6.html" class="btn btn-g w100 mt4" style="justify-content:center">Lihat Profil &amp; Jadwal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab content spesialis -->
+      <div id="klas-tab-spesialis" class="klas-tab-panel" style="display:none;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:16px">
+        <div class="pk-card" style="margin:0">
+          <img src="images/halobun_real_practitioner.jpg" alt="Dr. Budi Santoso, M.Si" style="height:140px">
+          <div class="pk-b">
+            <span class="bdg bdg-b" style="font-size:10px;margin-bottom:6px;display:inline-block">🔬 Praktisi Spesialis</span>
+            <div class="pk-name">Dr. Budi Santoso, M.Si</div>
+            <div class="pk-spec">Penyakit &amp; Hama Tanaman (OPT)</div>
+            <div class="pk-ft mt4">
+              <div class="price">Rp 150.000<span>/sesi</span></div>
+              <div class="rating"><span class="star">⭐</span> 4.9 (47)</div>
+            </div>
+            <a href="pages/konsultan-1.html" class="btn btn-g w100 mt4" style="justify-content:center">Lihat Profil &amp; Jadwal</a>
+          </div>
+        </div>
+        <div class="pk-card" style="margin:0">
+          <img src="images/halobun_praktisi_hero.jpg" alt="Ir. Siti Rahayu, M.P" style="height:140px">
+          <div class="pk-b">
+            <span class="bdg bdg-b" style="font-size:10px;margin-bottom:6px;display:inline-block">🔬 Praktisi Spesialis</span>
+            <div class="pk-name">Ir. Siti Rahayu, M.P</div>
+            <div class="pk-spec">Padi &amp; Palawija Komersial</div>
+            <div class="pk-ft mt4">
+              <div class="price">Rp 120.000<span>/sesi</span></div>
+              <div class="rating"><span class="star">⭐</span> 4.8 (32)</div>
+            </div>
+            <a href="pages/konsultan-2.html" class="btn btn-g w100 mt4" style="justify-content:center">Lihat Profil &amp; Jadwal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab content super_spesialis -->
+      <div id="klas-tab-super_spesialis" class="klas-tab-panel" style="display:none;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:16px">
+        <div class="pk-card" style="margin:0">
+          <img src="images/halobun_hero_halodoc.jpg" alt="Prof. Ahmad Fauzi, Ph.D" style="height:140px">
+          <div class="pk-b">
+            <span class="bdg" style="background:#F3E8FF;color:#7E22CE;font-size:10px;margin-bottom:6px;display:inline-block">🏛️ Super Spesialis</span>
+            <div class="pk-name">Prof. Ahmad Fauzi, Ph.D</div>
+            <div class="pk-spec">Agronomi &amp; Riset Uji Kesuburan Tanah</div>
+            <div class="pk-ft mt4">
+              <div class="price">Rp 200.000<span>/sesi</span></div>
+              <div class="rating"><span class="star">⭐</span> 5.0 (58)</div>
+            </div>
+            <a href="pages/konsultan-3.html" class="btn btn-g w100 mt4" style="justify-content:center">Lihat Profil &amp; Jadwal</a>
+          </div>
+        </div>
+        <div class="pk-card" style="margin:0">
+          <img src="images/halobun_real_soil_test.jpg" alt="Dr. Ir. Suwandi, M.Si" style="height:140px">
+          <div class="pk-b">
+            <span class="bdg" style="background:#F3E8FF;color:#7E22CE;font-size:10px;margin-bottom:6px;display:inline-block">🏛️ Super Spesialis</span>
+            <div class="pk-name">Dr. Ir. Suwandi, M.Si</div>
+            <div class="pk-spec">Audit Perkebunan &amp; Bioteknologi Hayati</div>
+            <div class="pk-ft mt4">
+              <div class="price">Rp 250.000<span>/sesi</span></div>
+              <div class="rating"><span class="star">⭐</span> 4.9 (41)</div>
+            </div>
+            <a href="pages/konsultan-5.html" class="btn btn-g w100 mt4" style="justify-content:center">Lihat Profil &amp; Jadwal</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+function switchKlasTab(tabKey, btn) {
+  document.querySelectorAll('.klas-tab-panel').forEach(p => p.style.display = 'none');
+  const target = document.getElementById('klas-tab-' + tabKey);
+  if (target) target.style.display = 'grid';
+  document.querySelectorAll('.tab-btn-klas').forEach(b => {
+    b.style.background = 'transparent';
+    b.style.color = 'var(--s600)';
+  });
+  btn.style.background = tabKey === 'umum' ? 'var(--g)' : (tabKey === 'spesialis' ? '#2563EB' : '#7E22CE');
+  btn.style.color = '#fff';
+}
+</script>
+
+<!-- TOKO SARANA -->
+<section class="sec" style="background:var(--s50);border-top:1px solid var(--s200)"><div class="con">
+  <div class="sec-hd"><div class="sec-ttl">🌿 Sarana &amp; Nutrisi Kebun Teruji</div>
+  <p class="sec-sub" style="margin:0 auto">Produk pertanian organik terpercaya untuk hasil panen optimal.</p></div>
+  <div class="grid g4"><div class="card">
+  <img src="images/halobun_real_sarana.jpg" alt="Bibit Cabai Merah TW Super" style="width:100%;height:170px;object-fit:cover">
+  <div class="card-b">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <span class="bdg bdg-g" style="font-size:11px">Bibit</span>
+      <span class="sts sts-c">Tersedia</span>
+    </div>
+    <div style="font-weight:800;font-size:14px;margin-bottom:4px;color:var(--s900)">Bibit Cabai Merah TW Super</div>
+    <p style="font-size:12.5px;color:var(--s500);margin-bottom:12px;line-height:1.5">Varietas unggulan, tahan virus kuning & keriting, produktivi...</p>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-size:16px;font-weight:800;color:var(--g)">Rp 45.000</div>
+      <a href="https://wa.me/6281234567890?text=Halo, saya ingin memesan Bibit Cabai Merah TW Super" target="_blank" class="btn btn-g btn-sm">Pesan WA</a>
+    </div>
+  </div>
+</div><div class="card">
+  <img src="images/halobun_real_hydroponics.jpg" alt="Pupuk NPK Organik 25 Kg" style="width:100%;height:170px;object-fit:cover">
+  <div class="card-b">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <span class="bdg bdg-g" style="font-size:11px">Pupuk</span>
+      <span class="sts sts-c">Tersedia</span>
+    </div>
+    <div style="font-weight:800;font-size:14px;margin-bottom:4px;color:var(--s900)">Pupuk NPK Organik 25 Kg</div>
+    <p style="font-size:12.5px;color:var(--s500);margin-bottom:12px;line-height:1.5">Formulasi khusus sayuran dan buah. Memperkuat akar, meningka...</p>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-size:16px;font-weight:800;color:var(--g)">Rp 185.000</div>
+      <a href="https://wa.me/6281234567890?text=Halo, saya ingin memesan Pupuk NPK Organik 25 Kg" target="_blank" class="btn btn-g btn-sm">Pesan WA</a>
+    </div>
+  </div>
+</div><div class="card">
+  <img src="images/halobun_real_pest_control.jpg" alt="Pestisida Nabati Neem Oil 500ml" style="width:100%;height:170px;object-fit:cover">
+  <div class="card-b">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <span class="bdg bdg-g" style="font-size:11px">Pestisida</span>
+      <span class="sts sts-x">Habis</span>
+    </div>
+    <div style="font-weight:800;font-size:14px;margin-bottom:4px;color:var(--s900)">Pestisida Nabati Neem Oil 500ml</div>
+    <p style="font-size:12.5px;color:var(--s500);margin-bottom:12px;line-height:1.5">Pengendali hama organik dari biji nimba. Efektif vs thrips, ...</p>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-size:16px;font-weight:800;color:var(--g)">Rp 75.000</div>
+      <a href="https://wa.me/6281234567890?text=Halo, saya ingin memesan Pestisida Nabati Neem Oil 500ml" target="_blank" class="btn btn-g btn-sm">Pesan WA</a>
+    </div>
+  </div>
+</div><div class="card">
+  <img src="images/halobun_real_soil_test.jpg" alt="Nutrisi Hidroponik AB Mix 1L" style="width:100%;height:170px;object-fit:cover">
+  <div class="card-b">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <span class="bdg bdg-g" style="font-size:11px">Nutrisi</span>
+      <span class="sts sts-c">Tersedia</span>
+    </div>
+    <div style="font-weight:800;font-size:14px;margin-bottom:4px;color:var(--s900)">Nutrisi Hidroponik AB Mix 1L</div>
+    <p style="font-size:12.5px;color:var(--s500);margin-bottom:12px;line-height:1.5">Larutan nutrisi lengkap untuk sistem NFT, DFT, dan wick. Sud...</p>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-size:16px;font-weight:800;color:var(--g)">Rp 125.000</div>
+      <a href="https://wa.me/6281234567890?text=Halo, saya ingin memesan Nutrisi Hidroponik AB Mix 1L" target="_blank" class="btn btn-g btn-sm">Pesan WA</a>
+    </div>
+  </div>
+</div></div>
+  <div class="tc mt8"><a href="pages/sarana.html" class="btn btn-o btn-lg">Buka Katalog Sarana Lengkap →</a></div>
+</div></section>
+
+<!-- BERITA & EDUKASI -->
+<section class="sec"><div class="con">
+  <div class="sec-hd"><div class="sec-ttl">📰 Edukasi &amp; Berita Pertanian</div>
+  <p class="sec-sub" style="margin:0 auto">Tips praktis dari praktisi berpengalaman untuk merawat tanaman Anda.</p></div>
+  <div class="grid g3"><div class="berita-card">
+  <img src="images/halobun_real_pest_control.jpg" alt="Cara Mengatasi Kutu Putih & Ulat Grayak Tanpa Pestisida Kimia">
+  <div style="padding:18px">
+    <span style="display:inline-block;background:#16A34A22;color:#16A34A;font-size:11px;font-weight:700;padding:3px 10px;border-radius:9999px;margin-bottom:10px">Pengendalian Hama</span>
+    <div style="font-weight:800;font-size:15px;line-height:1.4;color:var(--s900);margin-bottom:8px">Cara Mengatasi Kutu Putih & Ulat Grayak Tanpa Pestisida Kimia</div>
+    <p style="font-size:13px;color:var(--s500);line-height:1.6;margin-bottom:12px">Gunakan ramuan pestisida nabati daun tembakau dan minyak nimba yang aman untuk sayuran organik dan tanaman hias pekarangan.</p>
+    <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--s400)">
+      <span>✍️ Dr. Ir. Suwandi, M.Si</span><span>28 Sep 2026 · 4 mnt baca</span>
+    </div>
+  </div>
+</div><div class="berita-card">
+  <img src="images/halobun_real_sarana.jpg" alt="Panduan Aplikasi Pupuk Organik Cair (POC) untuk Hasil Panen Maksimal">
+  <div style="padding:18px">
+    <span style="display:inline-block;background:#1D4ED822;color:#1D4ED8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:9999px;margin-bottom:10px">Teknik Pemupukan</span>
+    <div style="font-weight:800;font-size:15px;line-height:1.4;color:var(--s900);margin-bottom:8px">Panduan Aplikasi Pupuk Organik Cair (POC) untuk Hasil Panen Maksimal</div>
+    <p style="font-size:13px;color:var(--s500);line-height:1.6;margin-bottom:12px">Ketahui rasio pengenceran air serta waktu terbaik penyemprotan stomata daun pada pagi hari sebelum sinar matahari terik.</p>
+    <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--s400)">
+      <span>✍️ Bayu Pratama, S.P.</span><span>26 Sep 2026 · 5 mnt baca</span>
+    </div>
+  </div>
+</div><div class="berita-card">
+  <img src="images/halobun_real_hydroponics.jpg" alt="Strategi Kebun Sayur Vertikal di Rooftop dan Pekarangan Sempit">
+  <div style="padding:18px">
+    <span style="display:inline-block;background:#D9770622;color:#D97706;font-size:11px;font-weight:700;padding:3px 10px;border-radius:9999px;margin-bottom:10px">Urban Farming</span>
+    <div style="font-weight:800;font-size:15px;line-height:1.4;color:var(--s900);margin-bottom:8px">Strategi Kebun Sayur Vertikal di Rooftop dan Pekarangan Sempit</div>
+    <p style="font-size:13px;color:var(--s500);line-height:1.6;margin-bottom:12px">Memanfaatkan instalasi pipa talang dan pot susun vertikal untuk menanam selada, seledri, dan mint secara mandiri.</p>
+    <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--s400)">
+      <span>✍️ Dewi Lestari, S.Pt</span><span>24 Sep 2026 · 3 mnt baca</span>
+    </div>
+  </div>
+</div></div>
+</div></section>
+
+<!-- TESTIMONIAL -->
+<section class="sec" style="background:var(--s50);border-top:1px solid var(--s200)"><div class="con">
+  <div class="sec-hd"><div class="sec-ttl">💬 Dipercaya 500+ Pekebun &amp; Petani</div>
+  <p class="sec-sub" style="margin:0 auto">Ulasan nyata dari pengguna layanan konsultasi dan kunjungan Hallobun.</p></div>
+  <div class="grid g3"><div class="testi-card">
+  <div style="font-size:24px;margin-bottom:12px">⭐⭐⭐⭐⭐</div>
+  <p style="font-size:14px;color:var(--s700);line-height:1.7;margin-bottom:16px">"Konsultasi video call di Hallobun sangat solutif. Daun cabai yang kriting langsung terdiagnosa kutu kebul dan sembuh setelah ikuti dosis rekomendasi pakar."</p>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div style="width:40px;height:40px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:20px">👨‍🌾</div>
+    <div><div style="font-weight:700;font-size:14px;color:var(--s900)">H. Ahmad Syafi'i</div>
+    <div style="font-size:12px;color:var(--s400)">Petani Cabai & Melon, Magelang</div></div>
+  </div>
+</div><div class="testi-card">
+  <div style="font-size:24px;margin-bottom:12px">⭐⭐⭐⭐⭐</div>
+  <p style="font-size:14px;color:var(--s700);line-height:1.7;margin-bottom:16px">"Suka sekali dengan konsep temanya yang asri dan praktisi yang ramah. Sekarang kebun selada rooftop saya bebas busuk akar berkat bimbingan rutin."</p>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div style="width:40px;height:40px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:20px">👩‍🌾</div>
+    <div><div style="font-weight:700;font-size:14px;color:var(--s900)">Rina Kusuma</div>
+    <div style="font-size:12px;color:var(--s400)">Urban Farmer & Hidroponik, Tangerang</div></div>
+  </div>
+</div><div class="testi-card">
+  <div style="font-size:24px;margin-bottom:12px">⭐⭐⭐⭐⭐</div>
+  <p style="font-size:14px;color:var(--s700);line-height:1.7;margin-bottom:16px">"Fitur undang narsum sangat mempermudah kelompok kami membuat workshop pemupukan berimbang. Materinya aplikatif dan pendampingannya berkelanjutan."</p>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div style="width:40px;height:40px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:20px">🌾</div>
+    <div><div style="font-weight:700;font-size:14px;color:var(--s900)">Bambang Triyono</div>
+    <div style="font-size:12px;color:var(--s400)">Ketua Kelompok Tani Mandiri, Boyolali</div></div>
+  </div>
+</div></div>
+</div></section>
+
+<!-- CTA -->
+<section class="sec-sm" style="background:linear-gradient(135deg,var(--gx),var(--g));color:#fff"><div class="con tc">
+  <div style="font-size:30px;font-weight:900;margin-bottom:10px">🌱 Tanaman Anda Bermasalah? Konsultasikan Sekarang</div>
+  <p style="opacity:.85;margin-bottom:28px;font-size:15px;max-width:540px;margin-left:auto;margin-right:auto">Dapatkan solusi cepat dan tepat dari praktisi agronom terpercaya. Tanpa antre, langsung dari gadget Anda.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="pages/konsultasi.html" class="btn btn-w btn-lg">Pilih Praktisi &amp; Booking</a>
+    <a href="https://wa.me/6281234567890?text=Halo%20Hallobun,%20saya%20ingin%20tanya%20seputar%20layanan" target="_blank" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.4)">Tanya CS via WhatsApp</a>
+  </div>
+</div></section>
 <footer class="ft"><div class="ft-in">
   <div class="ft-g">
-    <div class="ft-brand"><img class="ft-logo" src="images/logo_white.svg" alt="Hallobun">
-      <p>Platform tele-agronomi &amp; layanan kebun terpercaya. Konsultasi bersama praktisi agronom bersertifikasi Indonesia.</p></div>
+    <div class="ft-brand"><img class="ft-logo" src="images/logo.png" alt="Hallobun">
+      <p>Platform tele-agronomi & layanan kebun terpercaya. Konsultasi bersama praktisi agronom bersertifikasi Indonesia.</p>
+      <div style="display:flex;gap:12px;margin-top:16px">
+        <a href="https://wa.me/6281234567890" style="color:rgba(255,255,255,.5)" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+      </div>
+    </div>
     <div class="ft-col"><h4>Layanan</h4><ul>
       <li><a href="pages/konsultasi.html">Konsultasi Online</a></li>
       <li><a href="pages/kunjungan.html">Kunjungan Lahan</a></li>
       <li><a href="pages/narsum.html">Undang Narsum</a></li>
+      <li><a href="pages/layanan.html">Semua Layanan</a></li>
       <li><a href="pages/sarana.html">Sarana Tani</a></li>
     </ul></div>
     <div class="ft-col"><h4>Akun</h4><ul>
       <li><a href="pages/login.html">Masuk</a></li>
       <li><a href="pages/register.html">Daftar</a></li>
       <li><a href="pages/dashboard.html">Dashboard</a></li>
+      <li><a href="pages/riwayat.html">Riwayat Booking</a></li>
       <li><a href="pages/admin/dashboard.html">Panel Admin</a></li>
     </ul></div>
     <div class="ft-col"><h4>Kontak</h4><ul>
       <li><a href="https://wa.me/6281234567890">WhatsApp CS</a></li>
       <li><a href="mailto:info@hallobun.com">info@hallobun.com</a></li>
-      <li><a href="#">Instagram</a></li><li><a href="#">YouTube</a></li>
+      <li><a href="#">Instagram @hallobun</a></li>
+      <li><a href="#">YouTube Hallobun</a></li>
     </ul></div>
   </div>
-  <div class="ft-bot"><span>&copy; 2026 Hallobun Indonesia</span><span>Seluruh hak dilindungi</span></div>
+  <div class="ft-bot"><span>&copy; 2026 Hallobun Indonesia. Seluruh hak dilindungi.</span><span style="display:flex;gap:16px"><a href="#">Privasi</a><a href="#">S&K</a></span></div>
 </div></footer>
-<div class="wa"><a href="https://wa.me/6281234567890" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp CS</a></div>
-<script src="js/app.js"></script>
-<script>initSlider("heroSlider")</script>
-</body></html>
+<div class="wa"><a href="https://wa.me/6281234567890" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp CS</a></div>
+<script src="js/app.js"></script><script>
+initSlider("heroSlider");
+var hs=document.getElementById("heroSearch");
+if(hs){
+  hs.addEventListener("keydown",function(e){if(e.key==="Enter"){window.location="pages/konsultasi.html?q="+encodeURIComponent(this.value);}});
+}
+</script></body></html>

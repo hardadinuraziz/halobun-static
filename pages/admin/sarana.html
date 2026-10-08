@@ -1,62 +1,144 @@
 <!DOCTYPE html>
-<html lang="id"><head>
+<html lang="id">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Admin Sarana &#8212; Hallobun</title>
+<meta name="description" content="Platform tele-agronomi dan bimbingan berkebun terpercaya Indonesia.">
+<title>Admin Sarana Tani — Hallobun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css">
-</head><body>
+</head><body><body>
 <div class="adm-lay">
 <div class="sb">
-  <div class="sb-hd" style="display:flex;align-items:center;justify-content:space-between">
-    <img src="../../images/logo_white.svg" alt="Hallobun" style="height:34px;width:auto;object-fit:contain">
-    <span style="background:rgba(255,255,255,.12);color:#86EFAC;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.5px">ADMIN</span>
+  <div class="sb-hd">
+    <img src="../../images/logo.png" alt="Hallobun" style="height:28px;filter:brightness(0) invert(1);flex-shrink:0">
+    <div><div class="bt">Hallobun</div><div class="bs">Panel Admin</div></div>
   </div>
-  <div class="sb-nav"><a href="dashboard.html">&#128200; Dashboard</a>
-<div class="sb-lbl">Layanan</div><a href="konsultasi.html">&#128187; Konsultasi</a>
-<a href="kunjungan.html">&#127968; Kunjungan</a>
-<a href="narsum.html">&#127891; Narsum</a>
-<a href="sarana.html" class="active">&#127807; Sarana</a>
-<div class="sb-lbl">Master Data</div><a href="users.html">&#128100; Pengguna</a>
-<a href="praktisi.html">&#127807; Praktisi</a>
-<a href="payments.html">&#128179; Pembayaran</a>
-</div>
-  <div style="padding:16px;border-top:1px solid rgba(255,255,255,.08)">
-    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:13px">&#128682; Keluar</a>
+  <div class="sb-nav"><a href="dashboard.html">📊 Dashboard</a><div class="sb-lbl">Pemesanan</div><a href="konsultasi.html">💬 Konsultasi</a><a href="kunjungan.html">🚜 Kunjungan</a><a href="narsum.html">🎤 Narsum</a><div class="sb-lbl">Katalog</div><a href="sarana.html" class="active">🌿 Sarana</a><div class="sb-lbl">Pengguna</div><a href="users.html">👥 Semua User</a><a href="praktisi.html">🌾 Praktisi</a><div class="sb-lbl">Keuangan</div><a href="payments.html">💳 Pembayaran</a></div>
+  <div style="padding:14px;border-top:1px solid rgba(255,255,255,.08)">
+    <a href="../login.html" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.45);font-size:13px">🚪 Keluar</a>
   </div>
 </div>
 <div class="adm-main">
 <div class="adm-top">
-  <h2>&#127807; Manajemen Sarana Tani</h2>
+  <h2>🌿 Katalog &amp; Stok Sarana Tani</h2>
   <div style="display:flex;align-items:center;gap:12px">
-    <span style="font-size:13px;color:var(--s500)">&#128100; Admin Hallobun</span>
+    <button type="button" onclick="openModal('addProdModal')" class="btn btn-g btn-sm">+ Tambah Produk</button>
+    <span style="font-size:13px;color:var(--s500)">👤 Admin Hallobun</span>
     <a href="../login.html" class="btn btn-o btn-sm">Keluar</a>
   </div>
 </div>
 <div class="adm-body">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
-    <input type="text" class="fc" placeholder="&#128269; Cari produk..." style="max-width:280px">
-    <button onclick="openModal('addProduk')" class="btn btn-g btn-sm">+ Tambah Produk</button>
+  <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+    <input type="text" id="searchInput" class="fc" placeholder="🔍 Cari nama sarana tani..." style="max-width:300px">
   </div>
-  <div class="tw"><table>
-    <thead><tr><th>Produk</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Status</th><th>Aksi</th></tr></thead>
-    <tbody>
-      <tr><td><div class="fw7">Bibit Cabai Merah TW Super</div><div class="txs tm">Varietas unggulan, tahan virus</div></td><td>Bibit</td><td>Rp 45.000</td><td>150 pcs</td><td><span class="sts sts-c">Tersedia</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Hapus</a></td></tr>
-      <tr><td><div class="fw7">Pupuk NPK Organik 25Kg</div><div class="txs tm">Formulasi khusus sayuran</div></td><td>Pupuk</td><td>Rp 185.000</td><td>80 bag</td><td><span class="sts sts-c">Tersedia</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Hapus</a></td></tr>
-      <tr><td><div class="fw7">Pestisida Nabati Neem Oil</div><div class="txs tm">Pengendali hama organik</div></td><td>Pestisida</td><td>Rp 75.000</td><td>0 btl</td><td><span class="sts sts-x">Habis</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Hapus</a></td></tr>
-      <tr><td><div class="fw7">Soil Test Kit Digital</div><div class="txs tm">Uji pH, NPK, dan kelembaban</div></td><td>Alat</td><td>Rp 350.000</td><td>12 unit</td><td><span class="sts sts-c">Tersedia</span></td><td style="display:flex;gap:4px"><a href="#" class="btn btn-o btn-sm">Edit</a><a href="#" class="btn btn-red btn-sm">Hapus</a></td></tr>
-    </tbody>
-  </table></div>
-  <div class="mo" id="addProduk">
-    <div class="mo-box">
-      <button class="mo-close" onclick="closeModal('addProduk')">&#215;</button>
-      <div class="fw8" style="font-size:18px;margin-bottom:16px">Tambah Produk Baru</div>
-      <div class="fg"><label class="fl">Nama Produk</label><input type="text" class="fc"></div>
-      <div class="fg"><label class="fl">Kategori</label><select class="fc"><option>Bibit</option><option>Pupuk</option><option>Pestisida</option><option>Nutrisi</option><option>Alat</option></select></div>
-      <div class="fg"><label class="fl">Harga (Rp)</label><input type="number" class="fc"></div>
-      <div class="fg"><label class="fl">Stok</label><input type="number" class="fc"></div>
-      <div class="fg"><label class="fl">Deskripsi</label><textarea class="fc" rows="3"></textarea></div>
-      <button onclick="toast('Produk berhasil ditambahkan!','ok');closeModal('addProduk')" class="btn btn-g w100">Simpan Produk</button>
-    </div>
+  <div class="tw">
+    <table id="mainTable">
+      <thead><tr><th>Foto</th><th>Nama Produk</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Unggulan</th><th>Aksi</th></tr></thead>
+      <tbody><tr>
+  <td><img src="../../images/halobun_real_sarana.jpg" style="width:48px;height:48px;border-radius:8px;object-fit:cover"></td>
+  <td><div class="fw7">Bibit Cabai Merah TW Super</div><div class="txs tm">Varietas unggulan, tahan virus kuning & kerit...</div></td>
+  <td><span class="bdg bdg-g" style="font-size:11px">Bibit</span></td>
+  <td class="fw7">Rp 45.000</td>
+  <td><span class="sts sts-c">Tersedia</span></td>
+  <td>✅ Ya</td>
+  <td style="display:flex;gap:4px">
+    <button type="button" class="btn btn-o btn-sm" onclick="toast('Fitur edit produk dibuka dalam modal','in')">Edit</button>
+    <button type="button" class="btn btn-red btn-sm" onclick="this.closest('tr').remove();toast('Produk berhasil dihapus','ok')">Hapus</button>
+  </td>
+</tr><tr>
+  <td><img src="../../images/halobun_real_hydroponics.jpg" style="width:48px;height:48px;border-radius:8px;object-fit:cover"></td>
+  <td><div class="fw7">Pupuk NPK Organik 25 Kg</div><div class="txs tm">Formulasi khusus sayuran dan buah. Memperkuat...</div></td>
+  <td><span class="bdg bdg-g" style="font-size:11px">Pupuk</span></td>
+  <td class="fw7">Rp 185.000</td>
+  <td><span class="sts sts-c">Tersedia</span></td>
+  <td>✅ Ya</td>
+  <td style="display:flex;gap:4px">
+    <button type="button" class="btn btn-o btn-sm" onclick="toast('Fitur edit produk dibuka dalam modal','in')">Edit</button>
+    <button type="button" class="btn btn-red btn-sm" onclick="this.closest('tr').remove();toast('Produk berhasil dihapus','ok')">Hapus</button>
+  </td>
+</tr><tr>
+  <td><img src="../../images/halobun_real_pest_control.jpg" style="width:48px;height:48px;border-radius:8px;object-fit:cover"></td>
+  <td><div class="fw7">Pestisida Nabati Neem Oil 500ml</div><div class="txs tm">Pengendali hama organik dari biji nimba. Efek...</div></td>
+  <td><span class="bdg bdg-g" style="font-size:11px">Pestisida</span></td>
+  <td class="fw7">Rp 75.000</td>
+  <td><span class="sts sts-x">Habis</span></td>
+  <td>—</td>
+  <td style="display:flex;gap:4px">
+    <button type="button" class="btn btn-o btn-sm" onclick="toast('Fitur edit produk dibuka dalam modal','in')">Edit</button>
+    <button type="button" class="btn btn-red btn-sm" onclick="this.closest('tr').remove();toast('Produk berhasil dihapus','ok')">Hapus</button>
+  </td>
+</tr><tr>
+  <td><img src="../../images/halobun_real_soil_test.jpg" style="width:48px;height:48px;border-radius:8px;object-fit:cover"></td>
+  <td><div class="fw7">Nutrisi Hidroponik AB Mix 1L</div><div class="txs tm">Larutan nutrisi lengkap untuk sistem NFT, DFT...</div></td>
+  <td><span class="bdg bdg-g" style="font-size:11px">Nutrisi</span></td>
+  <td class="fw7">Rp 125.000</td>
+  <td><span class="sts sts-c">Tersedia</span></td>
+  <td>✅ Ya</td>
+  <td style="display:flex;gap:4px">
+    <button type="button" class="btn btn-o btn-sm" onclick="toast('Fitur edit produk dibuka dalam modal','in')">Edit</button>
+    <button type="button" class="btn btn-red btn-sm" onclick="this.closest('tr').remove();toast('Produk berhasil dihapus','ok')">Hapus</button>
+  </td>
+</tr><tr>
+  <td><img src="../../images/halobun_real_practitioner.jpg" style="width:48px;height:48px;border-radius:8px;object-fit:cover"></td>
+  <td><div class="fw7">Bibit Tomat Cherry Premium</div><div class="txs tm">Cocok untuk pot dan greenhouse. Produktif sep...</div></td>
+  <td><span class="bdg bdg-g" style="font-size:11px">Bibit</span></td>
+  <td class="fw7">Rp 35.000</td>
+  <td><span class="sts sts-x">Habis</span></td>
+  <td>—</td>
+  <td style="display:flex;gap:4px">
+    <button type="button" class="btn btn-o btn-sm" onclick="toast('Fitur edit produk dibuka dalam modal','in')">Edit</button>
+    <button type="button" class="btn btn-red btn-sm" onclick="this.closest('tr').remove();toast('Produk berhasil dihapus','ok')">Hapus</button>
+  </td>
+</tr><tr>
+  <td><img src="../../images/halobun_hero_halodoc.jpg" style="width:48px;height:48px;border-radius:8px;object-fit:cover"></td>
+  <td><div class="fw7">Soil Test Kit Digital 3-in-1</div><div class="txs tm">Uji pH, NPK, dan kelembaban tanah secara inst...</div></td>
+  <td><span class="bdg bdg-g" style="font-size:11px">Alat</span></td>
+  <td class="fw7">Rp 350.000</td>
+  <td><span class="sts sts-c">Tersedia</span></td>
+  <td>✅ Ya</td>
+  <td style="display:flex;gap:4px">
+    <button type="button" class="btn btn-o btn-sm" onclick="toast('Fitur edit produk dibuka dalam modal','in')">Edit</button>
+    <button type="button" class="btn btn-red btn-sm" onclick="this.closest('tr').remove();toast('Produk berhasil dihapus','ok')">Hapus</button>
+  </td>
+</tr><tr>
+  <td><img src="../../images/halobun_real_sarana.jpg" style="width:48px;height:48px;border-radius:8px;object-fit:cover"></td>
+  <td><div class="fw7">Media Tanam Cocopeat 10L</div><div class="txs tm">Cocopeat steril bebas patogen, kapasitas mena...</div></td>
+  <td><span class="bdg bdg-g" style="font-size:11px">Media Tanam</span></td>
+  <td class="fw7">Rp 45.000</td>
+  <td><span class="sts sts-c">Tersedia</span></td>
+  <td>—</td>
+  <td style="display:flex;gap:4px">
+    <button type="button" class="btn btn-o btn-sm" onclick="toast('Fitur edit produk dibuka dalam modal','in')">Edit</button>
+    <button type="button" class="btn btn-red btn-sm" onclick="this.closest('tr').remove();toast('Produk berhasil dihapus','ok')">Hapus</button>
+  </td>
+</tr><tr>
+  <td><img src="../../images/halobun_real_hydroponics.jpg" style="width:48px;height:48px;border-radius:8px;object-fit:cover"></td>
+  <td><div class="fw7">Pupuk Cair Organik 1L (POC)</div><div class="txs tm">Pupuk cair fermentasi limbah sayur + EM4. Tin...</div></td>
+  <td><span class="bdg bdg-g" style="font-size:11px">Pupuk</span></td>
+  <td class="fw7">Rp 55.000</td>
+  <td><span class="sts sts-c">Tersedia</span></td>
+  <td>—</td>
+  <td style="display:flex;gap:4px">
+    <button type="button" class="btn btn-o btn-sm" onclick="toast('Fitur edit produk dibuka dalam modal','in')">Edit</button>
+    <button type="button" class="btn btn-red btn-sm" onclick="this.closest('tr').remove();toast('Produk berhasil dihapus','ok')">Hapus</button>
+  </td>
+</tr></tbody>
+    </table>
   </div>
 </div></div></div>
-<script src="../../js/app.js"></script>
-</body></html>
+
+<div class="mo" id="addProdModal">
+  <div class="mo-box">
+    <button class="mo-close" onclick="closeModal('addProdModal')">✕</button>
+    <div style="font-weight:800;font-size:18px;margin-bottom:18px">+ Tambah Sarana Tani Baru</div>
+    <div class="fg"><label class="fl">Nama Produk <span style="color:var(--g)">*</span></label><input type="text" class="fc" id="np_name" placeholder="Contoh: Pupuk Kompos Organik Super 10Kg"></div>
+    <div class="grid g2" style="gap:12px">
+      <div class="fg"><label class="fl">Kategori</label><select class="fc" id="np_kat"><option>Bibit</option><option>Pupuk</option><option>Pestisida</option><option>Nutrisi</option><option>Alat</option></select></div>
+      <div class="fg"><label class="fl">Harga (Rp) <span style="color:var(--g)">*</span></label><input type="number" class="fc" id="np_price" placeholder="75000"></div>
+    </div>
+    <div class="fg"><label class="fl">Jumlah Stok</label><input type="number" class="fc" id="np_stock" value="50"></div>
+    <button type="button" onclick="toast('Produk baru berhasil disimpan ke katalog!','ok');closeModal('addProdModal');" class="btn btn-g w100">Simpan Produk</button>
+  </div>
+</div>
+<script src="../../js/app.js"></script></body></html>
